@@ -17,10 +17,19 @@ namespace BallsOfSteel.UI
 
         public override void Start()
         {
+            UI = UI ?? Entity.Get<UIComponent>();
+
             var page = UI.Page;
             ipAddressEditText = page.RootElement.FindVisualChildOfType<EditText>("IpAdress");
             connectButton = page.RootElement.FindVisualChildOfType<Button>("Connect");
             connectButton.Click += OnConnectButonClicked;
+        }
+
+        /// <inheritdoc />
+        public override void Cancel()
+        {
+            if (connectButton != null)
+                connectButton.Click -= OnConnectButonClicked;
         }
 
         private void OnConnectButonClicked(object sender, RoutedEventArgs e)

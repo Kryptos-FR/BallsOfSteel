@@ -30,11 +30,10 @@ Hierarchy:
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 DrawLayerNumber: 2
                 CanBeHitByUser: true
-                Width: 220.0
+                Width: 250.0
                 Height: 140.0
-                HorizontalAlignment: Right
-                VerticalAlignment: Top
-                Margin: {}
+                HorizontalAlignment: Left
+                Margin: {Top: 250.0, Bottom: 270.0}
                 Name: JumpButton
                 Padding: {Left: 20.0, Top: 10.0, Right: 20.0, Bottom: 10.0}
                 Content: !TextBlock ref!! f2572522-8e2e-42be-a9ea-77eff7db3258
@@ -52,7 +51,7 @@ Hierarchy:
                     aeac151a5b652b3dac5054fe77905155~Canvas.UseAbsolutePositionPropertyKey: false
                     534df3b4c2dff44f0a25a6646ea8b95b~Canvas.PinOriginPropertyKey: {X: 1.0, Y: 1.0, Z: 0.0}
                     ab0b39d001b1b320c5ee9167ef051c67~Canvas.RelativePositionPropertyKey: {X: 1.0, Y: 1.0, Z: 0.0}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 70}
                 Width: 250.0
                 Height: 250.0
                 HorizontalAlignment: Right
@@ -61,7 +60,7 @@ Hierarchy:
                 Name: RightThumb
                 Children:
                     a1e8b6659506de71285a472988aadbb8: !ImageElement ref!! a42b9cd4-cc66-4ffa-8fe1-543a50afff38
-                    a1d85ac899e822796ff2e7d67324972a: !Button ref!! 80f75b9e-07c2-41a1-9b60-e2bef3e3d17a
+                    4f6bcc7065cae9a0c75d6b39e07ccee7: !ImageElement ref!! 84473252-c5f6-4fe2-9cbb-ffe61810ed22
                 RowDefinitions: {}
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
@@ -80,37 +79,15 @@ Hierarchy:
                 ColumnDefinitions: {}
                 LayerDefinitions: {}
         -   UIElement: !Button
-                Id: 80f75b9e-07c2-41a1-9b60-e2bef3e3d17a
-                DependencyProperties: {}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                DrawLayerNumber: 2
-                CanBeHitByUser: true
-                Width: 100.0
-                Height: 100.0
-                HorizontalAlignment: Center
-                VerticalAlignment: Center
-                Margin: {}
-                Name: thumb
-                Padding: {Left: 10.0, Top: 5.0, Right: 10.0, Bottom: 7.0}
-                PressedImage: !SpriteFromTexture
-                    Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb
-                    Center: {X: 0.0, Y: 0.0}
-                NotPressedImage: !SpriteFromTexture
-                    Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb
-                    Center: {X: 0.0, Y: 0.0}
-                MouseOverImage: !SpriteFromTexture
-                    Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb
-                    Center: {X: 0.0, Y: 0.0}
-        -   UIElement: !Button
                 Id: 81913373-211b-45e2-83ff-48235ace0b7f
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
                 DrawLayerNumber: 2
                 CanBeHitByUser: true
-                Width: 220.0
+                Width: 250.0
                 Height: 140.0
-                VerticalAlignment: Bottom
-                Margin: {Left: 500.0, Right: 500.0, Bottom: 63.0}
+                HorizontalAlignment: Right
+                Margin: {Top: 250.0, Bottom: 270.0}
                 Name: PickupButton
                 Padding: {Left: 20.0, Top: 10.0, Right: 20.0, Bottom: 10.0}
                 Content: !TextBlock ref!! f88a5211-8c25-408b-8096-56f797c17488
@@ -122,13 +99,27 @@ Hierarchy:
                     CurrentFrame: 1
                 MouseOverImage: !SpriteFromSheet
                     Sheet: 1be3340c-b797-4557-bff7-d9be92dfdb42:XenkoUIDesigns
+        -   UIElement: !ImageElement
+                Id: 84473252-c5f6-4fe2-9cbb-ffe61810ed22
+                DependencyProperties: {}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                Width: 100.0
+                Height: 100.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
+                Margin: {}
+                Name: Rthumb
+                Source: !SpriteFromTexture
+                    Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb
+                    Center: {X: 0.0, Y: 0.0}
+                Color: {R: 255, G: 255, B: 255, A: 255}
         -   UIElement: !Grid
                 Id: 9409d9ef-cee6-4f48-a316-4e608881d85d
                 DependencyProperties:
                     aeac151a5b652b3dac5054fe77905155~Canvas.UseAbsolutePositionPropertyKey: false
                     534df3b4c2dff44f0a25a6646ea8b95b~Canvas.PinOriginPropertyKey: {X: 0.0, Y: 1.0, Z: 0.0}
                     ab0b39d001b1b320c5ee9167ef051c67~Canvas.RelativePositionPropertyKey: {X: 0.0, Y: 1.0, Z: 0.0}
-                BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
+                BackgroundColor: {R: 0, G: 0, B: 0, A: 70}
                 Width: 250.0
                 Height: 250.0
                 HorizontalAlignment: Left
@@ -161,7 +152,7 @@ Hierarchy:
                     6ccbd1eeb51780d51fd8e7e08af4ceca~Canvas.RelativePositionPropertyKey: {X: 0.0, Y: 1.0, Z: 0.0}
                     ee15b2bce226d9b9f006770da5042ec4~Canvas.PinOriginPropertyKey: {X: 0.0, Y: 1.0, Z: 0.0}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {}
+                Margin: {Left: 10.0, Top: 10.0, Right: 10.0, Bottom: 10.0}
                 Name: background
                 Source: !SpriteFromTexture
                     Texture: 32bf273e-abf6-4334-84f9-7750b76b4a70:UI/WhiteCircle
@@ -171,11 +162,12 @@ Hierarchy:
                 Id: d7b3e9ed-b0da-4f50-964b-260e421da294
                 DependencyProperties: {}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                CanBeHitByUser: true
                 Width: 100.0
                 Height: 100.0
+                HorizontalAlignment: Left
+                VerticalAlignment: Top
                 Margin: {}
-                Name: thumb
+                Name: Lthumb
                 Source: !SpriteFromTexture
                     Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb
                     Center: {X: 0.0, Y: 0.0}
@@ -187,7 +179,7 @@ Hierarchy:
                     6ccbd1eeb51780d51fd8e7e08af4ceca~Canvas.RelativePositionPropertyKey: {X: 0.0, Y: 1.0, Z: 0.0}
                     ee15b2bce226d9b9f006770da5042ec4~Canvas.PinOriginPropertyKey: {X: 0.0, Y: 1.0, Z: 0.0}
                 BackgroundColor: {R: 0, G: 0, B: 0, A: 0}
-                Margin: {}
+                Margin: {Left: 10.0, Top: 10.0, Right: 10.0, Bottom: 10.0}
                 Name: background
                 Source: !SpriteFromTexture
                     Texture: 32bf273e-abf6-4334-84f9-7750b76b4a70:UI/WhiteCircle
@@ -211,7 +203,7 @@ Hierarchy:
                 HorizontalAlignment: Center
                 VerticalAlignment: Center
                 Margin: {}
-                Text: Pickup
+                Text: Attack!!!
                 Font: cfd0910f-8ce3-4266-84e0-43d0294634ee:UI/SpriteFont
                 TextSize: 42.0
                 TextColor: {R: 240, G: 240, B: 240, A: 255}

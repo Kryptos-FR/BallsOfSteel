@@ -1,0 +1,7 @@
+!Texture
+Id: 0eac72d0-5b73-46e9-b438-77989b575173
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Textures/Muzzleflash02.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

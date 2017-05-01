@@ -1,0 +1,40 @@
+!Package
+Id: e0d70c19-3217-42a3-9446-2590906c080d
+SerializedVersion: {Assets: 0.0.4}
+Meta:
+    Name: BallsOfSteel
+    Version: 1.0.0.0
+    Authors: []
+    Owners: []
+    RootNamespace: BallsOfSteel
+    Dependencies:
+        -   Name: Xenko
+            Version: 2.0.1.1
+            RootAssets: []
+LocalDependencies: []
+Profiles:
+    -   Name: Shared
+        Platform: Shared
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Shared
+            -   Path: BallsOfSteel.Game/Effects
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: c3c27fa6-a683-4e8f-aeea-e7cfd3735922
+                Location: BallsOfSteel.Game/BallsOfSteel.Game.csproj
+                Type: Library
+    -   Name: Windows
+        Platform: Windows
+        InheritProfiles: []
+        AssetFolders:
+            -   Path: Assets/Windows
+        OutputGroupDirectories: {}
+        ProjectReferences:
+            -   Id: 73b2b9e7-d1d3-41bd-9986-7b928ad22ece
+                Location: BallsOfSteel.Windows/BallsOfSteel.Windows.csproj
+                Type: Executable
+ExplicitFolders: []
+Bundles: []
+TemplateFolders: []
+RootAssets: []

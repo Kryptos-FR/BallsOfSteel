@@ -166,10 +166,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicCameraController.cs" />
-    <Compile Include="Client.cs" />
-    <Compile Include="Server.cs" />
     <Compile Include="Core\InputManagerExtensions.cs" />
     <Compile Include="Core\Utils.cs" />
+    <Compile Include="Network\Client.cs" />
+    <Compile Include="Network\Server.cs" />
     <Compile Include="Player\XboxInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

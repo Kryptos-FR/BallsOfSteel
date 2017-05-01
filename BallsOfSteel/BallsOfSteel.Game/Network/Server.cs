@@ -42,13 +42,13 @@ namespace BallsOfSteel
             }
 
             byte[] received = new byte[512];
-            while (true)
+            while (Game.IsRunning)
             {
                 serverClient.Client.Receive(received);
 
                 if (received[0] == 0xFF)
                 {
-                    throw new AbandonedMutexException();
+                    
                 }
             }
         }

@@ -16,73 +16,66 @@ namespace BallsOfSteel.Player
 
         public float DeadZone { get; set; } = 0.25f;
 
-        // Non-normalized vector with which indicates the facing direction.
-        public Vector2 FaceDirection
-        {
-            get
-            {
-                var face = Input.GetRightThumbAny(DeadZone);
-
-                var moveLength = face.Length();
-                var isDeadZoneLeft = moveLength < DeadZone;
-                if (isDeadZoneLeft)
-                {
-                    face = Vector2.Zero;
-                }
-                else
-                {
-                    if (moveLength > 1)
-                    {
-                        moveLength = 1;
-                    }
-                    else
-                    {
-                        moveLength = (moveLength - DeadZone) / (1f - DeadZone);
-                    }
-
-                    face *= moveLength;
-                }
-
-                return face;
-            }
-        }
+        public int ControllerID { get; set; } = 0;
 
         // Indicates if the players wants to initiate jump this frame, regardless of if they can
         public bool Jump { get { return false; } }
 
-        public Vector2 WalkDirection
-        {
-            get
-            {
-                var walk = Input.GetLeftThumbAny(DeadZone);
+        public Vector2 WalkDirection => walkDirection;
 
-                var moveLength = walk.Length();
-                var isDeadZoneLeft = moveLength < DeadZone;
-                if (isDeadZoneLeft)
-                {
-                    walk = Vector2.Zero;
-                }
-                else
-                {
-                    if (moveLength > 1)
-                    {
-                        moveLength = 1;
-                    }
-                    else
-                    {
-                        moveLength = (moveLength - DeadZone) / (1f - DeadZone);
-                    }
+        public Vector2 FaceDirection => faceDirection;
 
-                    walk *= moveLength;
-                }
+        private Vector2 walkDirection = Vector2.Zero;
 
-                return walk;
-            }
-        }
+        private Vector2 faceDirection = Vector2.Zero;
 
         public override void Update()
         {
+            // Walking direction
+            walkDirection = Input.GetLeftThumb(ControllerID);
 
+            var moveLength = walkDirection.Length();
+            var isDeadZoneLeft = moveLength < DeadZone;
+            if (isDeadZoneLeft)
+            {
+                walkDirection = Vector2.Zero;
+            }
+            else
+            {
+                if (moveLength > 1)
+                {
+                    moveLength = 1;
+                }
+                else
+                {
+                    moveLength = (moveLength - DeadZone) / (1f - DeadZone);
+                }
+
+                walkDirection *= moveLength;
+            }
+
+            // Facing direction
+            faceDirection = Input.GetRightThumb(ControllerID);
+
+            var faceLength = faceDirection.Length();
+            var isDeadZoneRight = faceLength < DeadZone;
+            if (isDeadZoneRight)
+            {
+                faceDirection = Vector2.Zero;
+            }
+            else
+            {
+                if (faceLength > 1)
+                {
+                    faceLength = 1;
+                }
+                else
+                {
+                    faceLength = (faceLength - DeadZone) / (1f - DeadZone);
+                }
+
+                faceDirection *= faceLength;
+            }
         }
     }
 }

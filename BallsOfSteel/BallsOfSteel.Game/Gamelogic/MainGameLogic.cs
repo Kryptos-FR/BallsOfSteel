@@ -45,6 +45,8 @@ namespace Gamelogic
 
             SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
 
+            playerInputControl.Respawn(new Vector3(0, 2, 0));
+
             return player[0];
         }
 

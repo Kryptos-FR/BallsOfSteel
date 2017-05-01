@@ -5,5 +5,60 @@ Tags: []
 ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
-    RootPartIds: []
-    Parts: []
+    RootPartIds:
+        - 6acb9932-b557-4368-b9e0-5c2afbaaec60
+        - 8b07ebd9-7023-4561-abe8-abe0547b86eb
+        - 3161b94e-3c02-4b6c-b9f2-332c358d3103
+    Parts:
+        -   Entity:
+                Id: 3161b94e-3c02-4b6c-b9f2-332c358d3103
+                Name: ControllerUI
+                Components:
+                    481424a874fd793d12b598113d55cbf0: !TransformComponent
+                        Id: 7f9a999a-cab1-4428-a84a-a3a0c2ae7cb5
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    a91d546cacf4b6d3dc99979ebd11338d: !UIComponent
+                        Id: b207a123-ebc7-47a6-9057-a6dc88c6d943
+                        Page: c006cd19-697d-4dcb-b7a8-c4c756b90576:UI/ControllerAndroid
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                    688e9086377ac97b188bca442a9ad087: !BallsOfSteel.UI.ControllerScript,BallsOfSteel.Game
+                        Id: beb261d8-8e07-45f4-8111-5bebf8132e94
+                        UI: ref!! b207a123-ebc7-47a6-9057-a6dc88c6d943
+        -   Entity:
+                Id: 6acb9932-b557-4368-b9e0-5c2afbaaec60
+                Name: Camera
+                Components:
+                    cb05c737f793341cfb63b101222d7e87: !TransformComponent
+                        Id: 7ebbe347-ebd1-4991-b116-6a7f60dad180
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9c92ee6a3d31434b000b9b25f9e200e5: !CameraComponent
+                        Id: a3986109-512c-48f6-9994-9eee2b94bef6
+                        Name: null
+                        Projection: Orthographic
+                        Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
+        -   Entity:
+                Id: 8b07ebd9-7023-4561-abe8-abe0547b86eb
+                Name: WelcomeUI
+                Components:
+                    06fbb8dee73f11c2d631166d6de9bf79: !TransformComponent
+                        Id: 2b7c6133-851c-41e6-9556-7c6af8964fc0
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f11d22e79cc3637db51e26d309fa3c57: !UIComponent
+                        Id: 4274767b-8022-44b5-af05-aac3688feea8
+                        Enabled: false
+                        Page: e3cb0ba4-b00c-432b-a1e9-51429902625b:UI/WelcomeAndroid
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                    db9dff0171e46b1df307cba38316203f: !BallsOfSteel.UI.WelcomeScript,BallsOfSteel.Game
+                        Id: bdd6b886-8a7f-4cd3-a28c-3f85759f6bf2
+                        UI: ref!! 4274767b-8022-44b5-af05-aac3688feea8

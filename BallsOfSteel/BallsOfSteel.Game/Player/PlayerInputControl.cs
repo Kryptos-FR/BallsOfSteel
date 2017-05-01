@@ -9,6 +9,7 @@ using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Engine.Events;
 using SiliconStudio.Xenko.Input;
 using BallsOfSteel.Core;
+using Gamelogic;
 using SiliconStudio.Core;
 using SiliconStudio.Xenko.Physics;
 
@@ -16,6 +17,9 @@ namespace BallsOfSteel.Player
 {
     public class PlayerInputControl : SyncScript
     {
+        public float MaximumHitpoints { get; set; } = 100;
+        private float currentHitpoints = 0;
+
         public CameraComponent Camera { get; set; }
 
         // Physical controller, keyboard or a networking device
@@ -27,15 +31,36 @@ namespace BallsOfSteel.Player
 
         public Entity ModelChildEntity { get; set; }
 
+        public MahineGunScript MachineGun { get; set; }
+
         [Display("Run Speed")]
         public float MaxRunSpeed { get; set; } = 10;
 
         private float yawOrientation;
 
+        public override void Start()
+        {
+            currentHitpoints = MaximumHitpoints;
+        }
+
+        public void TakeDamage(float amount)
+        {
+            currentHitpoints -= amount;
+
+            // TODO: Die
+
+        }
+
         public override void Update()
         {
             if (Character == null)
                 return;
+
+            // Jump
+            if (ContolInput.Jump)
+            {
+                if (Character.IsGrounded) Character.Jump();
+            }
 
             // Left stick: movement
             var moveDirection = ContolInput.WalkDirection;
@@ -56,7 +81,7 @@ namespace BallsOfSteel.Player
             {
                 yawOrientation = MathUtil.RadiansToDegrees((float)Math.Atan2(worldSpeed.Z, -worldSpeed.X) + MathUtil.PiOverTwo);
             }
-
+            
             // Left stick: movement
             var faceDirection = ContolInput.FaceDirection;
             if (faceDirection.Length() > 0.001)
@@ -73,6 +98,10 @@ namespace BallsOfSteel.Player
                 }
             }
 
+            if (MachineGun != null)
+            {
+                MachineGun.IsShooting = ContolInput.Shoot;
+            }
 
             ModelChildEntity.Transform.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(yawOrientation), 0, 0);
 

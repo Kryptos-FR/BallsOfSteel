@@ -1,0 +1,60 @@
+!PrefabAsset
+Id: 05146b7f-b17b-4703-882e-2a5f0117a4bd
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Hierarchy:
+    RootPartIds:
+        - c7dbf242-e3d6-4675-893a-eadfc7c7a061
+    Parts:
+        -   Entity:
+                Id: 2d1963d4-3793-4bb4-9276-9805c65889bc
+                Name: Model
+                Components:
+                    c3cf5ebb3a08a9272b0adaf078a698d4: !TransformComponent
+                        Id: ff5203d8-ddf0-43cb-8855-17db200e8bc3
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bfbb6ffd5f50e084a04e5c3c70b15dc5: !ModelComponent
+                        Id: f13ba83a-d2da-4395-ad3c-bb0aeec1e374
+                        Model: 73e7f76d-df86-4f45-ad0d-ac8ce9ceeaa0:Models/BulletModel
+                        Materials: {}
+        -   Entity:
+                Id: c7dbf242-e3d6-4675-893a-eadfc7c7a061
+                Name: Silver bullet
+                Components:
+                    259e049495ec1ed1de83624ed95858a1: !TransformComponent
+                        Id: b4aa1746-c1fa-4f62-b0e2-37cddfe5a2ea
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            15c71d90b92ddd24e9f3b39cae744607: ref!! ff5203d8-ddf0-43cb-8855-17db200e8bc3
+                    253e2ec3e03b788fcb3d892e04e89978: !RigidbodyComponent
+                        Id: 60b7d463-a6e6-4f2f-b958-b1425e630b55
+                        CollisionGroup: DebrisFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        IsKinematic: false
+                        Mass: 1.0
+                        LinearDamping: 0.0
+                        AngularDamping: 0.0
+                        OverrideGravity: false
+                        Gravity: {X: 0.0, Y: 0.0, Z: 0.0}
+                        NodeName: null
+                        ColliderShapes:
+                            f236cd53577f262968735cb498f9ed03: !CapsuleColliderShapeDesc
+                                Length: 0.075
+                                Radius: 0.04
+                                Orientation: UpX
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    8ab1694584956a1176faf2fec1988aa3: !Gamelogic.DamagingScript,BallsOfSteel.Game
+                        Id: 6b27b398-7341-4516-833a-bdc5ede57138
+                        DamagePerHit: 10.0

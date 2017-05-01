@@ -1,0 +1,118 @@
+!PrefabAsset
+Id: 3869a99d-ced0-4d71-9378-cfc54cdd1ae2
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Hierarchy:
+    RootPartIds:
+        - 161fc83e-2b28-45eb-bc18-fd49774e7aec
+    Parts:
+        -   Entity:
+                Id: 161fc83e-2b28-45eb-bc18-fd49774e7aec
+                Name: Sword Trail
+                Components:
+                    78ad334db785174df8256dd5200cf65b: !TransformComponent
+                        Id: 5955ad61-61d1-43fa-9949-4892d7e140eb
+                        Position: {X: -1.35310287E-07, Y: 2.856554E-07, Z: -1.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    445c4e70f186257861244a993506352b: !ParticleSystemComponent
+                        Id: 815122a5-caf9-4520-bad6-c6c4fa47b9c8
+                        Control:
+                            ResetSeconds: 5.0
+                            Control: Play
+                        Color: {R: 1.0, G: 0.55573523, B: 0.329411745, A: 1.0}
+                        Speed: 1.0
+                        ParticleSystem:
+                            Settings: {}
+                            BoundingShape: null
+                            Emitters:
+                                fdadb25dced43126bdd787aa44a7e459:
+                                    ParticleLifetime: {X: 0.2, Y: 0.2}
+                                    SortingPolicy: ByOrder
+                                    ShapeBuilder: !ShapeBuilderTrail
+                                        SmoothingPolicy: Best
+                                        Segments: 5
+                                        EdgePolicy: Edge
+                                        TextureCoordinatePolicy: Stretched
+                                        TexCoordsFactor: 0.0
+                                        UVRotate:
+                                            FlipX: true
+                                            FlipY: false
+                                            UVClockwise: Degree90
+                                    Material: !ParticleMaterialComputeColor
+                                        AlphaAdditive: 1.0
+                                        ComputeColor: !ComputeBinaryColor
+                                            Operator: Multiply
+                                            LeftChild: !ComputeTextureColor
+                                                Texture: 4d309aa4-d87a-4188-8172-f0f986f52602:Textures/Trail01
+                                                FallbackValue:
+                                                    Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                                                Scale: {X: 1.0, Y: 1.0}
+                                                Offset: {X: 0.0, Y: 0.0}
+                                                Swizzle: null
+                                            RightChild: !ComputeFloat4
+                                                Value: {X: 3.0, Y: 3.0, Z: 3.0, W: 1.0}
+                                        UVBuilder: null
+                                        ForceTexCoords: false
+                                    Spawners:
+                                        a3581e56e4df085c858741b55cf8d454: !SpawnerPerFrame
+                                            LoopCondition: Looping
+                                            Delay: {X: 0.0, Y: 0.0}
+                                            Duration: {X: 1.0, Y: 1.0}
+                                            SpawnCount: 1.0
+                                            Framerate: 60.0
+                                    Initializers:
+                                        22a4d8e137dd86c1b2b511861081f784: !InitialSpawnOrder
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                        2e8d1921212aef872def7d59ae7c5e5c: !InitialDirectionSeed
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            SeedOffset: 0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: true
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: true
+                                            DirectionMin: {X: 0.0, Y: 0.0, Z: 20.0}
+                                            DirectionMax: {X: 0.0, Y: 0.0, Z: 20.0}
+                                    Updaters:
+                                        d789cd7aa311676b91eccabd3669b98f: !UpdaterSizeOverTime
+                                            InheritPosition: true
+                                            Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                                            InheritRotation: true
+                                            Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                                            InheritScale: true
+                                            Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                                            ScaleUniform: 1.0
+                                            DisplayParticlePosition: false
+                                            DisplayParticleRotation: false
+                                            DisplayParticleScale: false
+                                            DisplayParticleScaleUniform: false
+                                            SamplerMain: !ComputeCurveSamplerFloat
+                                                Curve: !ComputeAnimationCurveFloat
+                                                    KeyFrames:
+                                                        f3695e21addbea5d10a82df4a1cc6476:
+                                                            Key: 0.0
+                                                            Value: 0.1
+                                                            TangentType: Linear
+                                                        c140937c0aa21ff57b64a42978a4b15f:
+                                                            Key: 0.9
+                                                            Value: 0.0
+                                                            TangentType: Linear
+                                            SamplerOptional: null
+                                            SeedOffset: 0

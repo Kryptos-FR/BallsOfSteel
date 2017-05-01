@@ -11,6 +11,7 @@ Hierarchy:
         - ae4b364e-22e6-4c86-9538-571945e8cfe7
         - 55623da2-aeee-4c07-86d3-ad353adf6725
         - 9073be19-cb0e-4a17-87a4-de471de98667
+        - 6234630c-cee6-4241-8593-f4212db8c540
     Parts:
         -   Entity:
                 Id: 2b8ec950-6fa2-43d5-8168-2ba243cbf9a8
@@ -18,8 +19,8 @@ Hierarchy:
                 Components:
                     5803e08c8c1850187abeee7b86354e67: !TransformComponent
                         Id: 42ab1b8b-37c9-408d-b0a9-80a495d5dd27
-                        Position: {X: 10.625, Y: 7.5, Z: 0.0}
-                        Rotation: {X: -0.1830127, Y: 0.683012664, Z: 0.1830127, W: 0.683012664}
+                        Position: {X: 15.65952, Y: 14.4105072, Z: 0.0}
+                        Rotation: {X: -0.284714758, Y: 0.6472538, Z: 0.284714758, W: 0.6472538}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
@@ -43,7 +44,7 @@ Hierarchy:
                         Id: 2964509f-ecae-46d6-85bf-9c3c7b8f90a4
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
                     fc8f383ed0a092389833c07321ad6a9b: !ModelComponent
                         Id: 86662afe-c6f1-4403-956f-3814fda6956c
@@ -62,6 +63,40 @@ Hierarchy:
                             98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
+        -   Entity:
+                Id: 6234630c-cee6-4241-8593-f4212db8c540
+                Name: Machine gun hazard
+                Components:
+                    78dbbcb71d2a0c4a4fb09cf92dcb7f97: !TransformComponent
+                        Id: f5f77cdd-4099-4a70-bcaf-1b2b1a0f2429
+                        Position: {X: 3.80096054, Y: 0.5, Z: 4.9591074}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a83cb7ffe423bad33baca820add63f46: ref!! def3b5eb-6a83-4ffe-bc51-b9b2dee08c71
+                    5a189ed221e981897412ea6b6ca5e50b: !ModelComponent
+                        Id: 91abdb75-03fd-434b-872b-299fdd6b00ca
+                        Model: 3e6401fc-3403-4810-ac61-f0ce799b99a3:Models/MachinegunModel
+                        Materials: {}
+        -   Entity:
+                Id: 855c8cc3-1a75-49bf-977b-0b93bc73d55e
+                Name: Gunpoint
+                Components:
+                    a674882fc5d4dc96ab93d61ebb948a4e: !TransformComponent
+                        Id: def3b5eb-6a83-4ffe-bc51-b9b2dee08c71
+                        Position: {X: 0.0, Y: 0.1548201, Z: -0.7910748}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bfe37154c367a8bda16a9b56e926c1cf: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                        Id: 3543c89a-8c44-4cb0-ba86-7c73760941ca
+                        BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
+                        IsShooting: true
+                        MuzzleFlash: null
+                        Cooldown: 0.2
+                        ReloadCooldown: 1.2
+                        MagazineCapacity: 16
+                        BulletInitialSpeed: 20.0
         -   Entity:
                 Id: 9073be19-cb0e-4a17-87a4-de471de98667
                 Name: MainGameLogic

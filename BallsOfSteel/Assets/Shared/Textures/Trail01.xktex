@@ -1,0 +1,8 @@
+!Texture
+Id: 4d309aa4-d87a-4188-8172-f0f986f52602
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Textures/Trail01.png
+Type: !ColorTextureType
+    UseSRgbSampling: false
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

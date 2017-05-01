@@ -44,7 +44,7 @@ namespace BallsOfSteel.Gamelogic
                     damageOwner = damageOwner.GetParent();
 
                 if (damageOwner == character.Entity)
-                    return; // No self inflicted wounds
+                    continue; // No self inflicted wounds
 
                 character.TakeDamage(damage.DamagePerHit);
                 // TODO: Spawn on-hit effects

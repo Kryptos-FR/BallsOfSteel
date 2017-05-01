@@ -17,21 +17,24 @@ namespace Gamelogic
     {
         // Declared public member fields and properties will show in the game studio
 
-        private Vector3[] animPos = new Vector3[3];
-        private Vector3[] animRot = new Vector3[3];
+        private Vector3[] animPos = new Vector3[4];
+        private Vector3[] animRot = new Vector3[4];
 
         public float SwingDuration { get; set; } = 0.4f;
         private float swingCooldown = 0;
+        public float SwingCooldown => swingCooldown;
 
         public override void Start()
         {
             animPos[0] = new Vector3(-0.585f, 0f, 0f);
             animPos[1] = new Vector3(0f, 0f, -0.75f);
             animPos[2] = new Vector3(0.5f, 0f, -0.5f);
+            animPos[3] = new Vector3(0.8f, 0f, -0.325f);
 
             animRot[0] = new Vector3(2.0944f, 0f, 0f);
             animRot[1] = new Vector3(0f, 0f, 1.5708f);
             animRot[2] = new Vector3(0f, -0.523599f, 1.5708f);
+            animRot[3] = new Vector3(0f, -1.3962634f, 1.5708f);
 
             // Initialization of the script.
         }
@@ -62,7 +65,7 @@ namespace Gamelogic
 
         public void Slash()
         {
-            if (swingCooldown > 0)
+            if (swingCooldown > 0.1f) // Allow to start a new swing before the previous one finishes
                 return;
 
             EnableDamage();

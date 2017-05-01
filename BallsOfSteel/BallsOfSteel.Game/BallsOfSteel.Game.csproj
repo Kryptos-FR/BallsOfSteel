@@ -176,6 +176,7 @@
     <Compile Include="Network\Client.cs" />
     <Compile Include="Network\Server.cs" />
     <Compile Include="Player\IControlInput.cs" />
+    <Compile Include="Player\NetworkInput.cs" />
     <Compile Include="Player\PlayerInputControl.cs" />
     <Compile Include="Player\XboxInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

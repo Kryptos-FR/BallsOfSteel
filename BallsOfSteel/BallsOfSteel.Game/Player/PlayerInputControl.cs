@@ -188,7 +188,10 @@ namespace BallsOfSteel.Player
 
             if (MachineGun != null)
             {
-                MachineGun.IsShooting = ControlInput.Shoot;
+                var canShoot = ControlInput.Shoot & !ControlInput.Attack;
+                if (Sword != null)
+                    canShoot &= Sword.SwingCooldown <= 0;
+                MachineGun.IsShooting = canShoot;
             }
 
             if (Sword != null && ControlInput.Attack)

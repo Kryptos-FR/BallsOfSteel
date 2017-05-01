@@ -40,7 +40,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    fecf6cd882a2517bc91470e5f2770e76: !BallsOfSteel.Client,BallsOfSteel.Game
+                    8f858fd54b5b6e7746f48026236aaf22: !BallsOfSteel.Client,BallsOfSteel.Game
                         Id: 8c72c624-e51a-4d03-b8d7-369565eb5b9f
                         hostIp: 127.0.0.1
                         hostPort: 3748
@@ -97,7 +97,7 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
-                    0b914a64b360a70c5051fa8584dd17a3: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                    e55780119f2aaf30a6df627d3a95114a: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
                         Id: 963f990f-3dd7-452f-8c31-cc9c8603f8e9
                         KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
                         TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}

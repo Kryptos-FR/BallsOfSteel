@@ -8,19 +8,19 @@ Materials:
     cd6d720fe27952f5f050d4222c6a8982:
         Name: glowMT
         MaterialInstance:
-            Material: null
+            Material: bb839871-74fc-4c85-b73d-914668af22ba:Materials/Emissive
     10382906426b92d80fa84dd0ad073f5a:
         Name: semiGlossMT
         MaterialInstance:
-            Material: null
+            Material: 16568d7e-ae05-44e5-bd1f-fedc20c2fe7a:Materials/BodyGray
     fe3396f29aac9d236fb47385252a2103:
         Name: bladeMT
         MaterialInstance:
-            Material: null
+            Material: cc06d912-127f-4abe-a344-080c6b015e19:Materials/Blade
     25ec23d8377696f66db14e4ed5835ec3:
         Name: glossMT
         MaterialInstance:
-            Material: null
+            Material: 6b22740d-6417-43ef-9841-47a1e0cf3990:Materials/BodyWhite
 Skeleton: null
 ~SourceHashes:
-    5062d8907e3b98e04e9fe5330aadd9b5~../../../Resources/Models/SwordModel.fbx: f21eb0d2f6563aa8f6a26b74477d96d5
+    0ea86421f824f6ebd5fb29e06ef180ce~../../../Resources/Models/SwordModel.fbx: f21eb0d2f6563aa8f6a26b74477d96d5

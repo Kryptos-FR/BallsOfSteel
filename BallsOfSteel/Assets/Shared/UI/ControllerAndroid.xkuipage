@@ -71,9 +71,9 @@ Hierarchy:
                 Margin: {Left: 30.0, Top: 30.0, Right: 30.0, Bottom: 30.0}
                 Children:
                     69fe6ea2226e68ab4dab0fb292e5a23f: !Button ref!! 2fcce14e-0fab-4bc7-95e0-e290e3c2cc9e
+                    b0398a9448bb299b4da02abd4327775e: !Button ref!! 81913373-211b-45e2-83ff-48235ace0b7f
                     1607d0942110eb82042a2042aa07065f: !Grid ref!! 9409d9ef-cee6-4f48-a316-4e608881d85d
                     46347d3194a8c636370a294052192d46: !Grid ref!! 3fa8b02d-ee9c-4f97-8649-42316950277d
-                    c6f3f92767dbc02697361dca441662c8: !Button ref!! 81913373-211b-45e2-83ff-48235ace0b7f
                     23a32275b4417aae4595d921ac3731cd: !Border ref!! 99f3013d-ee9b-4b37-a46f-35ab18261419
                 RowDefinitions: {}
                 ColumnDefinitions: {}
@@ -88,7 +88,7 @@ Hierarchy:
                 Height: 140.0
                 HorizontalAlignment: Right
                 Margin: {Top: 250.0, Bottom: 270.0}
-                Name: PickupButton
+                Name: AttackButton
                 Padding: {Left: 20.0, Top: 10.0, Right: 20.0, Bottom: 10.0}
                 Content: !TextBlock ref!! f88a5211-8c25-408b-8096-56f797c17488
                 PressedImage: !SpriteFromSheet
@@ -107,7 +107,7 @@ Hierarchy:
                 Height: 100.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
-                Margin: {}
+                Margin: {Left: 75.0, Top: 75.0}
                 Name: Rthumb
                 Source: !SpriteFromTexture
                     Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb
@@ -166,7 +166,7 @@ Hierarchy:
                 Height: 100.0
                 HorizontalAlignment: Left
                 VerticalAlignment: Top
-                Margin: {}
+                Margin: {Left: 75.0, Top: 75.0}
                 Name: Lthumb
                 Source: !SpriteFromTexture
                     Texture: 310c27cf-1783-438e-85f7-05836e4237e4:UI/Thumb

@@ -1,0 +1,429 @@
+!SceneAsset
+Id: 671cfa15-e0a3-4fa7-b7c5-119f2e91c019
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootPartIds:
+        - 4f55e549-5627-4186-bfbd-9bfda4215a99
+        - 3be332e3-8236-4095-aaab-1e2ae38da499
+        - 116886d4-b015-45a4-a43e-20652f2b2676
+        - f701f268-cb0a-4d19-8a42-9225358f514c
+        - 8e4c34ac-5f9e-47e2-bfa1-c588a38c6a39
+        - 0c64011f-fb71-445c-a740-e832343b8483
+        - dbf969bc-b37d-4089-b8f8-074a50b7a850
+        - d73fe77b-85a8-4860-a6df-fe494e321599
+        - c0077553-2ecf-41c2-ae7d-126bc2cb084e
+        - 98deddc3-ab92-4b5f-926b-c3f674dd5d5d
+        - 55e88378-3c1d-4214-a775-3e005dca87c9
+    Parts:
+        -   Entity:
+                Id: 0c64011f-fb71-445c-a740-e832343b8483
+                Name: Machine gun hazard
+                Components:
+                    78dbbcb71d2a0c4a4fb09cf92dcb7f97: !TransformComponent
+                        Id: 4154ea6f-a63a-4f81-9cf9-9504bddd6b95
+                        Position: {X: 3.80096054, Y: 0.5, Z: 4.9591074}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a83cb7ffe423bad33baca820add63f46: ref!! 92568612-d681-4d11-b296-da4c05115a44
+                    5a189ed221e981897412ea6b6ca5e50b: !ModelComponent
+                        Id: 239bce10-7962-4a17-a09e-60d83c4f1056
+                        Model: 3e6401fc-3403-4810-ac61-f0ce799b99a3:Models/MachinegunModel
+                        Materials: {}
+        -   Entity:
+                Id: 116886d4-b015-45a4-a43e-20652f2b2676
+                Name: Skybox
+                Components:
+                    ba190c00a8b47036ea31a3d45ec884bd: !TransformComponent
+                        Id: 35379b0b-1610-45b8-8520-f74334be8ddf
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c0bb89a8da50bab16424df8b49851b08: !BackgroundComponent
+                        Id: 130f2e53-5f5c-4a64-abc3-cc6d5a4c303b
+                        Texture: 84f1f9ea-e5ec-4c52-bdef-9704fff2fc6e:Skybox Texture
+                    33a61fd218b1204a32a2422d3645148d: !LightComponent
+                        Id: 01c071bc-adad-4165-bb09-03c0b90f2507
+                        Type: !LightSkybox
+                            Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
+        -   Entity:
+                Id: 3be332e3-8236-4095-aaab-1e2ae38da499
+                Name: Directional light
+                Components:
+                    21e30de78e7545f69ea7c232711368ff: !TransformComponent
+                        Id: 9ce7d33b-5ae7-42e7-8e5e-257013c46e58
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.258819044, W: -4.222196E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8edd0ba7a73f7ec06f3ad6468cbd692c: !LightComponent
+                        Id: bd3a888b-178d-4a50-aa92-c7b9f663ad79
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 400384b7-3cae-484f-85f3-667665a45204
+                Name: Gunpoint
+                Components:
+                    a674882fc5d4dc96ab93d61ebb948a4e: !TransformComponent
+                        Id: 92568612-d681-4d11-b296-da4c05115a44
+                        Position: {X: 0.0, Y: 0.1548201, Z: -0.7910748}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    bfe37154c367a8bda16a9b56e926c1cf: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                        Id: 41291cca-1b39-43f5-a208-b96d40b4c02d
+                        BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
+                        IsShooting: true
+                        MuzzleFlash: null
+                        Cooldown: 0.2
+                        ReloadCooldown: 1.2
+                        MagazineCapacity: 16
+                        BulletInitialSpeed: 20.0
+        -   Entity:
+                Id: 4f55e549-5627-4186-bfbd-9bfda4215a99
+                Name: Camera
+                Components:
+                    5803e08c8c1850187abeee7b86354e67: !TransformComponent
+                        Id: 84194f98-7046-456b-b851-c5e75a695cac
+                        Position: {X: 15.65952, Y: 14.4105072, Z: 0.0}
+                        Rotation: {X: -0.284714758, Y: 0.6472538, Z: 0.284714758, W: 0.6472538}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
+                        Id: d725f5d8-9048-4d63-a3b6-19be361c8c4f
+                        Name: null
+                        Projection: Perspective
+                        Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
+                    4719b532dce223f971c10446da40690b: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                        Id: f7c544eb-6b00-465e-ac85-60a10b767853
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 90.0, Y: 60.0}
+                        TouchRotationSpeed: {X: 60.0, Y: 40.0}
+        -   Folder: Bridge
+            Entity:
+                Id: 55e88378-3c1d-4214-a775-3e005dca87c9
+                Name: Entity
+                Components:
+                    9ef982c0ddb2120edd48176c101955f1: !TransformComponent
+                        Id: fad43b85-4518-4a05-9264-fa62c80b8069
+                        Position: {X: -3.0, Y: -0.5, Z: -3.0}
+                        Rotation: {X: 0.0, Y: -0.9078262, Z: 0.0, W: 0.4193466}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            1dbe1472ad67fda22240f0c18385211d: ref!! b4edb9bb-9e81-4844-909e-d7fd72e8726f
+                            88b73bd800800e5099cdd55d96d7ad8e: ref!! 9e34d8a2-90c9-41aa-af9b-ec69454ca24f
+                            91b34cf82d0d958e8550881ff4d76bd0: ref!! fe0fe71d-c705-4e3b-b6ed-059e7a60e9a5
+                            252239fe3bf324a4d4aaf984fa8904e5: ref!! 67cf3512-5915-4457-b08e-989a6d84354c
+                            2b56d25659f9699d4284e824c1bae9b1: ref!! 7958dd1f-b7c5-40c3-846d-e46bc376c6d0
+        -   Folder: null
+            Entity:
+                Id: 5e314914-d67a-44be-9704-79a1cd55f08f
+                Name: Cube
+                Components:
+                    49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
+                        Id: fe0fe71d-c705-4e3b-b6ed-059e7a60e9a5
+                        Position: {X: 5.0, Y: 1.0, Z: -0.5000001}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    570e4e42bd53001b67a939a08a081238: !ModelComponent
+                        Id: 1506c2bc-ebfa-43c3-b8ba-43ee0664b26f
+                        Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
+                        Materials: {}
+                    9ce80df92d1a82758cb19b6e903d60de: !StaticColliderComponent
+                        Id: 488267ff-7f9c-4173-8157-7ad56fce7125
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            a9c797fe4c0def8f3fd9189146343b17: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: null
+            Entity:
+                Id: 7d0923ee-a41f-4e46-be5b-0d24d09d2921
+                Name: Cube
+                Components:
+                    49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
+                        Id: 7958dd1f-b7c5-40c3-846d-e46bc376c6d0
+                        Position: {X: -4.5, Y: 1.0, Z: -0.50000006}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    570e4e42bd53001b67a939a08a081238: !ModelComponent
+                        Id: fb7c072d-e07b-4107-b11a-4e81b3d211ab
+                        Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
+                        Materials: {}
+                    f2a188fce5bee8619fa3c8a5b99c3447: !StaticColliderComponent
+                        Id: 51d6dbde-5526-443c-89bb-3b1c89bdaca5
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d4207003eaf6a037426c410bb0e36a67: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 850d9959-7da8-4fe1-b502-8b39bb3bbbec
+                Name: Cube
+                Components:
+                    49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
+                        Id: b4edb9bb-9e81-4844-909e-d7fd72e8726f
+                        Position: {X: 0.0, Y: 3.0, Z: -0.49999994}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 7.389056, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    570e4e42bd53001b67a939a08a081238: !ModelComponent
+                        Id: 0bc7de9b-23cc-4424-8019-c12f2f448371
+                        Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
+                        Materials: {}
+                    ac98fe77ae0c47914b20a4b32a93dec1: !StaticColliderComponent
+                        Id: 79f0336c-12bb-4ebf-9a14-447e258302a4
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            5e685b7b593760241a3b7461ce53a259: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 8e4c34ac-5f9e-47e2-bfa1-c588a38c6a39
+                Name: MainGameLogic
+                Components:
+                    f147b87e26407ea1bb28118cbfa2ba2a: !TransformComponent
+                        Id: 10130d8d-c24b-4b1e-9f69-46e0142f682a
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    cdcf97a0560b94226e1df21ca7d93c58: !Gamelogic.MainGameLogic,BallsOfSteel.Game
+                        Id: 41e51596-7055-4c8c-9247-eea67157d516
+                        MainCamera: ref!! d725f5d8-9048-4d63-a3b6-19be361c8c4f
+                        NewXboxPlayerPrefab: 66c57634-cab8-4dac-8897-89ed55152c9a:XboxPlayer
+        -   Folder: Borders
+            Entity:
+                Id: 98deddc3-ab92-4b5f-926b-c3f674dd5d5d
+                Name: WestWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 6977e279-9357-4529-b1c6-d5228d59afec
+                        Position: {X: 9.999998, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: -0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    003199dae18c99e4b39ab488e717f3cb: !StaticColliderComponent
+                        Id: a1bba964-d735-4b44-9c23-5b18750aef05
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            7387e3c64746b9673681c71ef55c69bc: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Folder: null
+            Entity:
+                Id: b7448a67-08ea-4ea1-85f7-e92ef5ba3199
+                Name: Cube
+                Components:
+                    49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
+                        Id: 67cf3512-5915-4457-b08e-989a6d84354c
+                        Position: {X: -3.5, Y: 2.0, Z: -0.50000006}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    570e4e42bd53001b67a939a08a081238: !ModelComponent
+                        Id: 8e5c1cdb-dabf-4087-afb4-7777b1b338ca
+                        Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
+                        Materials: {}
+                    637768045688d2f21f9b6d3f191a05bc: !StaticColliderComponent
+                        Id: c714c36c-d455-4d2c-80e1-3ab32717dfc2
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            25f3bef2fc176ed9fba62e9c420e67e2: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: Borders
+            Entity:
+                Id: c0077553-2ecf-41c2-ae7d-126bc2cb084e
+                Name: SouthWall
+                Components:
+                    78c3b26dd5a52fe2ce5a2bd886b6b189: !StaticColliderComponent
+                        Id: a572dcdc-8456-45aa-aec3-0745b4bccfbf
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 0141517a-da86-406e-b186-49cc02760364
+                        Position: {X: 0.0, Y: 0.0, Z: 9.999999}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Folder: Borders
+            Entity:
+                Id: d73fe77b-85a8-4860-a6df-fe494e321599
+                Name: EastWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 3a8db706-22ba-479e-b7b1-67df1e90ffb0
+                        Position: {X: -9.999998, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    383f11985cf0300f36403a9dcf262812: !StaticColliderComponent
+                        Id: 7e917416-4dd2-484f-b41c-93d3e6afad6e
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Folder: Borders
+            Entity:
+                Id: dbf969bc-b37d-4089-b8f8-074a50b7a850
+                Name: NorthWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 3c8c81d8-474c-45d3-8144-887672ed31a4
+                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    58972e4af8966c241eb368916113f4ad: !StaticColliderComponent
+                        Id: 1be94232-8a27-44d3-acbf-8451221ac901
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Entity:
+                Id: e8edb905-7197-4838-85b1-c1dfa949e168
+                Name: Cube
+                Components:
+                    49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
+                        Id: 9e34d8a2-90c9-41aa-af9b-ec69454ca24f
+                        Position: {X: 4.0, Y: 2.0, Z: -0.50000006}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 1.0, Z: 2.0}
+                        Children: {}
+                    570e4e42bd53001b67a939a08a081238: !ModelComponent
+                        Id: e7e5676f-009b-45fa-85ca-89c00756f2b7
+                        Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
+                        Materials: {}
+                    6affaad67bf8a57763362f187a99becc: !StaticColliderComponent
+                        Id: 0d041588-6cd0-4da0-b342-a8fca6f66d3a
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            a13632f76514bc37ccd3ef6511387aea: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: f701f268-cb0a-4d19-8a42-9225358f514c
+                Name: Ground
+                Components:
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: 0ef3d1b3-a028-436a-bd4a-dad02d61ea67
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    fc8f383ed0a092389833c07321ad6a9b: !ModelComponent
+                        Id: 6318a912-ee77-4fa5-a69e-41ce823207a7
+                        Model: f47dec17-c40c-4ee1-8331-f2195656b921:Ground
+                        Materials: {}
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: 48b056af-ebfd-481a-9efd-e6c82c34acf4
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0

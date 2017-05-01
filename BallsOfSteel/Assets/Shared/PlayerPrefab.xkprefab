@@ -19,6 +19,7 @@ Hierarchy:
                             2b862c757ef899bc6d7ea7b4b0f2ab1b: ref!! b43c8ded-0057-423a-b5f3-5eba2854ed75
                     9bb6c79213feba3464b9eec76e80317f: !Gamelogic.MahineGunScript,BallsOfSteel.Game
                         Id: 0f18d35e-2b07-416c-81c6-c41bc14d2022
+                        GunSound: dcf6fede-3253-49d7-a4a7-2364d17878cc:Audio/gun
                         BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
                         IsShooting: true
                         MuzzleFlash: ref!! 383935bf-6ddd-4b75-9d80-274b1f2ef5c3
@@ -73,6 +74,8 @@ Hierarchy:
                     7b6e41af416ca7e438259e1272fb5e9a: !BallsOfSteel.Player.PlayerInputControl,BallsOfSteel.Game
                         Id: bc44134c-8ee6-4c85-9399-c4b7ddebbe2a
                         MaximumHitpoints: 100.0
+                        JumpSound: 2af4149a-2e09-44ea-967d-367ee18989d9:Audio/jump
+                        SpawnSound: a0bce443-e3f3-43e0-85e8-9e9e5c2b65be:Audio/respawn
                         Camera: null
                         Character: ref!! 93eae9f5-41c1-4915-b4df-0d749774a4cb
                         ModelChildEntity: ref!! 29a6b6b1-bb6e-45ad-b9aa-063fe29e495d

@@ -1,0 +1,8 @@
+!Sound
+Id: 3d791a6d-3803-4231-8b8a-f2999d6f9d8c
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Audio/sword.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

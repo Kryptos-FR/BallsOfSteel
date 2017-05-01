@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Audio;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Engine.Events;
 using SiliconStudio.Xenko.Input;
@@ -19,6 +20,14 @@ namespace BallsOfSteel.Player
     {
         public float MaximumHitpoints { get; set; } = 100;
         private float currentHitpoints = 0;
+        
+        [Display("Jump", category: "Sound")]
+        public Sound JumpSound { get; set; }
+        private SoundInstance jumpSfxInstance;
+        
+        [Display("Spawn", category: "Sound")]
+        public Sound SpawnSound { get; set; }
+        private SoundInstance spawnSfxInstance;
 
         public CameraComponent Camera { get; set; }
 
@@ -51,6 +60,11 @@ namespace BallsOfSteel.Player
         {
             currentHitpoints = MaximumHitpoints;
             invulnerabilityCooldown = 1;
+            
+            jumpSfxInstance = JumpSound?.CreateInstance();
+            jumpSfxInstance?.Stop();
+            spawnSfxInstance = SpawnSound?.CreateInstance();
+            spawnSfxInstance?.Play();
         }
 
         public void TakeDamage(float amount)
@@ -89,6 +103,7 @@ namespace BallsOfSteel.Player
             isAlive = true;
             invulnerabilityCooldown = 1;
             currentHitpoints = MaximumHitpoints;
+            spawnSfxInstance?.Play();
         }
 
         protected void WaitingToRespawn()
@@ -127,7 +142,12 @@ namespace BallsOfSteel.Player
             // Jump
             if (ControlInput.Jump)
             {
-                if (Character.IsGrounded) Character.Jump();
+                if (Character.IsGrounded)
+                {
+                    jumpSfxInstance?.Stop();
+                    Character.Jump();
+                    jumpSfxInstance?.Play();
+                }
             }
 
             // Left stick: movement

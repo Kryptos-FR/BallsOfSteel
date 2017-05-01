@@ -1,0 +1,8 @@
+!Sound
+Id: 08f784c1-00c2-4d4f-a946-5a606c26ee24
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Audio/power-up.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

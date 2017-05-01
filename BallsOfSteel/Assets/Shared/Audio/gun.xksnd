@@ -1,0 +1,8 @@
+!Sound
+Id: dcf6fede-3253-49d7-a4a7-2364d17878cc
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Audio/gun.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

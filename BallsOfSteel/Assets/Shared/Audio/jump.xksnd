@@ -1,0 +1,8 @@
+!Sound
+Id: 2af4149a-2e09-44ea-967d-367ee18989d9
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Audio/jump.mp3
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

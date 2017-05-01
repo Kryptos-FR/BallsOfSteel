@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Audio;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Particles.Components;
@@ -14,7 +16,11 @@ using SiliconStudio.Xenko.Physics;
 namespace Gamelogic
 {
     public class MahineGunScript : SyncScript
-    {
+    {        
+        [Display("Gun", category: "Sound")]
+        public Sound GunSound { get; set; }
+        private SoundInstance gunSfxInstance;
+        
         // Declared public member fields and properties will show in the game studio
         public Prefab BulletPrefab { get; set; }
 
@@ -39,6 +45,8 @@ namespace Gamelogic
         public override void Start()
         {
             bulletsRemaining = MagazineCapacity;
+            gunSfxInstance = GunSound?.CreateInstance();
+            gunSfxInstance?.Stop();
         }
 
         public override void Update()
@@ -59,7 +67,9 @@ namespace Gamelogic
             {
                 bulletsRemaining = MagazineCapacity;
                 cooldownRemaining = ReloadCooldown;
-
+                
+                // Stop shoot sound effect
+                gunSfxInstance?.Stop();
                 // TODO Play reload sound effect
                 return;
             }
@@ -69,12 +79,18 @@ namespace Gamelogic
                 cooldownRemaining -= dt;
 
             if (!IsShooting || cooldownRemaining > 0f)
+            {
+                // Stop shoot sound effect
+                gunSfxInstance?.Stop();
                 return; // Won't or can't shoot
+            }
 
             bulletsRemaining--;
             ShootBullets(BulletPrefab, 2f, Entity.Transform.WorldMatrix);
 
-            // TODO Play shoot sound effect
+            // Play shoot sound effect
+            if (gunSfxInstance?.PlayState == SoundPlayState.Stopped)
+                gunSfxInstance?.Play();
 
             // Do stuff every new frame
         }

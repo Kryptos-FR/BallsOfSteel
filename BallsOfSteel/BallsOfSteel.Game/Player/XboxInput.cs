@@ -16,73 +16,86 @@ namespace BallsOfSteel.Player
 
         public float DeadZone { get; set; } = 0.25f;
 
-        // Non-normalized vector with which indicates the facing direction.
-        public Vector2 FaceDirection
-        {
-            get
-            {
-                var face = Input.GetRightThumbAny(DeadZone);
-
-                var moveLength = face.Length();
-                var isDeadZoneLeft = moveLength < DeadZone;
-                if (isDeadZoneLeft)
-                {
-                    face = Vector2.Zero;
-                }
-                else
-                {
-                    if (moveLength > 1)
-                    {
-                        moveLength = 1;
-                    }
-                    else
-                    {
-                        moveLength = (moveLength - DeadZone) / (1f - DeadZone);
-                    }
-
-                    face *= moveLength;
-                }
-
-                return face;
-            }
-        }
+        public int ControllerID { get; set; } = 0;
 
         // Indicates if the players wants to initiate jump this frame, regardless of if they can
-        public bool Jump { get { return false; } }
+        public bool Jump => didJump;
 
-        public Vector2 WalkDirection
-        {
-            get
-            {
-                var walk = Input.GetLeftThumbAny(DeadZone);
+        private bool wasJumpDown = false;
+        private bool didJump = false;
 
-                var moveLength = walk.Length();
-                var isDeadZoneLeft = moveLength < DeadZone;
-                if (isDeadZoneLeft)
-                {
-                    walk = Vector2.Zero;
-                }
-                else
-                {
-                    if (moveLength > 1)
-                    {
-                        moveLength = 1;
-                    }
-                    else
-                    {
-                        moveLength = (moveLength - DeadZone) / (1f - DeadZone);
-                    }
+        public bool Attack => didAttack;
 
-                    walk *= moveLength;
-                }
+        private bool wasAttackDown = false;
+        private bool didAttack = false;
 
-                return walk;
-            }
-        }
+        public Vector2 WalkDirection => walkDirection;
+
+        public Vector2 FaceDirection => faceDirection;
+
+        private Vector2 walkDirection = Vector2.Zero;
+
+        private Vector2 faceDirection = Vector2.Zero;
+
+        public bool Shoot => (faceDirection.LengthSquared() > 0);
 
         public override void Update()
         {
+            // Jump
+            var isJumpDown = Input.IsGamePadButtonDown(GamePadButton.A, ControllerID) || (Input.GetLeftTrigger(ControllerID) > DeadZone);
+            didJump = isJumpDown && !wasJumpDown;
+            wasJumpDown = isJumpDown;
 
+            // Jump
+            var isAttackDown = Input.IsGamePadButtonDown(GamePadButton.B, ControllerID) || (Input.GetRightTrigger(ControllerID) > DeadZone);
+            didAttack = isAttackDown && !wasAttackDown;
+            wasAttackDown = isAttackDown;
+
+            // Walking direction
+            walkDirection = Input.GetLeftThumb(ControllerID);
+
+            var moveLength = walkDirection.Length();
+            var isDeadZoneLeft = moveLength < DeadZone;
+            if (isDeadZoneLeft)
+            {
+                walkDirection = Vector2.Zero;
+            }
+            else
+            {
+                if (moveLength > 1)
+                {
+                    moveLength = 1;
+                }
+                else
+                {
+                    moveLength = (moveLength - DeadZone) / (1f - DeadZone);
+                }
+
+                walkDirection *= moveLength;
+            }
+
+            // Facing direction
+            faceDirection = Input.GetRightThumb(ControllerID);
+
+            var faceLength = faceDirection.Length();
+            var isDeadZoneRight = faceLength < DeadZone;
+            if (isDeadZoneRight)
+            {
+                faceDirection = Vector2.Zero;
+            }
+            else
+            {
+                if (faceLength > 1)
+                {
+                    faceLength = 1;
+                }
+                else
+                {
+                    faceLength = (faceLength - DeadZone) / (1f - DeadZone);
+                }
+
+                faceDirection *= faceLength;
+            }
         }
     }
 }

@@ -18,5 +18,9 @@ namespace BallsOfSteel.Player
 
         // Indicates if the players wants to initiate jump this frame, regardless of if they can
         bool Jump { get; }
+
+        bool Attack { get; }
+
+        bool Shoot { get; }
     }
 }

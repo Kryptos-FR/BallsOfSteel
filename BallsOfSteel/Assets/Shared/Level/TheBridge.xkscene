@@ -123,7 +123,7 @@ Hierarchy:
                 Components:
                     9ef982c0ddb2120edd48176c101955f1: !TransformComponent
                         Id: fad43b85-4518-4a05-9264-fa62c80b8069
-                        Position: {X: -3.0, Y: -0.5, Z: -3.0}
+                        Position: {X: -0.715836763, Y: -0.5, Z: -1.05510962}
                         Rotation: {X: 0.0, Y: -0.9078262, Z: 0.0, W: 0.4193466}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
@@ -139,14 +139,15 @@ Hierarchy:
                 Components:
                     49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
                         Id: fe0fe71d-c705-4e3b-b6ed-059e7a60e9a5
-                        Position: {X: 5.0, Y: 1.0, Z: -0.5000001}
+                        Position: {X: 6.0, Y: 1.0, Z: -0.5000002}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 1.0, Z: 2.0}
                         Children: {}
                     570e4e42bd53001b67a939a08a081238: !ModelComponent
                         Id: 1506c2bc-ebfa-43c3-b8ba-43ee0664b26f
                         Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
-                        Materials: {}
+                        Materials:
+                            cebc9ae9c5f3cd90447b4c612e9aa6bc~0: 57fc414f-487d-45f9-97fa-05f78bb043bf:Materials/TransparentWhite
                     9ce80df92d1a82758cb19b6e903d60de: !StaticColliderComponent
                         Id: 488267ff-7f9c-4173-8157-7ad56fce7125
                         CollisionGroup: StaticFilter
@@ -170,14 +171,15 @@ Hierarchy:
                 Components:
                     49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
                         Id: 7958dd1f-b7c5-40c3-846d-e46bc376c6d0
-                        Position: {X: -4.5, Y: 1.0, Z: -0.50000006}
+                        Position: {X: -5.5, Y: 1.0, Z: -0.5}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 1.0, Z: 2.0}
                         Children: {}
                     570e4e42bd53001b67a939a08a081238: !ModelComponent
                         Id: fb7c072d-e07b-4107-b11a-4e81b3d211ab
                         Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
-                        Materials: {}
+                        Materials:
+                            ddf6c2bbd25001b16c0fd7939d5a7088~0: 57fc414f-487d-45f9-97fa-05f78bb043bf:Materials/TransparentWhite
                     f2a188fce5bee8619fa3c8a5b99c3447: !StaticColliderComponent
                         Id: 51d6dbde-5526-443c-89bb-3b1c89bdaca5
                         CollisionGroup: StaticFilter
@@ -207,7 +209,8 @@ Hierarchy:
                     570e4e42bd53001b67a939a08a081238: !ModelComponent
                         Id: 0bc7de9b-23cc-4424-8019-c12f2f448371
                         Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
-                        Materials: {}
+                        Materials:
+                            6c272da836b5e9a037baf883d0ace0bb~0: 57fc414f-487d-45f9-97fa-05f78bb043bf:Materials/TransparentWhite
                     ac98fe77ae0c47914b20a4b32a93dec1: !StaticColliderComponent
                         Id: 79f0336c-12bb-4ebf-9a14-447e258302a4
                         CollisionGroup: StaticFilter
@@ -270,14 +273,15 @@ Hierarchy:
                 Components:
                     49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
                         Id: 67cf3512-5915-4457-b08e-989a6d84354c
-                        Position: {X: -3.5, Y: 2.0, Z: -0.50000006}
+                        Position: {X: -4.0, Y: 2.0, Z: -0.50000006}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 1.0, Z: 2.0}
                         Children: {}
                     570e4e42bd53001b67a939a08a081238: !ModelComponent
                         Id: 8e5c1cdb-dabf-4087-afb4-7777b1b338ca
                         Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
-                        Materials: {}
+                        Materials:
+                            530742ef54ba2576c295eb32eb6cd838~0: 57fc414f-487d-45f9-97fa-05f78bb043bf:Materials/TransparentWhite
                     637768045688d2f21f9b6d3f191a05bc: !StaticColliderComponent
                         Id: c714c36c-d455-4d2c-80e1-3ab32717dfc2
                         CollisionGroup: StaticFilter
@@ -375,14 +379,15 @@ Hierarchy:
                 Components:
                     49cd7df72ea94b77950a70e597d13ed8: !TransformComponent
                         Id: 9e34d8a2-90c9-41aa-af9b-ec69454ca24f
-                        Position: {X: 4.0, Y: 2.0, Z: -0.50000006}
+                        Position: {X: 4.5, Y: 2.0, Z: -0.50000006}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 2.0, Y: 1.0, Z: 2.0}
                         Children: {}
                     570e4e42bd53001b67a939a08a081238: !ModelComponent
                         Id: e7e5676f-009b-45fa-85ca-89c00756f2b7
                         Model: 66c5321e-9fa8-4e55-bdb1-958c8a5113e5:Models/Cube
-                        Materials: {}
+                        Materials:
+                            67b51bf4cde27bfc6cdb7cba7643bc32~0: 57fc414f-487d-45f9-97fa-05f78bb043bf:Materials/TransparentWhite
                     6affaad67bf8a57763362f187a99becc: !StaticColliderComponent
                         Id: 0d041588-6cd0-4da0-b342-a8fca6f66d3a
                         CollisionGroup: StaticFilter

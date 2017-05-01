@@ -67,6 +67,7 @@ namespace BallsOfSteel
             if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
             {
                 translation.Z = -KeyboardMovementSpeed.Z;
+                //Client.GetClient().PushInputUpdate(Vector3.UnitZ, -KeyboardMovementSpeed.Z);
             }
             else if (Input.IsKeyDown(Keys.S) || Input.IsKeyDown(Keys.Down))
             {

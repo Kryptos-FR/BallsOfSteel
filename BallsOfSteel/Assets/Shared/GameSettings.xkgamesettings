@@ -2,7 +2,7 @@
 Id: 11c15089-17b3-4580-8ab8-ebac84f08ec8
 SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
-DefaultScene: 13de92a9-e0cd-4168-9e61-97aff5b8c4bc:AlexAnotherSandbox
+DefaultScene: b2350b8a-61b5-4bdd-8c6c-ff05be314670:NetworkTestScene
 GraphicsCompositor: f7c7121f-c457-490a-8611-9c2403aba80f:GraphicsCompositor
 SplashScreenTexture: d26edb11-10bd-403c-b3c2-9c7fcccf25e5:XenkoDefaultSplashScreen
 SplashScreenColor: {R: 0, G: 0, B: 0, A: 255}

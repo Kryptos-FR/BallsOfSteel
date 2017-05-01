@@ -6,12 +6,12 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootPartIds:
-        - 6e6a2bee-7edc-4854-9b60-bd4d8a3408bf
-        - be56d4f7-498a-4150-8e82-cc7ae4ba1c88
         - b0a96df8-8467-463e-a4d9-8b2325d04fbe
         - 5e65e6a7-b202-425c-8cd5-e086d69dbbb8
         - 8819086b-2df4-484d-b64b-96ee7ce80da6
         - bb5bc16a-3a7a-4c32-8489-9dc7ec2e21b5
+        - 6e3d0b07-b5a2-4246-a1b6-07920a8359a6
+        - ce4bfed3-421c-4123-98d9-99c2cbdfa440
     Parts:
         -   Entity:
                 Id: 5e65e6a7-b202-425c-8cd5-e086d69dbbb8
@@ -31,19 +31,17 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
         -   Entity:
-                Id: 6e6a2bee-7edc-4854-9b60-bd4d8a3408bf
-                Name: Client
+                Id: 6e3d0b07-b5a2-4246-a1b6-07920a8359a6
+                Name: Server
                 Components:
-                    7b07057aa783eb1c87c942492b77e151: !TransformComponent
-                        Id: a6140088-a072-48d7-a6b9-3206efa0d3a3
+                    344196158bc06e0f4deb1ac1022e1740: !TransformComponent
+                        Id: 812f40b5-3dc3-49af-acac-058655ad8bb7
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    c61fcd72dc7dd5ada4f6a8196fe28eb2: !BallsOfSteel.Client,BallsOfSteel.Game
-                        Id: 8c72c624-e51a-4d03-b8d7-369565eb5b9f
-                        hostIp: 127.0.0.1
-                        hostPort: 3748
+                    d6cd02b7ee52a264a014a3f2c7ef289f: !BallsOfSteel.Server,BallsOfSteel.Game
+                        Id: 44c32989-381a-45fc-8541-630db43e8034
         -   Entity:
                 Id: 8819086b-2df4-484d-b64b-96ee7ce80da6
                 Name: Directional light
@@ -106,16 +104,16 @@ Hierarchy:
                         MouseRotationSpeed: {X: 90.0, Y: 60.0}
                         TouchRotationSpeed: {X: 60.0, Y: 40.0}
         -   Entity:
-                Id: be56d4f7-498a-4150-8e82-cc7ae4ba1c88
-                Name: Sphere
+                Id: ce4bfed3-421c-4123-98d9-99c2cbdfa440
+                Name: MainGameLogic
                 Components:
-                    bbbd7d4d164be2121a0e449086438c79: !TransformComponent
-                        Id: af6e4257-e99c-4c8c-974a-950c92f633d1
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                    3f53c790d29b798048a7ab7d5ede7ca3: !TransformComponent
+                        Id: 57268d00-81d3-49a5-bb9c-e6988b80364e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    c1da40a03fe1a0a2373ca8e70f59d45c: !ModelComponent
-                        Id: 71242c81-12a2-4d00-84ba-cf608366116f
-                        Model: 27bd937c-dae7-484c-a483-cba30d33ddfa:Materials/Sphere
-                        Materials: {}
+                    aee2f75ade239c0fb9eb2779ab6aeffd: !Gamelogic.MainGameLogic,BallsOfSteel.Game
+                        Id: 853049aa-a8fc-4748-a32e-356c049bcfc8
+                        MainCamera: ref!! 9269d684-cec9-4970-8da5-f1e08d9087fa
+                        NewXboxPlayerPrefab: 29bc2b68-9a2e-4c3a-8d59-54c90b329dd3:NetPlayer

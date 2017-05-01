@@ -55,17 +55,32 @@ namespace Gamelogic
             {
                 if (players[i] != null)
                     continue;
-
-                if (Input.IsGamePadButtonDown(GamePadButton.A, i))
+                
+                if (Input.IsGamePadButtonDown(GamePadButton.A, i) || Input.IsKeyDown(Keys.F1))
                 {
                     players[i] = RegisterNewPlayer(NewXboxPlayerPrefab, i);
                 }
             }
 
+            if(Input.IsKeyDown(Keys.F1) && players[0] == null)
+                RegisterNewPlayer(NewXboxPlayerPrefab, 0);
+
             // Check for new players connecting remotely
 
             // Do stuff every new frame
 
+        }
+
+        public void RegisterDistantPlayer()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                if (players[i] == null)
+                {
+                    players[i] = RegisterNewPlayer(NewXboxPlayerPrefab, i);
+                    break;
+                }
+            }
         }
     }
 }

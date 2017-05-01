@@ -170,7 +170,9 @@
     <Compile Include="Core\Utils.cs" />
     <Compile Include="Gamelogic\MainGameLogic.cs" />
     <Compile Include="Network\Client.cs" />
+    <Compile Include="Network\PacketMagic.cs" />
     <Compile Include="Network\Server.cs" />
+    <Compile Include="Network\SharedNetwork.cs" />
     <Compile Include="Player\IControlInput.cs" />
     <Compile Include="Player\PlayerInputControl.cs" />
     <Compile Include="Player\XboxInput.cs" />

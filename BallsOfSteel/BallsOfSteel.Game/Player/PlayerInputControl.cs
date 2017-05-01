@@ -20,8 +20,10 @@ namespace BallsOfSteel.Player
 
         // Physical controller, keyboard or a networking device
         public XboxInput ContolInput { get; set; }
-
+        
         public CharacterComponent Character { get; set; }
+
+        public Client GameClient { get; set; }
 
         public Entity ModelChildEntity { get; set; }
 
@@ -73,6 +75,8 @@ namespace BallsOfSteel.Player
 
 
             ModelChildEntity.Transform.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(yawOrientation), 0, 0);
+
+            GameClient.PushInputUpdate(moveDirection, worldSpeed, false);
         }
     }
 }

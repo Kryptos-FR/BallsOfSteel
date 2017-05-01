@@ -24,6 +24,11 @@ namespace BallsOfSteel.Player
         private bool wasJumpDown = false;
         private bool didJump = false;
 
+        public bool Attack => didAttack;
+
+        private bool wasAttackDown = false;
+        private bool didAttack = false;
+
         public Vector2 WalkDirection => walkDirection;
 
         public Vector2 FaceDirection => faceDirection;
@@ -37,9 +42,14 @@ namespace BallsOfSteel.Player
         public override void Update()
         {
             // Jump
-            var isJumpDown = Input.IsGamePadButtonDown(GamePadButton.A, ControllerID);
+            var isJumpDown = Input.IsGamePadButtonDown(GamePadButton.A, ControllerID) || (Input.GetLeftTrigger(ControllerID) > DeadZone);
             didJump = isJumpDown && !wasJumpDown;
             wasJumpDown = isJumpDown;
+
+            // Jump
+            var isAttackDown = Input.IsGamePadButtonDown(GamePadButton.B, ControllerID) || (Input.GetRightTrigger(ControllerID) > DeadZone);
+            didAttack = isAttackDown && !wasAttackDown;
+            wasAttackDown = isAttackDown;
 
             // Walking direction
             walkDirection = Input.GetLeftThumb(ControllerID);

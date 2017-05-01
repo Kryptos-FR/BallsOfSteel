@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Particles.Components;
 using SiliconStudio.Xenko.Physics;
 
 namespace Gamelogic
@@ -19,11 +20,13 @@ namespace Gamelogic
 
         public bool IsShooting { get; set; } = true;
 
+        public ParticleSystemComponent MuzzleFlash { get; set; }
+
         public float Cooldown { get; set; } = 0.2f;
 
         public float ReloadCooldown { get; set; } = 1.2f;
 
-        public int MagazineCapacity { get; set; } = 16;
+        public int MagazineCapacity { get; set; } = 40;
 
         public float BulletInitialSpeed { get; set; } = 20f;
 
@@ -40,6 +43,18 @@ namespace Gamelogic
 
         public override void Update()
         {
+            if (MuzzleFlash != null)
+            {
+                if (IsShooting && cooldownRemaining <= 0f)
+                {
+                    MuzzleFlash.ParticleSystem.Play();
+                }
+                else
+                {
+                    MuzzleFlash.ParticleSystem.StopEmitters();
+                }
+            }
+
             if (bulletsRemaining <= 0)
             {
                 bulletsRemaining = MagazineCapacity;

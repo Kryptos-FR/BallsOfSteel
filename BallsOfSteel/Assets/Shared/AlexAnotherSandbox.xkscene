@@ -19,8 +19,8 @@ Hierarchy:
                 Components:
                     5803e08c8c1850187abeee7b86354e67: !TransformComponent
                         Id: 42ab1b8b-37c9-408d-b0a9-80a495d5dd27
-                        Position: {X: 10.625, Y: 7.5, Z: 0.0}
-                        Rotation: {X: -0.1830127, Y: 0.683012664, Z: 0.1830127, W: 0.683012664}
+                        Position: {X: 15.65952, Y: 14.4105072, Z: 0.0}
+                        Rotation: {X: -0.284714758, Y: 0.6472538, Z: 0.284714758, W: 0.6472538}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
@@ -44,7 +44,7 @@ Hierarchy:
                         Id: 2964509f-ecae-46d6-85bf-9c3c7b8f90a4
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
                     fc8f383ed0a092389833c07321ad6a9b: !ModelComponent
                         Id: 86662afe-c6f1-4403-956f-3814fda6956c
@@ -92,6 +92,7 @@ Hierarchy:
                         Id: 3543c89a-8c44-4cb0-ba86-7c73760941ca
                         BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
                         IsShooting: true
+                        MuzzleFlash: null
                         Cooldown: 0.2
                         ReloadCooldown: 1.2
                         MagazineCapacity: 16

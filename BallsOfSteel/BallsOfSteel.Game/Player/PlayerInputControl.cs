@@ -41,7 +41,7 @@ namespace BallsOfSteel.Player
             // Jump
             if (ContolInput.Jump)
             {
-                Character.Jump();
+                if (Character.IsGrounded) Character.Jump();
             }
 
             // Left stick: movement

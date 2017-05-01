@@ -13,6 +13,7 @@ using SiliconStudio.Xenko.Engine;
 
 using System.Net.Sockets;
 using System.Threading;
+using BallsOfSteel.Player;
 using Gamelogic;
 
 namespace BallsOfSteel
@@ -30,6 +31,8 @@ namespace BallsOfSteel
         public const int MaxPlayerCount = 8;
 
         private readonly Client[] clients = new Client[MaxPlayerCount];
+
+        public MainGameLogic logic { get; set; }
 
         private void Reply(UdpClient client, IPEndPoint distantClient, PacketMagic magic)
         {
@@ -120,9 +123,13 @@ namespace BallsOfSteel
                             {
                                 reader.ReadByte();
 
-                                Vector2 walkDir = new Vector2(reader.ReadSingle(), reader.ReadSingle());
-                                Vector2 faceDir = new Vector2(reader.ReadSingle(), reader.ReadSingle());
-                                bool isJumping = reader.ReadBoolean();
+                                Entity e = logic.Players[0];
+                                PlayerInputControl input =e.Get<PlayerInputControl>();
+                                input.RemoteContolInput.WalkDirection = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                                input.RemoteContolInput.FaceDirection = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                                input.RemoteContolInput.Jump = reader.ReadBoolean();
+                                input.RemoteContolInput.Attack = reader.ReadBoolean();
+                                input.RemoteContolInput.Shoot = reader.ReadBoolean();
                             }
                             break;
 

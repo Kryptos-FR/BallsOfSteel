@@ -12,6 +12,7 @@ Hierarchy:
         - 55623da2-aeee-4c07-86d3-ad353adf6725
         - 9073be19-cb0e-4a17-87a4-de471de98667
         - 6234630c-cee6-4241-8593-f4212db8c540
+        - c442f907-e41e-493c-be24-e6efe2b54b84
     Parts:
         -   Entity:
                 Id: 2b8ec950-6fa2-43d5-8168-2ba243cbf9a8
@@ -109,8 +110,17 @@ Hierarchy:
                         Children: {}
                     cdcf97a0560b94226e1df21ca7d93c58: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 5534b014-8fc8-40e8-b03b-9c552c0e2fd4
+                        Players:
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
                         MainCamera: ref!! 94cde23c-71f9-4a19-b7a6-42a0a545bd7b
-                        NewXboxPlayerPrefab: 66c57634-cab8-4dac-8897-89ed55152c9a:XboxPlayer
+                        NewXboxPlayerPrefab: 29bc2b68-9a2e-4c3a-8d59-54c90b329dd3:NetPlayer
         -   Entity:
                 Id: ae4b364e-22e6-4c86-9538-571945e8cfe7
                 Name: Skybox
@@ -128,6 +138,19 @@ Hierarchy:
                         Id: 6f4d95fb-3583-464e-a8a1-e9183561ecfc
                         Type: !LightSkybox
                             Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
+        -   Entity:
+                Id: c442f907-e41e-493c-be24-e6efe2b54b84
+                Name: Server
+                Components:
+                    174b480961df437efea029c6b3ee3c56: !TransformComponent
+                        Id: f78e8c38-6d83-4cdc-876f-e657494e2c0e
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    54b43ce49191521badc67af584910f65: !BallsOfSteel.Server,BallsOfSteel.Game
+                        Id: 650b07d6-c938-4f33-a07c-d2787077ec3c
+                        logic: ref!! 5534b014-8fc8-40e8-b03b-9c552c0e2fd4
         -   Entity:
                 Id: dff74662-ab6c-44ea-8cfc-caeeec46e3e2
                 Name: Directional light

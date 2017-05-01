@@ -483,6 +483,7 @@ Hierarchy:
                         MaximumHitpoints: 100.0
                         Camera: null
                         ContolInput: ref!! 99b33ac9-bddf-459a-b1a5-9ac39d49704b
+                        RemoteContolInput: null
                         Character: ref!! 2ccf8589-7e2b-4646-a28e-f36833b8438a
                         GameClient: null
                         ModelChildEntity: ref!! 4f65321d-0b97-475b-82cd-bef85ed97067

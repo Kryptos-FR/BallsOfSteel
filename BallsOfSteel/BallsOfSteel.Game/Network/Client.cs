@@ -13,6 +13,7 @@ using SiliconStudio.Xenko.Engine;
 
 using System.Net.Sockets;
 using System.Threading;
+using BallsOfSteel.Player;
 
 namespace BallsOfSteel
 {
@@ -22,19 +23,23 @@ namespace BallsOfSteel
         private bool isConnected = false;
         private Stack<byte[]> packetsToSend = new Stack<byte[]>();
 
-        public void PushInputUpdate(Vector2 moveDirection, Vector3 worldSpeed, bool isJumping)
+        public void PushInputUpdate(IControlInput input)
         {
             using (MemoryStream stream = new MemoryStream())
             {
                 using (BinaryWriter writer = new BinaryWriter(stream))
                 {
                     writer.Write((byte)PacketMagic.InputMove);
-                    writer.Write(moveDirection.X);
-                    writer.Write(moveDirection.Y);
-                    writer.Write(worldSpeed.X);
-                    writer.Write(worldSpeed.Y);
-                    writer.Write(worldSpeed.Z);
-                    writer.Write(isJumping);
+
+                    writer.Write(input.WalkDirection.X);
+                    writer.Write(input.WalkDirection.Y);
+
+                    writer.Write(input.FaceDirection.X);
+                    writer.Write(input.FaceDirection.Y);
+
+                    writer.Write(input.Jump);
+                    writer.Write(input.Attack);
+                    writer.Write(input.Shoot);
                 }
 
                 packetsToSend.Push(stream.ToArray());

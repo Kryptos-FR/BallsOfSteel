@@ -96,6 +96,7 @@ namespace BallsOfSteel.Player
 
                 faceDirection *= faceLength;
             }
+
         }
     }
 }

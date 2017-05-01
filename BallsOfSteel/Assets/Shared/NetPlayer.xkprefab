@@ -79,11 +79,14 @@ Hierarchy:
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                     30605b1daaa618995d61b7d28a7ec678: !BallsOfSteel.Player.PlayerInputControl,BallsOfSteel.Game
                         Id: 6334ada2-ad46-43ee-89ce-07a5ceeff09a
+                        MaximumHitpoints: 100.0
                         Camera: null
                         ContolInput: ref!! 154057cd-3009-4b61-a236-98510b9f2b71
+                        RemoteContolInput: null
                         Character: ref!! 4baeb4c7-1594-45a3-9097-2b86c9f88909
                         GameClient: ref!! 93132e8b-2f17-45b9-924e-5701e39590d2
                         ModelChildEntity: ref!! 9f556d7a-14b3-44ec-bd3e-0e7e8758dd0c
+                        MachineGun: null
                         MaxRunSpeed: 10.0
                     93167bf0a25ddd9e34a6e0565093df25: !BallsOfSteel.Player.XboxInput,BallsOfSteel.Game
                         Id: 154057cd-3009-4b61-a236-98510b9f2b71

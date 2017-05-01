@@ -24,7 +24,10 @@ namespace BallsOfSteel.Player
 
         // Physical controller, keyboard or a networking device
         public XboxInput ContolInput { get; set; }
-        
+
+        // TEMPORARY: FOR TEST
+        public PlayerInputData RemoteContolInput { get; set; }
+
         public CharacterComponent Character { get; set; }
 
         public Client GameClient { get; set; }
@@ -57,13 +60,13 @@ namespace BallsOfSteel.Player
                 return;
 
             // Jump
-            if (ContolInput.Jump)
+            if (RemoteContolInput.Jump)
             {
                 if (Character.IsGrounded) Character.Jump();
             }
 
             // Left stick: movement
-            var moveDirection = ContolInput.WalkDirection;
+            var moveDirection = RemoteContolInput.WalkDirection;
 
             // Broadcast the movement vector as a world-space Vector3 to allow characters to be controlled
             var worldSpeed = (Camera != null)
@@ -83,7 +86,7 @@ namespace BallsOfSteel.Player
             }
             
             // Left stick: movement
-            var faceDirection = ContolInput.FaceDirection;
+            var faceDirection = RemoteContolInput.FaceDirection;
             if (faceDirection.Length() > 0.001)
             {
                 // Broadcast the movement vector as a world-space Vector3 to allow characters to be controlled
@@ -100,12 +103,12 @@ namespace BallsOfSteel.Player
 
             if (MachineGun != null)
             {
-                MachineGun.IsShooting = ContolInput.Shoot;
+                MachineGun.IsShooting = RemoteContolInput.Shoot;
             }
 
             ModelChildEntity.Transform.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(yawOrientation), 0, 0);
 
-            GameClient.PushInputUpdate(moveDirection, worldSpeed, false);
+            GameClient.PushInputUpdate(ContolInput);
         }
     }
 }

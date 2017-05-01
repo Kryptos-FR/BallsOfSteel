@@ -1,4 +1,6 @@
-﻿using SiliconStudio.Core.Mathematics;
+﻿using BallsOfSteel.Player;
+using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Engine;
 
 namespace BallsOfSteel
 {
@@ -8,12 +10,16 @@ namespace BallsOfSteel
         public object Data;
     }
 
-    public struct PlayerInputData
+    public class PlayerInputData
     {
-        public PacketMagic Magic;
+        public int ControllerID { get; set; }
+
         public Vector2 WalkDirection;
         public Vector2 FaceDirection;
+
         public bool Jump;
+        public bool Attack;
+        public bool Shoot;
     }
 
     public static class SharedNetwork

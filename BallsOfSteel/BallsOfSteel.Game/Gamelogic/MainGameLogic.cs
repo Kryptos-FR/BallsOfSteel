@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BallsOfSteel;
 using BallsOfSteel.Core;
 using BallsOfSteel.Player;
 using SiliconStudio.Core.Mathematics;
@@ -16,6 +17,8 @@ namespace Gamelogic
     public class MainGameLogic : SyncScript
     {
         // Declared public member fields and properties will show in the game studio
+
+        public Entity[] Players { get { return players; } }
 
         private Entity[] players = new Entity[8]; // This is totally hardcoded
 
@@ -42,6 +45,8 @@ namespace Gamelogic
 
             // Assign the proper controller id
             playerInputControl.ContolInput.ControllerID = controllerId;
+            playerInputControl.RemoteContolInput = new PlayerInputData();
+            playerInputControl.RemoteContolInput.ControllerID = controllerId;
 
             SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
 
@@ -61,26 +66,11 @@ namespace Gamelogic
                     players[i] = RegisterNewPlayer(NewXboxPlayerPrefab, i);
                 }
             }
-
-            if(Input.IsKeyDown(Keys.F1) && players[0] == null)
-                RegisterNewPlayer(NewXboxPlayerPrefab, 0);
-
+            
             // Check for new players connecting remotely
 
             // Do stuff every new frame
 
-        }
-
-        public void RegisterDistantPlayer()
-        {
-            for (int i = 0; i < 8; i++)
-            {
-                if (players[i] == null)
-                {
-                    players[i] = RegisterNewPlayer(NewXboxPlayerPrefab, i);
-                    break;
-                }
-            }
         }
     }
 }

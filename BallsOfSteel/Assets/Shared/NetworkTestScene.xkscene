@@ -42,6 +42,7 @@ Hierarchy:
                         Children: {}
                     d6cd02b7ee52a264a014a3f2c7ef289f: !BallsOfSteel.Server,BallsOfSteel.Game
                         Id: 44c32989-381a-45fc-8541-630db43e8034
+                        logic: null
         -   Entity:
                 Id: 8819086b-2df4-484d-b64b-96ee7ce80da6
                 Name: Directional light
@@ -115,5 +116,14 @@ Hierarchy:
                         Children: {}
                     aee2f75ade239c0fb9eb2779ab6aeffd: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 853049aa-a8fc-4748-a32e-356c049bcfc8
+                        Players:
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
+                            - null
                         MainCamera: ref!! 9269d684-cec9-4970-8da5-f1e08d9087fa
                         NewXboxPlayerPrefab: 29bc2b68-9a2e-4c3a-8d59-54c90b329dd3:NetPlayer

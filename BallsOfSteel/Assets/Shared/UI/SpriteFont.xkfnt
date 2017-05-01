@@ -1,0 +1,14 @@
+!SpriteFont
+Id: cfd0910f-8ce3-4266-84e0-43d0294634ee
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+FontSource: !SystemFontProvider
+    FontName: Arial
+    Style: Regular
+FontType: !SignedDistanceFieldSpriteFontType
+    Size: 32.0
+    CharacterSet: null
+    CharacterRegions:
+        169b6a079c0d3ca8233ab6d82a386008:
+            Start: ' '
+            End: "\x7F"

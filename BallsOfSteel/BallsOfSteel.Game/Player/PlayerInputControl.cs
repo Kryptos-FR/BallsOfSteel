@@ -23,7 +23,8 @@ namespace BallsOfSteel.Player
         public CameraComponent Camera { get; set; }
 
         // Physical controller, keyboard or a networking device
-        public XboxInput ContolInput { get; set; }
+        [DataMemberIgnore]
+        public IControlInput ContolInput { get; set; }
 
         // TEMPORARY: FOR TEST
         public PlayerInputData RemoteContolInput { get; set; }
@@ -36,28 +37,94 @@ namespace BallsOfSteel.Player
 
         public MahineGunScript MachineGun { get; set; }
 
+        private bool isAlive = false;
+
         [Display("Run Speed")]
         public float MaxRunSpeed { get; set; } = 10;
+
+        [Display("Invulnerability")]
+        public float Invulnerability { get; set; } = 0.2f;
+
+        private float invulnerabilityCooldown = 0f;
 
         private float yawOrientation;
 
         public override void Start()
         {
             currentHitpoints = MaximumHitpoints;
+            invulnerabilityCooldown = 1;
         }
 
         public void TakeDamage(float amount)
         {
+            if (invulnerabilityCooldown > 0)
+                return;
+
             currentHitpoints -= amount;
+            invulnerabilityCooldown = Invulnerability;
+            ModelChildEntity.Get<ModelComponent>().Enabled = false;
 
-            // TODO: Die
+            if (currentHitpoints <= 0)
+                Die();
+        }
 
+        public void Die()
+        {
+            // TODO Particle effect - death
+
+            Entity.Get<CharacterComponent>().Enabled = false;
+            Entity.Get<RigidbodyComponent>().Enabled = false;
+
+            Entity.Transform.Position.Y = 200;
+
+            currentHitpoints = 0;
+            isAlive = false;
+        }
+
+        public void Respawn(Vector3 respawnPosition)
+        {
+            Entity.Transform.Position = respawnPosition;
+
+            Entity.Get<CharacterComponent>().Enabled = true;
+            Entity.Get<RigidbodyComponent>().Enabled = true;
+
+            isAlive = true;
+            invulnerabilityCooldown = 1;
+            currentHitpoints = MaximumHitpoints;
+        }
+
+        protected void WaitingToRespawn()
+        {
+            if (ContolInput.Jump)
+            {
+                Respawn(new Vector3(0, 2, 0));
+            }
         }
 
         public override void Update()
         {
             if (Character == null)
                 return;
+
+            if (!isAlive)
+            {
+                WaitingToRespawn();
+                return;
+            }
+
+            var dt = (float)Game.UpdateTime.Elapsed.TotalSeconds;
+            if (invulnerabilityCooldown > 0)
+            {
+                invulnerabilityCooldown -= dt;
+                if (invulnerabilityCooldown <= 0)
+                {
+                    ModelChildEntity.Get<ModelComponent>().Enabled = true;
+                }
+                else
+                {
+                    ModelChildEntity.Get<ModelComponent>().Enabled = !ModelChildEntity.Get<ModelComponent>().Enabled;
+                }
+            }
 
             // Jump
             if (RemoteContolInput.Jump)

@@ -464,6 +464,7 @@ Hierarchy:
                             32871b70f90c77e0c593387da5db5111: ref!! 912d3a48-298c-460f-8102-42f07ee1ee6f
                     b16d6b36d68d960db871a99f304f3e74: !CharacterComponent
                         Id: 2ccf8589-7e2b-4646-a28e-f36833b8438a
+                        Enabled: false
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -481,20 +482,17 @@ Hierarchy:
                     30605b1daaa618995d61b7d28a7ec678: !BallsOfSteel.Player.PlayerInputControl,BallsOfSteel.Game
                         Id: 5b450741-4238-4ab2-981f-b5030d9589b8
                         MaximumHitpoints: 100.0
-                        Camera: null
-                        ContolInput: ref!! 99b33ac9-bddf-459a-b1a5-9ac39d49704b
-                        RemoteContolInput: null
+                        Camera: 
+                        ContolInput: null
                         Character: ref!! 2ccf8589-7e2b-4646-a28e-f36833b8438a
                         GameClient: null
                         ModelChildEntity: ref!! 4f65321d-0b97-475b-82cd-bef85ed97067
                         MachineGun: ref!! d0daf469-ade0-4b6a-becd-b611d6ec3e11
                         MaxRunSpeed: 10.0
-                    93167bf0a25ddd9e34a6e0565093df25: !BallsOfSteel.Player.XboxInput,BallsOfSteel.Game
-                        Id: 99b33ac9-bddf-459a-b1a5-9ac39d49704b
-                        DeadZone: 0.25
-                        ControllerID: 0
+                        Invulnerability: 0.2
                     292728239dc4d2efd87deeb079353ffd: !RigidbodyComponent
                         Id: 197291da-ec13-4296-9ed7-17ffcf761a5f
+                        Enabled: false
                         CollisionGroup: CharacterFilter
                         CanCollideWith: DebrisFilter
                         CanSleep: false

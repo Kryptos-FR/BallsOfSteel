@@ -12,7 +12,10 @@ Hierarchy:
         - 55623da2-aeee-4c07-86d3-ad353adf6725
         - 9073be19-cb0e-4a17-87a4-de471de98667
         - 6234630c-cee6-4241-8593-f4212db8c540
-        - c442f907-e41e-493c-be24-e6efe2b54b84
+        - 5ae7d50d-2154-497d-940b-c551b61b6e27
+        - ea1a018f-57f6-482e-9073-86f7c59ffcef
+        - c2ed33e8-fb64-4e2f-b34f-5f4ef24eeaed
+        - 9e8de272-5b45-430e-876e-25ed62abffa0
     Parts:
         -   Entity:
                 Id: 2b8ec950-6fa2-43d5-8168-2ba243cbf9a8
@@ -53,6 +56,7 @@ Hierarchy:
                         Materials: {}
                     14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
                         Id: b83144a3-6253-4014-b708-eebed7a73549
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -63,6 +67,31 @@ Hierarchy:
                         ColliderShapes:
                             98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Folder: Borders
+            Entity:
+                Id: 5ae7d50d-2154-497d-940b-c551b61b6e27
+                Name: NorthWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: ae78f9d6-cc69-44cf-83d4-5034aa6d9ada
+                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    58972e4af8966c241eb368916113f4ad: !StaticColliderComponent
+                        Id: a87655ce-7bcf-4859-84d3-4df2bff1abc0
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
                                 Offset: 0.0
         -   Entity:
                 Id: 6234630c-cee6-4241-8593-f4212db8c540
@@ -120,7 +149,32 @@ Hierarchy:
                             - null
                             - null
                         MainCamera: ref!! 94cde23c-71f9-4a19-b7a6-42a0a545bd7b
-                        NewXboxPlayerPrefab: 29bc2b68-9a2e-4c3a-8d59-54c90b329dd3:NetPlayer
+                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+        -   Folder: Borders
+            Entity:
+                Id: 9e8de272-5b45-430e-876e-25ed62abffa0
+                Name: WestWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: e8263b80-0002-4f7f-a85d-7275afa0b38c
+                        Position: {X: 9.999998, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: -0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    003199dae18c99e4b39ab488e717f3cb: !StaticColliderComponent
+                        Id: 60aa4b68-98d1-4fcb-af03-0c6ad08fe118
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            7387e3c64746b9673681c71ef55c69bc: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
         -   Entity:
                 Id: ae4b364e-22e6-4c86-9538-571945e8cfe7
                 Name: Skybox
@@ -138,6 +192,31 @@ Hierarchy:
                         Id: 6f4d95fb-3583-464e-a8a1-e9183561ecfc
                         Type: !LightSkybox
                             Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
+        -   Folder: Borders
+            Entity:
+                Id: c2ed33e8-fb64-4e2f-b34f-5f4ef24eeaed
+                Name: SouthWall
+                Components:
+                    78c3b26dd5a52fe2ce5a2bd886b6b189: !StaticColliderComponent
+                        Id: 48270564-c447-4388-b08a-2fa0d7915d74
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: e812d372-c3cc-4cba-8ace-fd59aa451bab
+                        Position: {X: 0.0, Y: 0.0, Z: 9.999999}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Entity:
                 Id: c442f907-e41e-493c-be24-e6efe2b54b84
                 Name: Server
@@ -175,3 +254,28 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 BiasParameters: {}
                         Intensity: 20.0
+        -   Folder: Borders
+            Entity:
+                Id: ea1a018f-57f6-482e-9073-86f7c59ffcef
+                Name: EastWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: a128eceb-531f-42af-8fc1-b524268b15d5
+                        Position: {X: -9.999998, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    383f11985cf0300f36403a9dcf262812: !StaticColliderComponent
+                        Id: a8f099ad-7cc1-4214-befa-49c636e02503
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0

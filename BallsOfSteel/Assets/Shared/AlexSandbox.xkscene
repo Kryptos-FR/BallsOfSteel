@@ -62,7 +62,7 @@ Hierarchy:
                         Children: {}
                     c1da40a03fe1a0a2373ca8e70f59d45c: !ModelComponent
                         Id: 1805e1d9-4b69-4e8e-9048-2b632170a284
-                        Model: 27bd937c-dae7-484c-a483-cba30d33ddfa:Sphere
+                        Model: 27bd937c-dae7-484c-a483-cba30d33ddfa:Materials/Sphere
                         Materials: {}
         -   Entity:
                 Id: 6a1bdda1-e4b0-4fb1-adf9-c7c8a07422ed

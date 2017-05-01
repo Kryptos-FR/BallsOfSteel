@@ -39,6 +39,13 @@ namespace BallsOfSteel.Gamelogic
                 if (character == null || damage == null)
                     return; // I guess I'm impervious to that damage
 
+                var damageOwner = damage.Entity;
+                while (damageOwner.GetParent() != null)
+                    damageOwner = damageOwner.GetParent();
+
+                if (damageOwner == character.Entity)
+                    return; // No self inflicted wounds
+
                 character.TakeDamage(damage.DamagePerHit);
                 // TODO: Spawn on-hit effects
                 // TODO: Staggerf

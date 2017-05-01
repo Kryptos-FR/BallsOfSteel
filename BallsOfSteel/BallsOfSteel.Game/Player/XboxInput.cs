@@ -47,7 +47,7 @@ namespace BallsOfSteel.Player
             wasJumpDown = isJumpDown;
 
             // Jump
-            var isAttackDown = Input.IsGamePadButtonDown(GamePadButton.B, ControllerID) || (Input.GetRightTrigger(ControllerID) > DeadZone);
+            var isAttackDown = Input.IsGamePadButtonDown(GamePadButton.X, ControllerID) || (Input.GetRightTrigger(ControllerID) > DeadZone);
             didAttack = isAttackDown && !wasAttackDown;
             wasAttackDown = isAttackDown;
 

@@ -32,7 +32,7 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
-                    4719b532dce223f971c10446da40690b: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                    4a5c4c6975c0666bfdc45ed39be1ba16: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
                         Id: bc2accd4-1f51-4096-9d96-c59d15e74fcf
                         KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
                         TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
@@ -118,7 +118,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    bfe37154c367a8bda16a9b56e926c1cf: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                    b7824218850e186e767cf89f77e6fc3b: !Gamelogic.MahineGunScript,BallsOfSteel.Game
                         Id: 3543c89a-8c44-4cb0-ba86-7c73760941ca
                         BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
                         IsShooting: true
@@ -137,7 +137,7 @@ Hierarchy:
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    cdcf97a0560b94226e1df21ca7d93c58: !Gamelogic.MainGameLogic,BallsOfSteel.Game
+                    9147e8f0cee70562845456c6df7fca55: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 5534b014-8fc8-40e8-b03b-9c552c0e2fd4
                         MainCamera: ref!! 94cde23c-71f9-4a19-b7a6-42a0a545bd7b
                         NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab

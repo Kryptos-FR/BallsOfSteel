@@ -55,6 +55,6 @@ Hierarchy:
                                 Orientation: UpX
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    8ab1694584956a1176faf2fec1988aa3: !Gamelogic.DamagingScript,BallsOfSteel.Game
+                    3f4716a501f6770214417bec6c83db7e: !Gamelogic.DamagingScript,BallsOfSteel.Game
                         Id: 6b27b398-7341-4516-833a-bdc5ede57138
                         DamagePerHit: 10.0

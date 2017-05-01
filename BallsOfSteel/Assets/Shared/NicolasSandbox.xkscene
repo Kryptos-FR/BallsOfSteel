@@ -25,7 +25,7 @@ Hierarchy:
                         Page: c006cd19-697d-4dcb-b7a8-c4c756b90576:UI/ControllerAndroid
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                    688e9086377ac97b188bca442a9ad087: !BallsOfSteel.UI.ControllerScript,BallsOfSteel.Game
+                    e534607504148df4e1faa1796cb89b59: !BallsOfSteel.UI.ControllerScript,BallsOfSteel.Game
                         Id: beb261d8-8e07-45f4-8111-5bebf8132e94
                         UI: ref!! b207a123-ebc7-47a6-9057-a6dc88c6d943
         -   Entity:
@@ -59,6 +59,6 @@ Hierarchy:
                         Page: e3cb0ba4-b00c-432b-a1e9-51429902625b:UI/WelcomeAndroid
                         Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
                         Size: {X: 1.0, Y: 1.0, Z: 1.0}
-                    db9dff0171e46b1df307cba38316203f: !BallsOfSteel.UI.WelcomeScript,BallsOfSteel.Game
+                    5b51554007d09d6ef3ddde01d8e086f3: !BallsOfSteel.UI.WelcomeScript,BallsOfSteel.Game
                         Id: bdd6b886-8a7f-4cd3-a28c-3f85759f6bf2
                         UI: ref!! 4274767b-8022-44b5-af05-aac3688feea8

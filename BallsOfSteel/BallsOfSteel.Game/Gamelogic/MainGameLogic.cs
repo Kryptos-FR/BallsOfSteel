@@ -44,7 +44,7 @@ namespace Gamelogic
             // Assign the proper controller id
             var xboxController = player[0].GetOrCreate<XboxInput>();
             xboxController.ControllerID = controllerId;
-            playerInputControl.ContolInput = xboxController;
+            playerInputControl.ControlInput = xboxController;
 
             SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
 

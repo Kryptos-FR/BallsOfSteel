@@ -168,8 +168,10 @@ SharedRenderers:
             Afterimage:
                 Enabled: false
         LightStreak:
+            Enabled*: false
             Attenuation: 0.7
-        LensFlare: {}
+        LensFlare:
+            Enabled*: false
         ColorTransforms:
             Transforms:
                 1e06f805f8b2e949a06c30d45fe413ef: !ToneMap

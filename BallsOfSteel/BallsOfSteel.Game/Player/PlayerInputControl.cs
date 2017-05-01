@@ -24,13 +24,16 @@ namespace BallsOfSteel.Player
 
         // Physical controller, keyboard or a networking device
         [DataMemberIgnore]
-        public IControlInput ContolInput { get; set; }
+        public IControlInput ControlInput { get; set; }
 
         public CharacterComponent Character { get; set; }
 
         public Entity ModelChildEntity { get; set; }
 
         public MahineGunScript MachineGun { get; set; }
+
+        public SwordScript Sword { get; set; }
+
 
         private bool isAlive = false;
 
@@ -90,7 +93,7 @@ namespace BallsOfSteel.Player
 
         protected void WaitingToRespawn()
         {
-            if (ContolInput.Jump)
+            if (ControlInput.Jump)
             {
                 Respawn(new Vector3(0, 2, 0));
             }
@@ -122,13 +125,13 @@ namespace BallsOfSteel.Player
             }
 
             // Jump
-            if (ContolInput.Jump)
+            if (ControlInput.Jump)
             {
                 if (Character.IsGrounded) Character.Jump();
             }
 
             // Left stick: movement
-            var moveDirection = ContolInput.WalkDirection;
+            var moveDirection = ControlInput.WalkDirection;
 
             // Broadcast the movement vector as a world-space Vector3 to allow characters to be controlled
             var worldSpeed = (Camera != null)
@@ -148,7 +151,7 @@ namespace BallsOfSteel.Player
             }
             
             // Left stick: movement
-            var faceDirection = ContolInput.FaceDirection;
+            var faceDirection = ControlInput.FaceDirection;
             if (faceDirection.Length() > 0.001)
             {
                 // Broadcast the movement vector as a world-space Vector3 to allow characters to be controlled
@@ -165,7 +168,12 @@ namespace BallsOfSteel.Player
 
             if (MachineGun != null)
             {
-                MachineGun.IsShooting = ContolInput.Shoot;
+                MachineGun.IsShooting = ControlInput.Shoot;
+            }
+
+            if (Sword != null && ControlInput.Attack)
+            {
+                Sword.Slash();
             }
 
             ModelChildEntity.Transform.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(yawOrientation), 0, 0);

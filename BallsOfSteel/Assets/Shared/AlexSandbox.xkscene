@@ -109,7 +109,7 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
-                    4719b532dce223f971c10446da40690b: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                    88ede16242db474fcb44e538571022e5: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
                         Id: 742e9930-2c9c-440b-9d7f-090d4f5b046f
                         KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
                         TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}

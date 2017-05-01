@@ -17,7 +17,7 @@ Hierarchy:
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children:
                             2b862c757ef899bc6d7ea7b4b0f2ab1b: ref!! 46eda1e2-bac1-43b7-9b60-4f3ff8f01d49
-                    61fd53892da5a6f140eb07ae3dbe5dff: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                    93409eb215cf8ca2e51802ab9ab84ee0: !Gamelogic.MahineGunScript,BallsOfSteel.Game
                         Id: d0daf469-ade0-4b6a-becd-b611d6ec3e11
                         BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
                         IsShooting: true
@@ -479,14 +479,14 @@ Hierarchy:
                             18d5a525376f7f6bdafe6c504d1b3320: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    30605b1daaa618995d61b7d28a7ec678: !BallsOfSteel.Player.PlayerInputControl,BallsOfSteel.Game
+                    533dae3ddb6b209351d0389c22d8612a: !BallsOfSteel.Player.PlayerInputControl,BallsOfSteel.Game
                         Id: 5b450741-4238-4ab2-981f-b5030d9589b8
                         MaximumHitpoints: 100.0
                         Camera: null
-                        ContolInput: null
                         Character: ref!! 2ccf8589-7e2b-4646-a28e-f36833b8438a
                         ModelChildEntity: ref!! 4f65321d-0b97-475b-82cd-bef85ed97067
                         MachineGun: ref!! d0daf469-ade0-4b6a-becd-b611d6ec3e11
+                        Sword: null
                         MaxRunSpeed: 10.0
                         Invulnerability: 0.2
                     292728239dc4d2efd87deeb079353ffd: !RigidbodyComponent
@@ -512,5 +512,5 @@ Hierarchy:
                             cf20e0d7fb4bf9130966aa8d08508ecb: !SphereColliderShapeDesc
                                 Is2D: false
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
-                    0a03c44ba1b6faadf14f0bdd700b420f: !BallsOfSteel.Gamelogic.Trigger,BallsOfSteel.Game
+                    5f140338cc2fd004d581acf6827487af: !BallsOfSteel.Gamelogic.Trigger,BallsOfSteel.Game
                         Id: c1b8391b-1037-4fa3-98dc-56bb08dd5dcf

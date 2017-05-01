@@ -171,6 +171,7 @@
     <Compile Include="Gamelogic\DamagingScript.cs" />
     <Compile Include="Gamelogic\MahineGunScript.cs" />
     <Compile Include="Gamelogic\MainGameLogic.cs" />
+    <Compile Include="Gamelogic\SwordScript.cs" />
     <Compile Include="Gamelogic\Trigger.cs" />
     <Compile Include="Network\Client.cs" />
     <Compile Include="Network\Server.cs" />

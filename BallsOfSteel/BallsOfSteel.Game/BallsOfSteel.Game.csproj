@@ -356,6 +356,9 @@
 </Project>
     <Compile Include="BasicCameraController.cs" />
     <Compile Include="Client.cs" />
+    <Compile Include="Core\InputManagerExtensions.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="Player\XboxInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Server.cs" />
   </ItemGroup>

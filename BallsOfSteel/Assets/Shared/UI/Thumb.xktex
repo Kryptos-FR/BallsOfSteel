@@ -1,0 +1,7 @@
+!Texture
+Id: 310c27cf-1783-438e-85f7-05836e4237e4
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/UI/Thumb.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

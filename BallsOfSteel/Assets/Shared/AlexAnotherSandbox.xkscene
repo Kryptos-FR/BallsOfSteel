@@ -56,6 +56,7 @@ Hierarchy:
                         Materials: {}
                     14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
                         Id: b83144a3-6253-4014-b708-eebed7a73549
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -80,6 +81,7 @@ Hierarchy:
                         Children: {}
                     58972e4af8966c241eb368916113f4ad: !StaticColliderComponent
                         Id: a87655ce-7bcf-4859-84d3-4df2bff1abc0
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -152,6 +154,7 @@ Hierarchy:
                         Children: {}
                     003199dae18c99e4b39ab488e717f3cb: !StaticColliderComponent
                         Id: 60aa4b68-98d1-4fcb-af03-0c6ad08fe118
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -187,6 +190,7 @@ Hierarchy:
                 Components:
                     78c3b26dd5a52fe2ce5a2bd886b6b189: !StaticColliderComponent
                         Id: 48270564-c447-4388-b08a-2fa0d7915d74
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5
@@ -241,6 +245,7 @@ Hierarchy:
                         Children: {}
                     383f11985cf0300f36403a9dcf262812: !StaticColliderComponent
                         Id: a8f099ad-7cc1-4214-befa-49c636e02503
+                        CollisionGroup: StaticFilter
                         CanSleep: false
                         Restitution: 0.0
                         Friction: 0.5

@@ -110,7 +110,7 @@ Hierarchy:
                     cdcf97a0560b94226e1df21ca7d93c58: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 5534b014-8fc8-40e8-b03b-9c552c0e2fd4
                         MainCamera: ref!! 94cde23c-71f9-4a19-b7a6-42a0a545bd7b
-                        NewXboxPlayerPrefab: 66c57634-cab8-4dac-8897-89ed55152c9a:XboxPlayer
+                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
         -   Entity:
                 Id: ae4b364e-22e6-4c86-9538-571945e8cfe7
                 Name: Skybox

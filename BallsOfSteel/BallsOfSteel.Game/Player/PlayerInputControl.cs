@@ -23,7 +23,8 @@ namespace BallsOfSteel.Player
         public CameraComponent Camera { get; set; }
 
         // Physical controller, keyboard or a networking device
-        public XboxInput ContolInput { get; set; }
+        [DataMemberIgnore]
+        public IControlInput ContolInput { get; set; }
 
         public CharacterComponent Character { get; set; }
 

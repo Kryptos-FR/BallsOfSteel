@@ -21,7 +21,8 @@ namespace Gamelogic
 
         public CameraComponent MainCamera { get; set; }
 
-        public Prefab NewXboxPlayerPrefab { get; set; }
+        public Prefab NewPlayerPrefab { get; set; }
+
 
         public override void Start()
         {
@@ -41,7 +42,9 @@ namespace Gamelogic
             playerInputControl.Camera = MainCamera;
 
             // Assign the proper controller id
-            playerInputControl.ContolInput.ControllerID = controllerId;
+            var xboxController = player[0].GetOrCreate<XboxInput>();
+            xboxController.ControllerID = controllerId;
+            playerInputControl.ContolInput = xboxController;
 
             SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
 
@@ -60,7 +63,7 @@ namespace Gamelogic
 
                 if (Input.IsGamePadButtonDown(GamePadButton.A, i))
                 {
-                    players[i] = RegisterNewPlayer(NewXboxPlayerPrefab, i);
+                    players[i] = RegisterNewPlayer(NewPlayerPrefab, i);
                 }
             }
 

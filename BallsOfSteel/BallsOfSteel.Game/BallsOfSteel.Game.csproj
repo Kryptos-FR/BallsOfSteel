@@ -170,6 +170,8 @@
     <Compile Include="Server.cs" />
     <Compile Include="Core\InputManagerExtensions.cs" />
     <Compile Include="Core\Utils.cs" />
+    <Compile Include="Player\IControlInput.cs" />
+    <Compile Include="Player\PlayerInputControl.cs" />
     <Compile Include="Player\XboxInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

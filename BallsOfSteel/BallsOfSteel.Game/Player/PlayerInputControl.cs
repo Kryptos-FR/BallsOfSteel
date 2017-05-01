@@ -9,6 +9,7 @@ using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Engine.Events;
 using SiliconStudio.Xenko.Input;
 using BallsOfSteel.Core;
+using Gamelogic;
 using SiliconStudio.Core;
 using SiliconStudio.Xenko.Physics;
 
@@ -25,6 +26,8 @@ namespace BallsOfSteel.Player
 
         public Entity ModelChildEntity { get; set; }
 
+        public MahineGunScript MachineGun { get; set; }
+
         [Display("Run Speed")]
         public float MaxRunSpeed { get; set; } = 10;
 
@@ -34,6 +37,12 @@ namespace BallsOfSteel.Player
         {
             if (Character == null)
                 return;
+
+            // Jump
+            if (ContolInput.Jump)
+            {
+                Character.Jump();
+            }
 
             // Left stick: movement
             var moveDirection = ContolInput.WalkDirection;
@@ -54,7 +63,7 @@ namespace BallsOfSteel.Player
             {
                 yawOrientation = MathUtil.RadiansToDegrees((float)Math.Atan2(worldSpeed.Z, -worldSpeed.X) + MathUtil.PiOverTwo);
             }
-
+            
             // Left stick: movement
             var faceDirection = ContolInput.FaceDirection;
             if (faceDirection.Length() > 0.001)
@@ -71,6 +80,10 @@ namespace BallsOfSteel.Player
                 }
             }
 
+            if (MachineGun != null)
+            {
+                MachineGun.IsShooting = ContolInput.Shoot;
+            }
 
             ModelChildEntity.Transform.Rotation = Quaternion.RotationYawPitchRoll(MathUtil.DegreesToRadians(yawOrientation), 0, 0);
         }

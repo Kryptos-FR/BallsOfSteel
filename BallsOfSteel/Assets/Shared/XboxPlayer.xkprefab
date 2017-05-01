@@ -7,6 +7,24 @@ Hierarchy:
         - f0c6a66c-cfd1-462a-87a8-e50582d09fda
     Parts:
         -   Entity:
+                Id: 2095b576-d611-43f3-b0a0-4ef955e12c8a
+                Name: Gunpoint
+                Components:
+                    b6dadbcdf061c7f30986f89995d4a84d: !TransformComponent
+                        Id: 4c89177c-fa9a-4cf3-a0c5-f775efdb18f3
+                        Position: {X: 0.0, Y: 0.15419586, Z: -0.7947862}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    61fd53892da5a6f140eb07ae3dbe5dff: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                        Id: d0daf469-ade0-4b6a-becd-b611d6ec3e11
+                        BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
+                        IsShooting: true
+                        Cooldown: 0.2
+                        ReloadCooldown: 1.2
+                        MagazineCapacity: 16
+                        BulletInitialSpeed: 50.0
+        -   Entity:
                 Id: 3ec6751c-7823-4f5b-8bd2-7bfbe6c797a9
                 Name: MachinegunModel
                 Components:
@@ -15,7 +33,8 @@ Hierarchy:
                         Position: {X: 0.5388992, Y: 0.0, Z: 0.0639578551}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
+                        Children:
+                            a48f591f75f87dcf32faefb693fde702: ref!! 4c89177c-fa9a-4cf3-a0c5-f775efdb18f3
                     717938c938403cb5ccd52dd62b67cd92: !ModelComponent
                         Id: cf51e8b7-e69d-45af-80ff-2545758cee25
                         Model: 3e6401fc-3403-4810-ac61-f0ce799b99a3:Models/MachinegunModel
@@ -83,6 +102,7 @@ Hierarchy:
                         ContolInput: ref!! 99b33ac9-bddf-459a-b1a5-9ac39d49704b
                         Character: ref!! 2ccf8589-7e2b-4646-a28e-f36833b8438a
                         ModelChildEntity: ref!! 4f65321d-0b97-475b-82cd-bef85ed97067
+                        MachineGun: ref!! d0daf469-ade0-4b6a-becd-b611d6ec3e11
                         MaxRunSpeed: 10.0
                     93167bf0a25ddd9e34a6e0565093df25: !BallsOfSteel.Player.XboxInput,BallsOfSteel.Game
                         Id: 99b33ac9-bddf-459a-b1a5-9ac39d49704b

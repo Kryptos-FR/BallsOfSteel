@@ -168,6 +168,7 @@
     <Compile Include="BasicCameraController.cs" />
     <Compile Include="Core\InputManagerExtensions.cs" />
     <Compile Include="Core\Utils.cs" />
+    <Compile Include="Gamelogic\MahineGunScript.cs" />
     <Compile Include="Gamelogic\MainGameLogic.cs" />
     <Compile Include="Network\Client.cs" />
     <Compile Include="Network\Server.cs" />

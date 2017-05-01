@@ -1,0 +1,10 @@
+!ProceduralModelAsset
+Id: 73e7f76d-df86-4f45-ad0d-ac8ce9ceeaa0
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Type: !CapsuleProceduralModel
+    Scale: {X: 0.1, Y: 0.1, Z: 0.1}
+    UvScale: {X: 1.0, Y: 1.0}
+    LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+    MaterialInstance:
+        Material: cc06d912-127f-4abe-a344-080c6b015e19:Materials/Blade

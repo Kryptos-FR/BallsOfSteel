@@ -19,7 +19,10 @@ namespace BallsOfSteel.Player
         public int ControllerID { get; set; } = 0;
 
         // Indicates if the players wants to initiate jump this frame, regardless of if they can
-        public bool Jump { get { return false; } }
+        public bool Jump => didJump;
+
+        private bool wasJumpDown = false;
+        private bool didJump = false;
 
         public Vector2 WalkDirection => walkDirection;
 
@@ -29,8 +32,15 @@ namespace BallsOfSteel.Player
 
         private Vector2 faceDirection = Vector2.Zero;
 
+        public bool Shoot => (faceDirection.LengthSquared() > 0);
+
         public override void Update()
         {
+            // Jump
+            var isJumpDown = Input.IsGamePadButtonDown(GamePadButton.A, ControllerID);
+            didJump = isJumpDown && !wasJumpDown;
+            wasJumpDown = isJumpDown;
+
             // Walking direction
             walkDirection = Input.GetLeftThumb(ControllerID);
 

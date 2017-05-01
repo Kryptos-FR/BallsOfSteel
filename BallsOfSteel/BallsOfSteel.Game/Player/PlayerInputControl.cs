@@ -17,6 +17,9 @@ namespace BallsOfSteel.Player
 {
     public class PlayerInputControl : SyncScript
     {
+        public float MaximumHitpoints { get; set; } = 100;
+        private float currentHitpoints = 0;
+
         public CameraComponent Camera { get; set; }
 
         // Physical controller, keyboard or a networking device
@@ -32,6 +35,19 @@ namespace BallsOfSteel.Player
         public float MaxRunSpeed { get; set; } = 10;
 
         private float yawOrientation;
+
+        public override void Start()
+        {
+            currentHitpoints = MaximumHitpoints;
+        }
+
+        public void TakeDamage(float amount)
+        {
+            currentHitpoints -= amount;
+
+            // TODO: Die
+
+        }
 
         public override void Update()
         {

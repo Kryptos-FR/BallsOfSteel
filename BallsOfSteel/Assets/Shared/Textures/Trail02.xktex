@@ -1,0 +1,7 @@
+!Texture
+Id: 335d5398-13b0-4bca-8d66-86085616bf1d
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Textures/Trail02.jpg
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

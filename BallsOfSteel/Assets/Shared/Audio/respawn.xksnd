@@ -1,0 +1,8 @@
+!Sound
+Id: a0bce443-e3f3-43e0-85e8-9e9e5c2b65be
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Audio/respawn.wav
+CompressionRatio: 15
+StreamFromDisk: false
+Spatialized: true

@@ -5,5 +5,27 @@ Tags: []
 ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
-    RootPartIds: []
-    Parts: []
+    RootPartIds:
+        - 07d0560b-f4c3-4448-a481-40fd501c75d3
+        - 5e9a56a6-1a16-49f7-8e6d-e529fd90ffc2
+    Parts:
+        -   Entity:
+                Id: 07d0560b-f4c3-4448-a481-40fd501c75d3
+                Name: Client
+                Components:
+                    30f10da9acf9021f63f3c6188b71bed6: !TransformComponent
+                        Id: a987ef32-3e04-4696-a855-3dd23b7323b8
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Entity:
+                Id: 5e9a56a6-1a16-49f7-8e6d-e529fd90ffc2
+                Name: Server
+                Components:
+                    baf8f291dc3b4ece204630a2012f53bd: !TransformComponent
+                        Id: d1f2e5a2-6a57-4ce7-b911-ef20e6f4b2c7
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}

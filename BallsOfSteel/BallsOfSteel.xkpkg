@@ -34,16 +34,6 @@ Profiles:
             -   Id: 73b2b9e7-d1d3-41bd-9986-7b928ad22ece
                 Location: BallsOfSteel.Windows/BallsOfSteel.Windows.csproj
                 Type: Executable
-    -   Name: Android
-        Platform: Android
-        InheritProfiles: []
-        AssetFolders:
-            -   Path: Assets/Android
-        OutputGroupDirectories: {}
-        ProjectReferences:
-            -   Id: cf83a876-f4a1-49aa-be70-3aaf8f718705
-                Location: BallsOfSteel.Android/BallsOfSteel.Android.csproj
-                Type: Executable
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []

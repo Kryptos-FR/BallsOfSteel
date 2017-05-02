@@ -46,7 +46,11 @@ namespace Gamelogic
         {
             bulletsRemaining = MagazineCapacity;
             gunSfxInstance = GunSound?.CreateInstance();
-            gunSfxInstance?.Stop();
+            if (gunSfxInstance != null)
+            {
+                gunSfxInstance.Volume = 10;
+                gunSfxInstance.Stop();
+            }
         }
 
         public override void Update()

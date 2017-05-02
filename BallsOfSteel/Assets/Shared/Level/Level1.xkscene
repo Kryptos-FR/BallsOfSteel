@@ -63,7 +63,8 @@ Hierarchy:
                 BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: e4f60d26-76be-4c66-a233-d9cb0c81d201
-        -   Entity:
+        -   Folder: Blocks
+            Entity:
                 Id: 05959d9a-22f1-4834-9a75-a02a1c82cb1f
                 Name: Pillar0x5x0
                 Components:
@@ -174,7 +175,8 @@ Hierarchy:
                 BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
                 BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
                 InstanceId: 6bc33753-65cd-4048-a9db-01a7c01adf06
-        -   Entity:
+        -   Folder: Blocks
+            Entity:
                 Id: 1ae3c75b-b9d8-4949-9c8c-94973b9cad62
                 Name*: Ramp
                 Components:
@@ -255,7 +257,7 @@ Hierarchy:
                             98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
-        -   Folder: null
+        -   Folder: Blocks
             Entity:
                 Id: 32c42153-44b9-4e6d-b9f2-4b5a7841fa43
                 Name*: Ramp
@@ -345,6 +347,9 @@ Hierarchy:
                         Id: 1e4df01e-5947-44d4-85dd-7cebc8fb9122
                         MainCamera: ref!! 3cde50cf-5779-4f3f-b738-d9261fbe020c
                         NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+                    7255fbf695586e98df7d0e83ed26b2c0: !BallsOfSteel.MusicScript,BallsOfSteel.Game
+                        Id: 1131ed03-bd5b-4e08-984d-cbfaed241185
+                        SoundMusic: 11416e66-c105-4026-beb2-3e4f6dabeb9f:Audio/Music
         -   Folder: null
             Entity:
                 Id: 64cfdb6e-66c0-4611-8bd4-df336522555a
@@ -481,7 +486,8 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 BiasParameters: {}
                         Intensity: 20.0
-        -   Entity:
+        -   Folder: Blocks
+            Entity:
                 Id: 865fdbb1-f3fb-4ade-8f60-b561a8f5ceeb
                 Name: Floor1x0x1
                 Components:
@@ -623,7 +629,7 @@ Hierarchy:
                         Id: b52fb705-0007-488a-9cd7-ffcd7c32740c
                         Type: !LightSkybox
                             Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
-        -   Folder: null
+        -   Folder: Blocks
             Entity:
                 Id: a5bb0d89-1ec7-4cac-918d-9ec56e36c944
                 Name*: Ramp
@@ -640,7 +646,7 @@ Hierarchy:
                 BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
                 BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
                 InstanceId: e82bd7d1-0781-4752-99a2-a4d515dade5d
-        -   Folder: null
+        -   Folder: Blocks
             Entity:
                 Id: cafe5e1e-7386-440d-bf12-469f24ea2534
                 Name*: Ramp
@@ -725,7 +731,8 @@ Hierarchy:
                 BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
                 BasePartId: ab764054-957c-4816-859b-9e1723cbae77
                 InstanceId: 72a5a832-be6d-467c-b6c0-f11ceccb71bf
-        -   Entity:
+        -   Folder: Blocks
+            Entity:
                 Id: e1c8adfc-5315-4686-af7e-8d6a2f5210cd
                 Name: Box1x1x1
                 Components:

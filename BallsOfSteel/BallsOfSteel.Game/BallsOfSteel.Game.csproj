@@ -175,6 +175,7 @@
     <Compile Include="Gamelogic\MainGameLogic.cs" />
     <Compile Include="Gamelogic\SwordScript.cs" />
     <Compile Include="Gamelogic\Trigger.cs" />
+    <Compile Include="MusicScript.cs" />
     <Compile Include="Network\Client.cs" />
     <Compile Include="Network\Server.cs" />
     <Compile Include="Player\IControlInput.cs" />

@@ -1,0 +1,7 @@
+!Sound
+Id: 11416e66-c105-4026-beb2-3e4f6dabeb9f
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../Resources/Audio/DDmyzik_-_Active_Sports.mp3
+StreamFromDisk: true
+Spatialized: false

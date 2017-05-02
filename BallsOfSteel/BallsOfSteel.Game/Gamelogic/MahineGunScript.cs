@@ -48,6 +48,7 @@ namespace Gamelogic
             gunSfxInstance = GunSound?.CreateInstance();
             if (gunSfxInstance != null)
             {
+                // boost sfx volume
                 gunSfxInstance.Volume = 10;
                 gunSfxInstance.Stop();
             }

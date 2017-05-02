@@ -10,11 +10,10 @@ Hierarchy:
         - 81840a2f-0395-492b-8a92-e287e7fbdab9
         - 9e8ca458-438e-4037-9e5a-ca0286e3b1ad
         - 25b98262-725f-4828-88c2-5c8bf0ea887a
-        - 8f3a29b3-f99c-45cd-a3aa-1594b72ae577
-        - d43af524-bed9-41c9-a61f-c95dc1917de2
-        - 5fbef984-26cc-4bbb-b2d8-f5a662a1a77e
-        - cccfe198-4606-44eb-ae6f-31a3923c89a4
         - 5d2b970e-0e40-4849-8c9b-7f543b67ac07
+        - 5fbef984-26cc-4bbb-b2d8-f5a662a1a77e
+        - d43af524-bed9-41c9-a61f-c95dc1917de2
+        - cccfe198-4606-44eb-ae6f-31a3923c89a4
         - 78441e95-6e88-4c56-a878-e83921f51e53
         - 17c06536-c7e9-4763-b05d-2c2a0897f7ee
         - fd92f63d-5f41-41b5-856c-ecc19885178d
@@ -363,16 +362,16 @@ Hierarchy:
                     7255fbf695586e98df7d0e83ed26b2c0: !BallsOfSteel.MusicScript,BallsOfSteel.Game
                         Id: 1131ed03-bd5b-4e08-984d-cbfaed241185
                         SoundMusic: 11416e66-c105-4026-beb2-3e4f6dabeb9f:Audio/Music
-        -   Folder: null
+        -   Folder: Borders
             Entity:
                 Id: 5fbef984-26cc-4bbb-b2d8-f5a662a1a77e
-                Name: Wall
+                Name: EastWall
                 Components:
                     a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
                         Id: 069bf841-ad80-4d53-8abd-b9a0de7fbcfa
                         Position: {X: -15.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: -0.707106769, W: 0.707106769}
-                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
                         Id: 56c14413-0cc5-4cd0-bdec-a500051d2b78
@@ -519,31 +518,6 @@ Hierarchy:
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children:
                             e4930a9f0d8a4363c007a311132795d6: ref!! 207119f1-f0f0-466d-8785-5dea7e1ca0c8
-        -   Folder: null
-            Entity:
-                Id: 8f3a29b3-f99c-45cd-a3aa-1594b72ae577
-                Name: Wall
-                Components:
-                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
-                        Id: 06d0f39f-3372-4484-a49c-a586664bbbac
-                        Position: {X: 15.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.707106769, W: 0.707106769}
-                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
-                        Children: {}
-                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
-                        Id: e320a762-1bf5-4e2d-bafc-2ae1997ea7ec
-                        CollisionGroup: StaticFilter
-                        CanSleep: false
-                        Restitution: 0.0
-                        Friction: 0.5
-                        RollingFriction: 0.0
-                        CcdMotionThreshold: 0.0
-                        CcdSweptSphereRadius: 0.0
-                        IsTrigger: false
-                        ColliderShapes:
-                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
-                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
-                                Offset: 0.0
         -   Folder: null
             Entity:
                 Id: 9014ed9a-9b30-498b-a0a1-b63c4765bb7f
@@ -694,16 +668,16 @@ Hierarchy:
                 BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
                 BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
                 InstanceId: 362bc5ec-28fb-4fe2-acdd-5f8c913dd10a
-        -   Folder: null
+        -   Folder: Borders
             Entity:
                 Id: cccfe198-4606-44eb-ae6f-31a3923c89a4
-                Name: Wall
+                Name: SouthWall
                 Components:
                     a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
                         Id: 6d6e404f-ab0c-4110-9c5b-b53bc5170ac3
                         Position: {X: 0.0, Y: 0.0, Z: 15.0}
                         Rotation: {X: -0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
-                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
                         Id: 6007386b-fb9e-43d6-9da9-1bba2b4fb60a
@@ -719,16 +693,16 @@ Hierarchy:
                             98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
                                 Normal: {X: 0.0, Y: 1.0, Z: 0.0}
                                 Offset: 0.0
-        -   Folder: null
+        -   Folder: Borders
             Entity:
                 Id: d43af524-bed9-41c9-a61f-c95dc1917de2
-                Name: Wall
+                Name: NorthWall
                 Components:
                     a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
                         Id: be1ff565-b97c-47b6-9156-b1bb645d5874
                         Position: {X: 0.0, Y: 0.0, Z: -15.0}
                         Rotation: {X: 0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
-                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
                         Id: 30f06e26-ce88-4315-91dc-79cd3db4079c

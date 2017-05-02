@@ -1,0 +1,14 @@
+!Model
+Id: 7adb8463-ff24-44e1-85d5-6cea5c3d7083
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Models/Ladder0x2x0.fbx
+PivotPosition: {X: 0.0, Y: 0.0, Z: 0.0}
+Materials:
+    2a4c62502d84612cd0bc56d6d0bc56d6:
+        Name: GridMT
+        MaterialInstance:
+            Material: a80f441e-3029-48bb-9520-eca447ea593b:Materials/Blocks/GridMT
+Skeleton: null
+~SourceHashes:
+    b17f028f92c3f0e6e44a0aed6f009dbe~../../../../Resources/Models/Ladder0x2x0.fbx: 588988b73fe735ca013ed32c977cc31b

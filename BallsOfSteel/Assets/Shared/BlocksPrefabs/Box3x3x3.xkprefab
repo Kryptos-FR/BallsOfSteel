@@ -1,0 +1,38 @@
+!PrefabAsset
+Id: 9291acec-5983-461a-b0c4-dd0fd10de87c
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Hierarchy:
+    RootPartIds:
+        - fa9df93c-3b86-4404-96ca-decbb2f4171a
+    Parts:
+        -   Entity:
+                Id: fa9df93c-3b86-4404-96ca-decbb2f4171a
+                Name: Box3x3x3
+                Components:
+                    cafed28ac2678c4e84c546d7570eabd3: !TransformComponent
+                        Id: 8ad2feca-67c2-4e8c-84c5-46d7570eabd3
+                        Position: {X: 1.5, Y: 1.5, Z: 1.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    7807e4f88759f5408bc713431dfc8978: !ModelComponent
+                        Id: f8e40778-5987-40f5-8bc7-13431dfc8978
+                        Model: dfe90a04-6ac7-469c-934c-0b6853534f77:Models/Blocks/Box3x3x3
+                        Materials:
+                            97cb539b4d6079458c5ef344e58d8e55~0: c29cf05b-c701-4b8b-96d8-64f6b086b8ca:Materials/Blocks/GridMTPlatform
+                    793d2ad2924e3a48a2a869b11f5df718: !StaticColliderComponent
+                        Id: d22a3d79-4e92-483a-a2a8-69b11f5df718
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            16348c7905caf14d82d3668b90f0c07b: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 3.0, Y: 3.0, Z: 3.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}

@@ -23,12 +23,15 @@ namespace Gamelogic
         [DataMemberIgnore]
         public Stack<Server.RemoteClient> ClientsToRegister = new Stack<Server.RemoteClient>();
 
+        [DataMemberIgnore]
+        public Stack<Server.RemoteClient> ClientsToRemove = new Stack<Server.RemoteClient>();
+        
         private Entity[] players = new Entity[8]; // This is totally hardcoded
 
         public CameraComponent MainCamera { get; set; }
 
-        public Prefab NewPlayerPrefab { get; set; }
-
+        public Prefab NewPlayerPrefab = null;
+        
         public override void Start()
         {
             // Initialization of the script.
@@ -82,7 +85,7 @@ namespace Gamelogic
 
             return player[0];
         }
-
+        
         public override void Update()
         {
             // Check for new players connecting locally
@@ -95,17 +98,8 @@ namespace Gamelogic
                 {
                     players[i] = RegisterNewPlayer(NewPlayerPrefab, i);
                 }
-                else if (Input.IsGamePadButtonDown(GamePadButton.Y, i))
-                {
-                    ClientsToRegister.Push(new Server.RemoteClient()
-                    {
-                        clientIp = new IPEndPoint(IPAddress.None, 0),
-                        isUsed = true,
-                        incomingInput = new Stack<NetworkPlayerInputData>()
-                    });
-                }
             }
-
+            
             while (ClientsToRegister.Count != 0)
             {
                 Server.RemoteClient clientToRegister = ClientsToRegister.Pop();
@@ -116,6 +110,24 @@ namespace Gamelogic
                     {
                         players[i] = RegisterNewNetworkPlayer(NewPlayerPrefab, clientToRegister);
                         break;
+                    }
+                }
+            }
+
+            while (ClientsToRemove.Count != 0)
+            {
+                Server.RemoteClient clientToRemove = ClientsToRemove.Pop();
+
+                for (int i = 0; i < 8; i++)
+                {
+                    if (players[i] != null)
+                    {
+                        var networkController = players[i].GetOrCreate<NetworkInput>();
+                        if (networkController.client.clientIp.Address.Equals(clientToRemove.clientIp.Address))
+                        {
+                            // remove the player
+                            break;
+                        }
                     }
                 }
             }

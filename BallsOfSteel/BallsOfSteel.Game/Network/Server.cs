@@ -87,6 +87,7 @@ namespace BallsOfSteel
                 {
                     clients[i].clientIp = clientInfos;
                     clients[i].isUsed = true;
+                    GameLogic.ClientsToRemove.Push(clients[i]);
 
                     Console.WriteLine(">> BoS Server : Received disconnection request from client {1}", i, clientInfos);
 
@@ -127,21 +128,24 @@ namespace BallsOfSteel
                             break;
 
                         case PacketMagic.InputMove:
-                            using (BinaryReader reader = new BinaryReader(new MemoryStream(incomingPacket.Buffer)))
+                            using (MemoryStream ms = new MemoryStream(incomingPacket.Buffer))
                             {
-                                // Skip Packet Magic Byte
-                                reader.ReadByte();
+                                using (BinaryReader reader = new BinaryReader(ms))
+                                {
+                                    // Skip Packet Magic Byte
+                                    reader.ReadByte();
 
-                                RemoteClient client = FindClientByIp(incomingPacket.RemoteEndPoint);
+                                    RemoteClient client = FindClientByIp(incomingPacket.RemoteEndPoint);
 
-                                NetworkPlayerInputData input = new NetworkPlayerInputData();
-                                input.WalkDirection = new Vector2(reader.ReadSingle(), reader.ReadSingle());
-                                input.FaceDirection = new Vector2(reader.ReadSingle(), reader.ReadSingle());
-                                input.Jump = reader.ReadBoolean();
-                                input.Attack = reader.ReadBoolean();
-                                input.Shoot = reader.ReadBoolean();
+                                    NetworkPlayerInputData input = new NetworkPlayerInputData();
+                                    input.WalkDirection = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                                    input.FaceDirection = new Vector2(reader.ReadSingle(), reader.ReadSingle());
+                                    input.Jump = reader.ReadBoolean();
+                                    input.Attack = reader.ReadBoolean();
+                                    input.Shoot = reader.ReadBoolean();
 
-                                client.incomingInput.Push(input);
+                                    client.incomingInput.Push(input);
+                                }
                             }
                             break;
 

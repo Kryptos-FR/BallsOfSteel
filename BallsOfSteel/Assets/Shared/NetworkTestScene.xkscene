@@ -14,10 +14,24 @@ Hierarchy:
         - e80c49a4-8ced-4731-a76f-d7e4d868c726
         - a54bed71-eec9-48e9-b338-3c9df6adbf2a
         - 84a696e4-a349-4ff6-a2f5-b4decfce730a
-        - d97668c4-eaea-4537-90c3-3098c91c1892
         - 9cc4eb2c-8525-41db-859e-34886f2f159d
         - c563272d-f3af-42d0-9f87-0cff28c5d727
+        - 2872e59f-cbef-48ad-b214-a44dd6b7725c
     Parts:
+        -   Entity:
+                Id: 2872e59f-cbef-48ad-b214-a44dd6b7725c
+                Name: Entity
+                Components:
+                    657b0e677cc2d438da62720133342999: !TransformComponent
+                        Id: 6ccebe65-40b0-45e6-a3cf-a6ecdc29f822
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    71329822e5265aaf072cc92fbc37961c: !Gamelogic.MainGameLogic,BallsOfSteel.Game
+                        Id: d81d7bbd-c732-4289-8b3d-37be9b251d21
+                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+                        MainCamera: ref!! 7b8b12fc-fae5-4392-9813-38300cecf141
         -   Folder: Borders
             Entity:
                 Id: 287eeac3-3e20-4e0b-a964-6f94d7d0c1fd
@@ -233,21 +247,7 @@ Hierarchy:
                         Children: {}
                     d47d6c2d77e78329a1fa9d6a69d7ae7c: !BallsOfSteel.Server,BallsOfSteel.Game
                         Id: 1401e861-3ec0-4fca-a639-5c50ab7d4254
-                        GameLogic: ref!! 1e91a9a1-2a82-4633-98cb-8010fd8f7c94
-        -   Entity:
-                Id: d97668c4-eaea-4537-90c3-3098c91c1892
-                Name: MainGameLogic
-                Components:
-                    f147b87e26407ea1bb28118cbfa2ba2a: !TransformComponent
-                        Id: 2019d1d3-e8d5-4d3b-a446-e8b80996a399
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    cf939da5e0ad89a273de47027f412d13: !Gamelogic.MainGameLogic,BallsOfSteel.Game
-                        Id: 1e91a9a1-2a82-4633-98cb-8010fd8f7c94
-                        MainCamera: ref!! 7b8b12fc-fae5-4392-9813-38300cecf141
-                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+                        GameLogic: ref!! d81d7bbd-c732-4289-8b3d-37be9b251d21
         -   Entity:
                 Id: e80c49a4-8ced-4731-a76f-d7e4d868c726
                 Name: Directional light

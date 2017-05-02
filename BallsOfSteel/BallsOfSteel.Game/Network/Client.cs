@@ -2,6 +2,7 @@
 // See LICENSE.md for full license information.
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -14,6 +15,7 @@ using SiliconStudio.Xenko.Engine;
 using System.Net.Sockets;
 using System.Threading;
 using BallsOfSteel.Player;
+using SiliconStudio.Core.Collections;
 
 namespace BallsOfSteel
 {
@@ -21,7 +23,9 @@ namespace BallsOfSteel
     {
         private string hostIp = "127.0.0.1";
         private bool isConnected = false;
-        private Stack<byte[]> packetsToSend = new Stack<byte[]>();
+        private FastList<byte[]> packetsToSend = new FastList<byte[]>();
+
+        public XboxInput input;
 
         public void PushInputUpdate(IControlInput input)
         {
@@ -42,8 +46,23 @@ namespace BallsOfSteel
                     writer.Write(input.Shoot);
                 }
 
-                packetsToSend.Push(stream.ToArray());
+                packetsToSend.Add(stream.ToArray());
             }
+        }
+
+        private bool previousAttack;
+        private bool previousJump;
+        private bool previousShoot;
+        private Vector2 previousFaceDirection;
+        private Vector2 previousWalkDirection;
+
+        private bool IsInputUpdateNeeded(IControlInput newInputState)
+        {
+            return previousAttack != newInputState.Attack 
+                || previousJump != newInputState.Jump
+                || previousShoot != newInputState.Shoot
+                || previousFaceDirection != newInputState.FaceDirection
+                || previousWalkDirection != newInputState.WalkDirection;
         }
 
         public override async Task Execute()
@@ -96,39 +115,30 @@ namespace BallsOfSteel
             {
                 await Script.NextFrame();
             }
+            
+            Stopwatch netUpdate = new Stopwatch();
+            netUpdate.Start();
 
-            int fakeStuff = 0;
             while (Game.IsRunning)
             {
-                while (packetsToSend.Count != 0)
+                for (var index = 0; index < packetsToSend.Count; index++)
                 {
-                    var packet = packetsToSend.Pop();
-                    sender.Client.Send(packet);
+                    sender.Client.Send(packetsToSend[index]);
                 }
 
-                fakeStuff++;
+                packetsToSend.Clear();
 
-                if (fakeStuff % 120 == 0)
-                {                 
-                    using (MemoryStream stream = new MemoryStream())
-                    {
-                        using (BinaryWriter writer = new BinaryWriter(stream))
-                        {
-                            writer.Write((byte)PacketMagic.InputMove);
+                if (IsInputUpdateNeeded(input) && netUpdate.ElapsedMilliseconds >= 50)
+                {
+                    PushInputUpdate(input);
 
-                            writer.Write(0.1f);
-                            writer.Write(0.0f);
+                    netUpdate.Restart();
 
-                            writer.Write(1.0f);
-                            writer.Write(0.0f);
-
-                            writer.Write(true);
-                            writer.Write(false);
-                            writer.Write(true);
-                        }
-
-                        packetsToSend.Push(stream.ToArray());
-                    }
+                    previousAttack = input.Attack;
+                    previousJump = input.Jump;
+                    previousShoot = input.Shoot;
+                    previousFaceDirection = input.FaceDirection;
+                    previousWalkDirection = input.WalkDirection;
                 }
 
                 // Do stuff every new frame

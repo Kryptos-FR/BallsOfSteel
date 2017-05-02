@@ -1,0 +1,62 @@
+!SceneAsset
+Id: 5f8779a8-8064-4cd9-ba77-2a4cdfe7d0f6
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootPartIds:
+        - 8940fe40-b876-4312-a2f1-d959eb11bdc2
+        - a9955984-35d7-453d-9d5b-438017fec1d6
+        - d7866a54-9d03-448b-8cc9-93e3a11aeb3c
+    Parts:
+        -   Entity:
+                Id: 8940fe40-b876-4312-a2f1-d959eb11bdc2
+                Name: Client
+                Components:
+                    66ea72d4f128d9297734024eb2e78110: !TransformComponent
+                        Id: 68ac379b-74cd-4766-94b3-f821ffe24226
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    5710eab7fcf48785dffd2b57208ba393: !BallsOfSteel.Client,BallsOfSteel.Game
+                        Id: a9071362-1701-486c-a17a-a7adc93b5fd3
+                        input: ref!! 280205cc-7be4-4bae-a86d-6b25133056ca
+        -   Entity:
+                Id: a9955984-35d7-453d-9d5b-438017fec1d6
+                Name: XboxInput
+                Components:
+                    a1d1e75f8d4d700b8e9434e8dc7a5c27: !TransformComponent
+                        Id: bfd30baf-6d8e-4238-b4ce-7630e1003768
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e64d48ae21f200d4768e1d761caed159: !BallsOfSteel.Player.XboxInput,BallsOfSteel.Game
+                        Id: 280205cc-7be4-4bae-a86d-6b25133056ca
+                        DeadZone: 0.25
+                        ControllerID: 0
+        -   Entity:
+                Id: d7866a54-9d03-448b-8cc9-93e3a11aeb3c
+                Name: Camera
+                Components:
+                    5803e08c8c1850187abeee7b86354e67: !TransformComponent
+                        Id: d8c371f7-2c99-4abd-abed-ec1743dc7abc
+                        Position: {X: 15.65952, Y: 14.4105072, Z: 0.0}
+                        Rotation: {X: -0.284714758, Y: 0.6472538, Z: 0.284714758, W: 0.6472538}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
+                        Id: 2046878e-2d7d-49e7-8169-6bc5f9e0176e
+                        Name: null
+                        Projection: Perspective
+                        Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
+                    408bc12f24b12b3806d60b1f6be499ee: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                        Id: 6aa013f1-1bac-4b62-9a11-5385f6af2576
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 90.0, Y: 60.0}
+                        TouchRotationSpeed: {X: 60.0, Y: 40.0}

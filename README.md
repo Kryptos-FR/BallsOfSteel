@@ -7,7 +7,7 @@ This game was completed in 24 hours as part of a Xenko game jam.
 A party brawl game where each player gets control of one spherical fighter. The goal is to get power-ups and kill your friends. The more kills and less deaths you have, the better.
 
 
-![Concept](https://image.ibb.co/moFikk/Balls_Concept.png =450x)
+![Concept](https://image.ibb.co/moFikk/Balls_Concept.png)
 
 ---
 ## Controls
@@ -22,7 +22,7 @@ The game is an endless deathmatch for up to 8 players.
 
 ### Stretch goals - nations
 
-![](https://image.ibb.co/dMyB5k/germanyball_by_propagandastamps_d9ict68.png =250x)
+![](https://image.ibb.co/dMyB5k/germanyball_by_propagandastamps_d9ict68.png)
 
 When you spawn for the first time you pick a random nation. You can't choose (that's how it work IRL as well).
 
@@ -32,7 +32,7 @@ When you spawn for the first time you pick a random nation. You can't choose (th
 
 Your phone is your controller. Contextual buttons will change depending on what actions are available to your character.
 
-![Concept](https://image.ibb.co/cMcqWQ/HUD.png =450x)
+![Concept](https://image.ibb.co/cMcqWQ/HUD.png)
 
 We finally got the networking working on a branch, but there wasn't enough time to properly integrate it.
 

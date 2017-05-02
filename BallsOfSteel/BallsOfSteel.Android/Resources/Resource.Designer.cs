@@ -26,6 +26,10 @@ namespace BallsOfSteel
 		
 		public static void UpdateIdValues()
 		{
+			global::SiliconStudio.Xenko.Resource.Id.EditTextLayout = global::BallsOfSteel.Resource.Id.EditTextLayout;
+			global::SiliconStudio.Xenko.Resource.Id.GameMainLayout = global::BallsOfSteel.Resource.Id.GameMainLayout;
+			global::SiliconStudio.Xenko.Resource.Id.GameViewLayout = global::BallsOfSteel.Resource.Id.GameViewLayout;
+			global::SiliconStudio.Xenko.Resource.Layout.Game = global::BallsOfSteel.Resource.Layout.Game;
 		}
 		
 		public partial class Attribute
@@ -53,6 +57,44 @@ namespace BallsOfSteel
 			}
 			
 			private Drawable()
+			{
+			}
+		}
+		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f040002
+			public const int EditTextLayout = 2130968578;
+			
+			// aapt resource value: 0x7f040000
+			public const int GameMainLayout = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int GameViewLayout = 2130968577;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
+		public partial class Layout
+		{
+			
+			// aapt resource value: 0x7f030000
+			public const int Game = 2130903040;
+			
+			static Layout()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Layout()
 			{
 			}
 		}

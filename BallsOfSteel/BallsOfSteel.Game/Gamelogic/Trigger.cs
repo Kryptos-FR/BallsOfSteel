@@ -47,7 +47,7 @@ namespace BallsOfSteel.Gamelogic
                     continue;
 
                 character.TakeDamage(damage.DamagePerHit);
-                damage.DamagePerHit = 0;
+                damage.RemoveDamage();
 
                 damage.Entity.Get<RigidbodyComponent>().Enabled = false;
 

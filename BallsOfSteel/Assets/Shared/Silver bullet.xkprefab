@@ -59,6 +59,7 @@ Hierarchy:
                     377dbfe927deccc8c1869636e969f7cc: !Gamelogic.DamagingScript,BallsOfSteel.Game
                         Id: 6b27b398-7341-4516-833a-bdc5ede57138
                         DamagePerHit: 10.0
+                        PersistantDamage: false
                     4483d67aeae1f8e4af4c206564635391: !Gamelogic.DestroyOnHit,BallsOfSteel.Game
                         Id: c919b00a-bb8a-41fc-ae61-8c14d524d00c
                         OnDestroyEffect: 9147f3d5-8668-4846-9189-4bb4b19b341d:VFXPrefabs/vfx-BulletImpact

@@ -16,7 +16,15 @@ namespace Gamelogic
         // Declared public member fields and properties will show in the game studio
 
         public float DamagePerHit { get; set; } = 10f;
-        
+
+        public bool PersistantDamage { get; set; } = false;
+
+        public void RemoveDamage()
+        {
+            if (!PersistantDamage)
+                DamagePerHit = 0f;
+        }
+
         public override void Start()
         {
             // Initialization of the script.

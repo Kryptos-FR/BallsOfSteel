@@ -6,56 +6,260 @@ ChildrenIds: []
 Offset: {X: 0.0, Y: 0.0, Z: 0.0}
 Hierarchy:
     RootPartIds:
-        - 6e6a2bee-7edc-4854-9b60-bd4d8a3408bf
-        - be56d4f7-498a-4150-8e82-cc7ae4ba1c88
-        - b0a96df8-8467-463e-a4d9-8b2325d04fbe
-        - 5e65e6a7-b202-425c-8cd5-e086d69dbbb8
-        - 8819086b-2df4-484d-b64b-96ee7ce80da6
-        - bb5bc16a-3a7a-4c32-8489-9dc7ec2e21b5
+        - 3b42b0f7-14d3-4522-9216-66c87b5c001b
+        - 7af7f361-c203-42d0-888a-a0636a13b8aa
+        - 480a155a-bcb5-4b71-83bd-2fd4bd44b28e
+        - 287eeac3-3e20-4e0b-a964-6f94d7d0c1fd
+        - b7170a49-d8bb-4c2e-8985-e937015f3e36
+        - e80c49a4-8ced-4731-a76f-d7e4d868c726
+        - a54bed71-eec9-48e9-b338-3c9df6adbf2a
+        - 84a696e4-a349-4ff6-a2f5-b4decfce730a
+        - d97668c4-eaea-4537-90c3-3098c91c1892
+        - 9cc4eb2c-8525-41db-859e-34886f2f159d
+        - c563272d-f3af-42d0-9f87-0cff28c5d727
     Parts:
+        -   Folder: Borders
+            Entity:
+                Id: 287eeac3-3e20-4e0b-a964-6f94d7d0c1fd
+                Name: WestWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 5d30f9bc-3239-4c6b-a9b6-a497a3f88d90
+                        Position: {X: 9.999998, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: -0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    003199dae18c99e4b39ab488e717f3cb: !StaticColliderComponent
+                        Id: 5abb26fa-2fed-491d-87c3-70edb4ba8aab
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            7387e3c64746b9673681c71ef55c69bc: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Folder: Borders
+            Entity:
+                Id: 3b42b0f7-14d3-4522-9216-66c87b5c001b
+                Name: NorthWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 28fe1a33-d54b-4a1e-bcf4-1ba0a2ea24f7
+                        Position: {X: 0.0, Y: 0.0, Z: -10.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    58972e4af8966c241eb368916113f4ad: !StaticColliderComponent
+                        Id: 3916951d-2a50-42e9-8bc5-0f92325a7cff
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Folder: Borders
+            Entity:
+                Id: 480a155a-bcb5-4b71-83bd-2fd4bd44b28e
+                Name: SouthWall
+                Components:
+                    78c3b26dd5a52fe2ce5a2bd886b6b189: !StaticColliderComponent
+                        Id: 713922ee-32cf-4cb2-a16e-c63108a2d450
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: fc4bcadb-4cb4-482a-b1c5-61ca6974a713
+                        Position: {X: 0.0, Y: 0.0, Z: 9.999999}
+                        Rotation: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
         -   Entity:
-                Id: 5e65e6a7-b202-425c-8cd5-e086d69dbbb8
+                Id: 7751f3d9-709e-4802-a2f7-3de830411e6d
+                Name: Gunpoint
+                Components:
+                    a674882fc5d4dc96ab93d61ebb948a4e: !TransformComponent
+                        Id: e9c26a7e-d1d5-4dc3-8e40-9df289d3ea03
+                        Position: {X: 0.0, Y: 0.1548201, Z: -0.7910748}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c34f37a15cdb57efc43d6091e148e3be: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                        Id: 01e3ba56-d73a-4d0f-93d8-2d9adec61937
+                        GunSound: null
+                        BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
+                        IsShooting: true
+                        MuzzleFlash: null
+                        Cooldown: 0.2
+                        ReloadCooldown: 1.2
+                        MagazineCapacity: 16
+                        BulletInitialSpeed: 20.0
+        -   Folder: Borders
+            Entity:
+                Id: 7af7f361-c203-42d0-888a-a0636a13b8aa
+                Name: EastWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 3bfd1b6e-0992-4793-86a2-c10873e1986e
+                        Position: {X: -9.999998, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    383f11985cf0300f36403a9dcf262812: !StaticColliderComponent
+                        Id: 6080f787-fd8f-43af-8c4d-e55d46538426
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            20bd96d500e68afd91c75c8f747deb88: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Entity:
+                Id: 84a696e4-a349-4ff6-a2f5-b4decfce730a
+                Name: Ground
+                Components:
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: 3c503aaf-8d81-41e7-a49f-174b7e9d3fc6
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children: {}
+                    fc8f383ed0a092389833c07321ad6a9b: !ModelComponent
+                        Id: 0c04a575-41bc-497b-b222-5108bb7edf54
+                        Model: f47dec17-c40c-4ee1-8331-f2195656b921:Ground
+                        Materials: {}
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: 4d0ec2c7-7dc6-4a42-a482-21f2416dc648
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Entity:
+                Id: 9cc4eb2c-8525-41db-859e-34886f2f159d
+                Name: Machine gun hazard
+                Components:
+                    78dbbcb71d2a0c4a4fb09cf92dcb7f97: !TransformComponent
+                        Id: 837d2844-9396-48e4-a0e9-7e4b5e2e35e3
+                        Position: {X: 3.80096054, Y: 0.5, Z: 4.9591074}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a83cb7ffe423bad33baca820add63f46: ref!! e9c26a7e-d1d5-4dc3-8e40-9df289d3ea03
+                    5a189ed221e981897412ea6b6ca5e50b: !ModelComponent
+                        Id: ad93e856-e634-4190-b28e-caf11ac29e90
+                        Model: 3e6401fc-3403-4810-ac61-f0ce799b99a3:Models/MachinegunModel
+                        Materials: {}
+        -   Entity:
+                Id: a54bed71-eec9-48e9-b338-3c9df6adbf2a
                 Name: Skybox
                 Components:
                     ba190c00a8b47036ea31a3d45ec884bd: !TransformComponent
-                        Id: 02b6e6bb-5738-4de6-acda-a541d15d70ee
+                        Id: dda10330-48fb-4608-be97-4b4708410fc2
                         Position: {X: 0.0, Y: 2.0, Z: -2.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     c0bb89a8da50bab16424df8b49851b08: !BackgroundComponent
-                        Id: a505f9b4-6c15-46a0-b80b-4cb534743a46
+                        Id: de9d0ad8-e1a6-4f92-85d2-991e2f55602d
                         Texture: 84f1f9ea-e5ec-4c52-bdef-9704fff2fc6e:Skybox Texture
                     33a61fd218b1204a32a2422d3645148d: !LightComponent
-                        Id: 3e4e5856-023d-493b-ab2f-4c9fdd47f507
+                        Id: 07b26db2-fefe-459b-b2a8-7f41f63f9a3c
                         Type: !LightSkybox
                             Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
         -   Entity:
-                Id: 6e6a2bee-7edc-4854-9b60-bd4d8a3408bf
-                Name: Client
+                Id: b7170a49-d8bb-4c2e-8985-e937015f3e36
+                Name: Camera
                 Components:
-                    7b07057aa783eb1c87c942492b77e151: !TransformComponent
-                        Id: a6140088-a072-48d7-a6b9-3206efa0d3a3
+                    5803e08c8c1850187abeee7b86354e67: !TransformComponent
+                        Id: 279c80f5-8f05-4cb0-b3ce-5befcae07d04
+                        Position: {X: 15.65952, Y: 14.4105072, Z: 0.0}
+                        Rotation: {X: -0.284714758, Y: 0.6472538, Z: 0.284714758, W: 0.6472538}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
+                        Id: 7b8b12fc-fae5-4392-9813-38300cecf141
+                        Name: null
+                        Projection: Perspective
+                        Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
+                    408bc12f24b12b3806d60b1f6be499ee: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                        Id: de485f39-e420-487a-8bf1-776d62d662ee
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 90.0, Y: 60.0}
+                        TouchRotationSpeed: {X: 60.0, Y: 40.0}
+        -   Entity:
+                Id: c563272d-f3af-42d0-9f87-0cff28c5d727
+                Name: Server
+                Components:
+                    fff2a267c4cc1d361004c0763aa92822: !TransformComponent
+                        Id: 2a9578dc-2ceb-4cd8-b094-30bdc775a590
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    8f858fd54b5b6e7746f48026236aaf22: !BallsOfSteel.Client,BallsOfSteel.Game
-                        Id: 8c72c624-e51a-4d03-b8d7-369565eb5b9f
-                        hostIp: 127.0.0.1
-                        hostPort: 3748
+                    d47d6c2d77e78329a1fa9d6a69d7ae7c: !BallsOfSteel.Server,BallsOfSteel.Game
+                        Id: 1401e861-3ec0-4fca-a639-5c50ab7d4254
+                        GameLogic: ref!! 1e91a9a1-2a82-4633-98cb-8010fd8f7c94
         -   Entity:
-                Id: 8819086b-2df4-484d-b64b-96ee7ce80da6
+                Id: d97668c4-eaea-4537-90c3-3098c91c1892
+                Name: MainGameLogic
+                Components:
+                    f147b87e26407ea1bb28118cbfa2ba2a: !TransformComponent
+                        Id: 2019d1d3-e8d5-4d3b-a446-e8b80996a399
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    cf939da5e0ad89a273de47027f412d13: !Gamelogic.MainGameLogic,BallsOfSteel.Game
+                        Id: 1e91a9a1-2a82-4633-98cb-8010fd8f7c94
+                        MainCamera: ref!! 7b8b12fc-fae5-4392-9813-38300cecf141
+                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+        -   Entity:
+                Id: e80c49a4-8ced-4731-a76f-d7e4d868c726
                 Name: Directional light
                 Components:
                     21e30de78e7545f69ea7c232711368ff: !TransformComponent
-                        Id: b2e6b490-1ab0-44c6-bab1-21d00d924a7d
+                        Id: c2294631-07f3-4492-a1a4-89dab2e60b3f
                         Position: {X: 0.0, Y: 2.0, Z: 0.0}
                         Rotation: {X: 1.131334E-08, Y: -0.9659258, Z: -0.258819044, W: -4.222196E-08}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     8edd0ba7a73f7ec06f3ad6468cbd692c: !LightComponent
-                        Id: 658351bb-63cd-4ff3-b46b-e6d9b24ae983
+                        Id: f672d2c7-bf60-4c63-abee-ad9ac21f1043
                         Type: !LightDirectional
                             Color: !ColorRgbProvider
                                 Value: {R: 1.0, G: 1.0, B: 1.0}
@@ -68,54 +272,3 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 BiasParameters: {}
                         Intensity: 20.0
-        -   Entity:
-                Id: b0a96df8-8467-463e-a4d9-8b2325d04fbe
-                Name: Ground
-                Components:
-                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
-                        Id: f2ccf1aa-6a04-4fd1-bc97-87d219b84aa0
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    fc8f383ed0a092389833c07321ad6a9b: !ModelComponent
-                        Id: 9a336e4e-d620-405e-a9ff-1ffbfa49fd52
-                        Model: f47dec17-c40c-4ee1-8331-f2195656b921:Ground
-                        Materials: {}
-        -   Entity:
-                Id: bb5bc16a-3a7a-4c32-8489-9dc7ec2e21b5
-                Name: Camera
-                Components:
-                    5803e08c8c1850187abeee7b86354e67: !TransformComponent
-                        Id: dd633cef-37e8-443b-b689-96edeac7fb0f
-                        Position: {X: 2.6, Y: 0.6, Z: -1.0}
-                        Rotation: {X: 0.0, Y: 0.829037547, Z: 0.0, W: 0.5591929}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
-                        Id: 9269d684-cec9-4970-8da5-f1e08d9087fa
-                        Name: null
-                        Projection: Perspective
-                        Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
-                    e55780119f2aaf30a6df627d3a95114a: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
-                        Id: 963f990f-3dd7-452f-8c31-cc9c8603f8e9
-                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
-                        TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
-                        SpeedFactor: 5.0
-                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
-                        MouseRotationSpeed: {X: 90.0, Y: 60.0}
-                        TouchRotationSpeed: {X: 60.0, Y: 40.0}
-        -   Entity:
-                Id: be56d4f7-498a-4150-8e82-cc7ae4ba1c88
-                Name: Sphere
-                Components:
-                    bbbd7d4d164be2121a0e449086438c79: !TransformComponent
-                        Id: af6e4257-e99c-4c8c-974a-950c92f633d1
-                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    c1da40a03fe1a0a2373ca8e70f59d45c: !ModelComponent
-                        Id: 71242c81-12a2-4d00-84ba-cf608366116f
-                        Model: 27bd937c-dae7-484c-a483-cba30d33ddfa:Materials/Sphere
-                        Materials: {}

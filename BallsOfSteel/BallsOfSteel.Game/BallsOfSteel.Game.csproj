@@ -176,7 +176,9 @@
     <Compile Include="Gamelogic\SwordScript.cs" />
     <Compile Include="Gamelogic\Trigger.cs" />
     <Compile Include="Network\Client.cs" />
+    <Compile Include="Network\PacketMagic.cs" />
     <Compile Include="Network\Server.cs" />
+    <Compile Include="Network\SharedNetwork.cs" />
     <Compile Include="Player\IControlInput.cs" />
     <Compile Include="Player\NetworkInput.cs" />
     <Compile Include="Player\PlayerInputControl.cs" />

@@ -5,16 +5,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BallsOfSteel;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
 using BallsOfSteel.Player;
+using SiliconStudio.Core;
 
 namespace Player
 {
     public class NetworkInput : AsyncScript, IControlInput
     {
         // TODO add [DataMemberIgnore] property for the network connection. Should be set externally
+        [DataMemberIgnore]
+        public Server.RemoteClient client;
 
         public bool Jump => didJump;
 
@@ -40,11 +44,15 @@ namespace Player
         {
             while(Game.IsRunning)
             {
-                // TODO Await client input, cache it in 
-                // walkDirection
-                // faceDirection
-                // didAttack
-                // didJump
+                while (client.incomingInput.Count != 0)
+                {
+                    NetworkPlayerInputData inputData = client.incomingInput.Pop();
+
+                    walkDirection = inputData.WalkDirection;
+                    faceDirection = inputData.FaceDirection;
+                    didJump = inputData.Jump;
+                    didAttack = inputData.Attack;
+                }
 
                 // Do stuff every new frame
                 await Script.NextFrame();

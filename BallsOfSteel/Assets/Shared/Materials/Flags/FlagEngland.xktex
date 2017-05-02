@@ -1,0 +1,7 @@
+!Texture
+Id: 8351035c-993a-48d4-905e-fe60e73948a2
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagEngland.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

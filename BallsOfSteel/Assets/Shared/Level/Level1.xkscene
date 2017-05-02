@@ -10,8 +10,11 @@ Hierarchy:
         - 81840a2f-0395-492b-8a92-e287e7fbdab9
         - 9e8ca458-438e-4037-9e5a-ca0286e3b1ad
         - 25b98262-725f-4828-88c2-5c8bf0ea887a
+        - 8f3a29b3-f99c-45cd-a3aa-1594b72ae577
+        - d43af524-bed9-41c9-a61f-c95dc1917de2
+        - 5fbef984-26cc-4bbb-b2d8-f5a662a1a77e
+        - cccfe198-4606-44eb-ae6f-31a3923c89a4
         - 5d2b970e-0e40-4849-8c9b-7f543b67ac07
-        - 8e72074b-2727-4243-8f54-3e4f322c4799
         - 78441e95-6e88-4c56-a878-e83921f51e53
         - 17c06536-c7e9-4763-b05d-2c2a0897f7ee
         - fd92f63d-5f41-41b5-856c-ecc19885178d
@@ -36,7 +39,7 @@ Hierarchy:
                         Id: 6f7e3f14-2488-4c66-b5fa-dde3b6456e77
                         Position*: {X: -15.0000029, Y: 2.0, Z: 7.499997}
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Scale*: {X: 5.0, Y: 2.0, Z: 3.0}
                         Children: {}
                     6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
                         Id: aaa029a6-513e-40e3-bf65-d5dd355e625b
@@ -148,7 +151,7 @@ Hierarchy:
                         Id: 0cd01a99-d8c5-41b7-a59a-04484f2c9333
                         Position*: {X: -7.499999, Y: 2.0, Z: -15.0}
                         Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
-                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Scale*: {X: 5.0, Y: 2.0, Z: 3.0}
                         Children: {}
                     6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
                         Id: f658a7cf-5bd5-41ad-8eee-e3d6d8d00c3b
@@ -201,7 +204,7 @@ Hierarchy:
                         Id: b053ba6c-dedd-4fe8-82d7-fa451f1f89ea
                         Position*: {X: -7.500001, Y: 2.0, Z: 14.9999962}
                         Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
-                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Scale*: {X: 3.0, Y: 2.0, Z: 3.0}
                         Children: {}
                     6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
                         Id: c7c57cf5-1f0a-46ca-ab67-8e9e042ec4b5
@@ -242,7 +245,7 @@ Hierarchy:
                         Id: 0cf5ce8a-2b6c-4edc-8155-8cbae6c8de10
                         Model: f47dec17-c40c-4ee1-8331-f2195656b921:Ground
                         Materials:
-                            267a9e79aac64d60d4c57e9efdbbbc5c~0: f0c52996-ad3e-4156-bbee-7cceeb45e02b:Materials/Blocks/GridMTx10
+                            267a9e79aac64d60d4c57e9efdbbbc5c~0: ed41e6ed-9beb-45bc-8955-67936a0d742b:Materials/Ground Material
                     14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
                         Id: c8ac73f0-b187-4718-a53d-dcb4d92fd1b6
                         CollisionGroup: StaticFilter
@@ -280,8 +283,8 @@ Hierarchy:
                 Components:
                     5803e08c8c1850187abeee7b86354e67: !TransformComponent
                         Id: fd3a8b18-2224-4ab0-a200-67bba8650474
-                        Position: {X: 22.15952, Y: 22.4105072, Z: 0.0}
-                        Rotation: {X: -0.2979503, Y: 0.6412688, Z: 0.2979503, W: 0.6412688}
+                        Position: {X: 28.1408234, Y: 11.3733826, Z: 0.0}
+                        Rotation: {X: -0.115569331, Y: 0.6975985, Z: 0.115569331, W: 0.6975985}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
@@ -306,7 +309,7 @@ Hierarchy:
                         Id: 9f42e3cd-f160-47f5-8582-b672072b7cf8
                         Position*: {X: -15.0, Y: 2.0, Z: -7.500004}
                         Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Scale*: {X: 5.0, Y: 2.0, Z: 3.0}
                         Children: {}
                     6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
                         Id: a6571296-31ae-4b95-b96f-da39b0316a65
@@ -345,11 +348,46 @@ Hierarchy:
                         Children: {}
                     9ea1247759c4e80c4255e6173981ddfc: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 1e4df01e-5947-44d4-85dd-7cebc8fb9122
+                        VariousNations:
+                            c017815aefb196e33e5c4efce73ef3bf: 7b40eeec-3fe6-42f0-948b-5bfd5cff6e3f:Materials/Flags/SomeFlag1
+                            0838a6c798bc535c0aded09ab9392953: bc159876-4473-4383-962c-8756ac862ea2:Materials/Flags/SomeFlag2
+                            acf4ff5a25470ea638f9eda30bdd99f3: f52bfade-9082-4159-9672-16e91d811499:Materials/Flags/SomeFlag3
+                            87c0b0032126b6de2eed4372d2d75b2a: c121b26b-975e-4334-bd83-cbc4473c7f1f:Materials/Flags/SomeFlag4
+                            afd1bc71a3fe833c88b2afa840b20e6f: c2c1e5ae-df36-4d54-bf55-8a3444c76688:Materials/Flags/SomeFlag5
+                            0ee7b0522ba317f5b60bfb7c7ec2a076: 544f8521-5d6e-4f47-8064-f38709039530:Materials/Flags/SomeFlag6
+                            5d13cd4ae21691f842b3e0da391c1595: db0a61d7-85c5-4e2f-ac69-037b13608f70:Materials/Flags/SomeFlag7
+                            b1b3b2a29dcf288063a21781ff742aa4: 9ecd7cd3-5061-48d2-8f59-85b6f23a19d6:Materials/Flags/SomeFlag8
+                            8ae91f8c38ef79db99602eef81b73f35: f4b8813d-abf1-4494-afcd-32d2d2348b21:Materials/Flags/SomeFlag11
                         MainCamera: ref!! 3cde50cf-5779-4f3f-b738-d9261fbe020c
                         NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
                     7255fbf695586e98df7d0e83ed26b2c0: !BallsOfSteel.MusicScript,BallsOfSteel.Game
                         Id: 1131ed03-bd5b-4e08-984d-cbfaed241185
                         SoundMusic: 11416e66-c105-4026-beb2-3e4f6dabeb9f:Audio/Music
+        -   Folder: null
+            Entity:
+                Id: 5fbef984-26cc-4bbb-b2d8-f5a662a1a77e
+                Name: Wall
+                Components:
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: 069bf841-ad80-4d53-8abd-b9a0de7fbcfa
+                        Position: {X: -15.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: -0.707106769, W: 0.707106769}
+                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: 56c14413-0cc5-4cd0-bdec-a500051d2b78
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
         -   Folder: null
             Entity:
                 Id: 64cfdb6e-66c0-4611-8bd4-df336522555a
@@ -382,26 +420,6 @@ Hierarchy:
                 BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
                 BasePartId: f191e186-225e-4b72-a25b-aad70dbc4389
                 InstanceId: e82bd7d1-0781-4752-99a2-a4d515dade5d
-        -   Entity:
-                Id: 6c7cb07a-4aa1-42c7-9027-1ab625c40881
-                Name: Gunpoint
-                Components:
-                    a674882fc5d4dc96ab93d61ebb948a4e: !TransformComponent
-                        Id: 1e62ee3d-19dd-4766-8841-52734e38a9e9
-                        Position: {X: 0.0, Y: 0.1548201, Z: -0.7910748}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children: {}
-                    68008cb0c19f042d45dcba2fdca41fa9: !Gamelogic.MahineGunScript,BallsOfSteel.Game
-                        Id: 1f77ba06-7c73-4b7c-bfc7-d2efdbab7494
-                        GunSound: null
-                        BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
-                        IsShooting: true
-                        MuzzleFlash: null
-                        Cooldown: 0.2
-                        ReloadCooldown: 1.2
-                        MagazineCapacity: 16
-                        BulletInitialSpeed: 20.0
         -   Entity:
                 Id: 6cb2301f-a62d-4dc1-93de-cab0cc0d038f
                 Name: Pillar0x5x0
@@ -469,7 +487,7 @@ Hierarchy:
                     21e30de78e7545f69ea7c232711368ff: !TransformComponent
                         Id: 5dfafa76-89da-49cd-83fc-88f3bf7d72be
                         Position: {X: 0.0, Y: 12.999999, Z: -3.27825518E-07}
-                        Rotation: {X: -2.58218016E-08, Y: 0.9396926, Z: 0.342020124, W: 7.094482E-08}
+                        Rotation: {X: -0.217071339, Y: 0.7681748, Z: 0.254325539, W: 0.545990765}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     8edd0ba7a73f7ec06f3ad6468cbd692c: !LightComponent
@@ -482,9 +500,12 @@ Hierarchy:
                                 Filter: !LightShadowMapFilterTypePcf
                                     FilterSize: Filter5x5
                                 Size: Large
-                                DepthRange: {}
+                                DepthRange:
+                                    IsAutomatic: false
+                                    ManualMinDistance: 1.0
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
-                                BiasParameters: {}
+                                BiasParameters:
+                                    DepthBias: 0.003
                         Intensity: 20.0
         -   Folder: Blocks
             Entity:
@@ -498,21 +519,31 @@ Hierarchy:
                         Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children:
                             e4930a9f0d8a4363c007a311132795d6: ref!! 207119f1-f0f0-466d-8785-5dea7e1ca0c8
-        -   Entity:
-                Id: 8e72074b-2727-4243-8f54-3e4f322c4799
-                Name: Machine gun hazard
+        -   Folder: null
+            Entity:
+                Id: 8f3a29b3-f99c-45cd-a3aa-1594b72ae577
+                Name: Wall
                 Components:
-                    78dbbcb71d2a0c4a4fb09cf92dcb7f97: !TransformComponent
-                        Id: 2593d775-dd10-4477-a8d0-0388f06698d3
-                        Position: {X: 7.30096054, Y: 0.5, Z: 10.4591074}
-                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
-                        Children:
-                            a83cb7ffe423bad33baca820add63f46: ref!! 1e62ee3d-19dd-4766-8841-52734e38a9e9
-                    5a189ed221e981897412ea6b6ca5e50b: !ModelComponent
-                        Id: aaa5677a-6cee-411e-bf29-3bab02a94bdf
-                        Model: 3e6401fc-3403-4810-ac61-f0ce799b99a3:Models/MachinegunModel
-                        Materials: {}
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: 06d0f39f-3372-4484-a49c-a586664bbbac
+                        Position: {X: 15.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.707106769, W: 0.707106769}
+                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: e320a762-1bf5-4e2d-bafc-2ae1997ea7ec
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
         -   Folder: null
             Entity:
                 Id: 9014ed9a-9b30-498b-a0a1-b63c4765bb7f
@@ -663,6 +694,56 @@ Hierarchy:
                 BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
                 BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
                 InstanceId: 362bc5ec-28fb-4fe2-acdd-5f8c913dd10a
+        -   Folder: null
+            Entity:
+                Id: cccfe198-4606-44eb-ae6f-31a3923c89a4
+                Name: Wall
+                Components:
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: 6d6e404f-ab0c-4110-9c5b-b53bc5170ac3
+                        Position: {X: 0.0, Y: 0.0, Z: 15.0}
+                        Rotation: {X: -0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: 6007386b-fb9e-43d6-9da9-1bba2b4fb60a
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Folder: null
+            Entity:
+                Id: d43af524-bed9-41c9-a61f-c95dc1917de2
+                Name: Wall
+                Components:
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: be1ff565-b97c-47b6-9156-b1bb645d5874
+                        Position: {X: 0.0, Y: 0.0, Z: -15.0}
+                        Rotation: {X: 0.707106769, Y: 0.0, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: 30f06e26-ce88-4315-91dc-79cd3db4079c
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
         -   Folder: Borders/South
             Entity:
                 Id: dd447a3e-2c06-447b-961a-2e2d8e5014b5
@@ -672,7 +753,7 @@ Hierarchy:
                         Id: 7a0d3888-d2c8-4f10-9148-819322f2965d
                         Position*: {X: 7.499997, Y: 2.0, Z: 14.9999971}
                         Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
-                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Scale*: {X: 3.0, Y: 2.0, Z: 3.0}
                         Children: {}
                     6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
                         Id: cbeb5519-89e5-4190-944b-5bfa8c829e10
@@ -783,7 +864,7 @@ Hierarchy:
                         Id: 9c342304-10fc-428a-b35f-29daffb00ddd
                         Position*: {X: 7.499999, Y: 2.0, Z: -14.999999}
                         Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
-                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Scale*: {X: 5.0, Y: 2.0, Z: 3.0}
                         Children: {}
                     6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
                         Id: 9e665549-3fdc-47a6-ab06-52bb74304081

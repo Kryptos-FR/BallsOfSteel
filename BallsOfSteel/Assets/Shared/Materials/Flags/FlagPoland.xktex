@@ -1,0 +1,7 @@
+!Texture
+Id: de9211f9-9e26-409b-a8ef-16d5c47fa7a0
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagPoland.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

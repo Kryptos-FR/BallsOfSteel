@@ -10,12 +10,17 @@ using BallsOfSteel.Player;
 using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
+using SiliconStudio.Xenko.Rendering;
 
 namespace Gamelogic
 {
     public class MainGameLogic : SyncScript
     {
+        private Random rand = new Random();
+
         // Declared public member fields and properties will show in the game studio
+        public List<Material> VariousNations = new List<Material>();
+
 
         private Entity[] players = new Entity[8]; // This is totally hardcoded
 
@@ -45,6 +50,17 @@ namespace Gamelogic
             var xboxController = player[0].GetOrCreate<XboxInput>();
             xboxController.ControllerID = controllerId;
             playerInputControl.ControlInput = xboxController;
+
+            // Assign a random nation
+            if (VariousNations.Count > 0)
+            {
+                int idx = rand.Next() % VariousNations.Count;
+                var modelComponent = playerInputControl?.ModelChildEntity?.Get<ModelComponent>();
+                if (modelComponent != null)
+                {
+                    modelComponent.Materials[0] = VariousNations[idx];
+                }
+            }
 
             SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
 

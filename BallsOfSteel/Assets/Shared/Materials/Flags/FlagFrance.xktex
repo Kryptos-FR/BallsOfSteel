@@ -1,0 +1,7 @@
+!Texture
+Id: f26bc38b-1f90-447c-a54a-bc29b3bb65fb
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagFrance.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

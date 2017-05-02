@@ -1,0 +1,7 @@
+!Texture
+Id: 0c4e8c74-1261-43d2-8f9e-f05d67a9a126
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagBulgaria.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

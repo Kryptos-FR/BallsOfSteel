@@ -18,9 +18,14 @@ namespace BallsOfSteel.Player
 {
     public class PlayerInputControl : SyncScript
     {
+        protected Random rand = new Random();
+
         public float MaximumHitpoints { get; set; } = 100;
         private float currentHitpoints = 0;
         
+        public Prefab RespawnEffect { get; set; }
+        public Prefab DieEffect { get; set; }
+
         [Display("Jump", category: "Sound")]
         public Sound JumpSound { get; set; }
         private SoundInstance jumpSfxInstance;
@@ -83,6 +88,7 @@ namespace BallsOfSteel.Player
         public void Die()
         {
             // TODO Particle effect - death
+            this.SpawnInstance(DieEffect, null, 3f, Entity.Transform.WorldMatrix);
 
             Entity.Get<CharacterComponent>().Enabled = false;
             Entity.Get<RigidbodyComponent>().Enabled = false;
@@ -96,9 +102,14 @@ namespace BallsOfSteel.Player
         public void Respawn(Vector3 respawnPosition)
         {
             Entity.Transform.Position = respawnPosition;
+            Entity.Transform.UpdateLocalMatrix();
+            Entity.Transform.UpdateWorldMatrix();
 
             Entity.Get<CharacterComponent>().Enabled = true;
             Entity.Get<RigidbodyComponent>().Enabled = true;
+            Entity.Get<CharacterComponent>().Teleport(respawnPosition);
+            Entity.Get<CharacterComponent>().UpdatePhysicsTransformation();
+            this.SpawnInstance(RespawnEffect, null, 3f, Entity.Transform.WorldMatrix);
 
             isAlive = true;
             invulnerabilityCooldown = 1;
@@ -110,7 +121,7 @@ namespace BallsOfSteel.Player
         {
             if (ControlInput.Jump)
             {
-                Respawn(new Vector3(0, 2, 0));
+                Respawn(new Vector3((float) (rand.NextDouble() * 20 - 10), 2, (float)(rand.NextDouble() * 20 - 10)));
             }
         }
 

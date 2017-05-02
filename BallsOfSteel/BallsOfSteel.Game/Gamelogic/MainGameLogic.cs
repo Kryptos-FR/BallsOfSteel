@@ -96,6 +96,17 @@ namespace Gamelogic
 
             playerInputControl.ControlInput = networkController;
 
+            // Assign a random nation
+            if (VariousNations.Count > 0)
+            {
+                int idx = rand.Next() % VariousNations.Count;
+                var modelComponent = playerInputControl?.ModelChildEntity?.Get<ModelComponent>();
+                if (modelComponent != null)
+                {
+                    modelComponent.Materials[0] = VariousNations[idx];
+                }
+            }
+
             SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
 
             playerInputControl.Respawn(new Vector3(0, 2, 0));
@@ -135,11 +146,12 @@ namespace Gamelogic
             {
                 Server.RemoteClient clientToRemove = ClientsToRemove.Pop();
 
-                for (int i = 0; i < 8; i++)
+                for (var i = 0; i < 8; i++)
                 {
                     if (players[i] != null)
                     {
                         var networkController = players[i].GetOrCreate<NetworkInput>();
+
                         if (networkController.client.clientIp.Address.Equals(clientToRemove.clientIp.Address))
                         {
                             players[i].Scene.Entities.Remove(players[i]);

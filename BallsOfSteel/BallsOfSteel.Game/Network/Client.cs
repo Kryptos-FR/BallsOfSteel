@@ -21,11 +21,12 @@ namespace BallsOfSteel
 {
     public class Client : AsyncScript
     {
-        private string hostIp = "127.0.0.1";
+        public string hostIp = "127.0.0.1";
+        public XboxInput input;
+
         private bool isConnected = false;
         private FastList<byte[]> packetsToSend = new FastList<byte[]>();
 
-        public XboxInput input;
 
         public void PushInputUpdate(IControlInput input)
         {
@@ -58,18 +59,15 @@ namespace BallsOfSteel
 
         private bool IsInputUpdateNeeded(IControlInput newInputState)
         {
-            return previousAttack != newInputState.Attack 
-                || previousJump != newInputState.Jump
-                || previousShoot != newInputState.Shoot
-                || previousFaceDirection != newInputState.FaceDirection
+            return previousFaceDirection != newInputState.FaceDirection
                 || previousWalkDirection != newInputState.WalkDirection;
         }
 
         private bool IsSinglePushUpdateNeeded(IControlInput newInputState)
         {
             return previousAttack != newInputState.Attack
-                   || previousJump != newInputState.Jump
-                   || previousShoot != newInputState.Shoot;
+                || previousJump != newInputState.Jump
+                || previousShoot != newInputState.Shoot;
         }
 
         public override async Task Execute()

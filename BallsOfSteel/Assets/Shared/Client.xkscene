@@ -22,6 +22,7 @@ Hierarchy:
                         Children: {}
                     5710eab7fcf48785dffd2b57208ba393: !BallsOfSteel.Client,BallsOfSteel.Game
                         Id: a9071362-1701-486c-a17a-a7adc93b5fd3
+                        hostIp: 127.0.0.1
                         input: ref!! 280205cc-7be4-4bae-a86d-6b25133056ca
         -   Entity:
                 Id: a9955984-35d7-453d-9d5b-438017fec1d6

@@ -52,6 +52,7 @@ Hierarchy:
         - c46e1a3c-193b-4740-ab03-562b1f56ecd6
         - 652b6a44-a33d-4957-861a-04d63bddbb22
         - dcff097f-22c0-4d33-8dca-9757f1373af4
+        - 9a80991e-bac3-49e3-8495-0429b3df2370
     Parts:
         -   Folder: null
             Entity:
@@ -1153,6 +1154,19 @@ Hierarchy:
                 BasePartAsset: 1c726628-c238-4b5a-bf2c-8e5e936a0035:BlocksPrefabs/Box3x1x1
                 BasePartId: b86036f4-0ce3-4794-9947-a61378390d41
                 InstanceId: bf866ac3-7703-47d9-9892-a1ca19a3232d
+        -   Entity:
+                Id: 9a80991e-bac3-49e3-8495-0429b3df2370
+                Name: Server
+                Components:
+                    ac91c4174867081f95c1ddf73bce8e1b: !TransformComponent
+                        Id: abb58eb6-34a5-459d-bca9-d736bb4933e4
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    68e3c4d8ae525d5888eaaaf06744df8f: !BallsOfSteel.Server,BallsOfSteel.Game
+                        Id: ee2fbb56-79e2-4c4f-8a59-71c218f3713b
+                        GameLogic: ref!! b2e32e84-0382-4e83-bc07-ce54a61e7986
         -   Folder: Borders/South
             Entity:
                 Id: 9b47e543-bdcb-438a-9b83-5d5d7738fb25
@@ -1306,8 +1320,8 @@ Hierarchy:
                             fc09f4ed915d877f1baa811926435f4d: db0a61d7-85c5-4e2f-ac69-037b13608f70:Materials/Flags/SomeFlag7
                             5e4cb34a100da20b2d1b15a970464aa3: 9ecd7cd3-5061-48d2-8f59-85b6f23a19d6:Materials/Flags/SomeFlag8
                             535e399ef98ddfbdf243f560dcf59d4e: f4b8813d-abf1-4494-afcd-32d2d2348b21:Materials/Flags/SomeFlag11
-                        MainCamera: ref!! c9bfc26c-9f0e-474b-91ca-caae94dc92fc
                         NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+                        MainCamera: ref!! c9bfc26c-9f0e-474b-91ca-caae94dc92fc
                     681d7870e588ea12e0d594fa5e8ee5df: !BallsOfSteel.MusicScript,BallsOfSteel.Game
                         Id: 0e1886b1-98be-458d-8da8-9b227e083644
                         SoundMusic: 11416e66-c105-4026-beb2-3e4f6dabeb9f:Audio/Music

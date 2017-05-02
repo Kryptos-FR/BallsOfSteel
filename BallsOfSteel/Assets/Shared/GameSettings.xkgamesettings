@@ -2,7 +2,7 @@
 Id: 11c15089-17b3-4580-8ab8-ebac84f08ec8
 SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
-DefaultScene: 193ed80d-0fd3-42f9-a9ed-5f27fcff46cf:Level/Level1
+DefaultScene: 5f8779a8-8064-4cd9-ba77-2a4cdfe7d0f6:Client
 GraphicsCompositor: f7c7121f-c457-490a-8611-9c2403aba80f:GraphicsCompositor
 SplashScreenTexture: d26edb11-10bd-403c-b3c2-9c7fcccf25e5:XenkoDefaultSplashScreen
 SplashScreenColor: {R: 0, G: 0, B: 0, A: 255}

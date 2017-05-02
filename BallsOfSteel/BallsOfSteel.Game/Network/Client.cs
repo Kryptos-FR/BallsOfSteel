@@ -65,6 +65,13 @@ namespace BallsOfSteel
                 || previousWalkDirection != newInputState.WalkDirection;
         }
 
+        private bool IsSinglePushUpdateNeeded(IControlInput newInputState)
+        {
+            return previousAttack != newInputState.Attack
+                   || previousJump != newInputState.Jump
+                   || previousShoot != newInputState.Shoot;
+        }
+
         public override async Task Execute()
         {
             IPEndPoint ep = new IPEndPoint(IPAddress.Parse(hostIp), SharedNetwork.ListenPort);
@@ -133,7 +140,7 @@ namespace BallsOfSteel
 
                 packetsToSend.Clear();
 
-                if (IsInputUpdateNeeded(input) && netUpdate.ElapsedMilliseconds >= 50)
+                if ((IsInputUpdateNeeded(input) && netUpdate.ElapsedMilliseconds >= 50) || IsSinglePushUpdateNeeded(input))
                 {
                     PushInputUpdate(input);
 

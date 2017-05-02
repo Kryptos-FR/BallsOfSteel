@@ -167,6 +167,7 @@
   <ItemGroup>
     <Compile Include="BasicCameraController.cs" />
     <Compile Include="Core\InputManagerExtensions.cs" />
+    <Compile Include="Core\ScriptComponentExtensions.cs" />
     <Compile Include="Core\Utils.cs" />
     <Compile Include="Gamelogic\DamagingScript.cs" />
     <Compile Include="Gamelogic\DestroyOnHit.cs" />

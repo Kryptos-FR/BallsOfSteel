@@ -9,12 +9,13 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Physics;
+using BallsOfSteel.Core;
 
 namespace Gamelogic
 {
     public class DestroyOnHit : AsyncScript
     {
-        // Declared public member fields and properties will show in the game studio
+        public Prefab OnDestroyEffect { get; set; }
 
         public override async Task Execute()
         {
@@ -33,6 +34,10 @@ namespace Gamelogic
 
                 // This was remove before - didn't work due to ordering problem?
                 Entity.Get<RigidbodyComponent>().Enabled = false;
+
+                // Spawn a visual effect
+                this.SpawnInstance(OnDestroyEffect, null, 2f, Entity.Transform.WorldMatrix);
+
                 return;
             }
         }

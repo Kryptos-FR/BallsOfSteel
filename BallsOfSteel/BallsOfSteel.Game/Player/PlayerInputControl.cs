@@ -69,7 +69,12 @@ namespace BallsOfSteel.Player
             jumpSfxInstance = JumpSound?.CreateInstance();
             jumpSfxInstance?.Stop();
             spawnSfxInstance = SpawnSound?.CreateInstance();
-            spawnSfxInstance?.Play();
+            if (spawnSfxInstance != null)
+            {                
+                // boost sfx volme
+                spawnSfxInstance.Volume = 10;
+                spawnSfxInstance.Play();
+            }
         }
 
         public void TakeDamage(float amount)
@@ -92,6 +97,10 @@ namespace BallsOfSteel.Player
 
             Entity.Get<CharacterComponent>().Enabled = false;
             Entity.Get<RigidbodyComponent>().Enabled = false;
+            if (MachineGun != null)
+            {
+                MachineGun.IsShooting = false;
+            }
 
             Entity.Transform.Position.Y = 200;
 

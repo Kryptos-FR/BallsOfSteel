@@ -11,9 +11,6 @@ namespace BallsOfSteel.Gamelogic
 {
     public class Trigger : AsyncScript
     {
-        [DataMemberIgnore]
-        public EventKey<bool> TriggerEvent = new EventKey<bool>();
-
         public override async Task Execute()
         {
             var trigger = Entity.Get<RigidbodyComponent>();
@@ -33,8 +30,8 @@ namespace BallsOfSteel.Gamelogic
                 var character = (firstCollision.ColliderA.Entity.Get<PlayerInputControl>()) ??
                                 (firstCollision.ColliderB.Entity.Get<PlayerInputControl>());
 
-                var damage = (firstCollision.ColliderA.Entity.Get<DamagingScript>()) ??
-                                (firstCollision.ColliderB.Entity.Get<DamagingScript>());
+                var damage = (firstCollision.ColliderA.Entity?.Get<DamagingScript>()) ??
+                                (firstCollision.ColliderB.Entity?.Get<DamagingScript>());
 
                 if (character == null || damage == null)
                     return; // I guess I'm impervious to that damage
@@ -46,7 +43,14 @@ namespace BallsOfSteel.Gamelogic
                 if (damageOwner == character.Entity)
                     continue; // No self inflicted wounds
 
+                if (damage.DamagePerHit <= 0)
+                    continue;
+
                 character.TakeDamage(damage.DamagePerHit);
+                damage.DamagePerHit = 0;
+
+                damage.Entity.Get<RigidbodyComponent>().Enabled = false;
+
                 // TODO: Spawn on-hit effects
                 // TODO: Staggerf
 

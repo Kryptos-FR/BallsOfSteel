@@ -15,7 +15,9 @@ namespace Player
     public class NetworkInput : AsyncScript, IControlInput
     {
         // TODO add [DataMemberIgnore] property for the network connection. Should be set externally
-
+        [DataMemberIgnore]
+        public Server.RemoteClient client;
+        
         public bool Jump => didJump;
 
         private bool wasJumpDown = false;
@@ -40,6 +42,9 @@ namespace Player
         {
             while(Game.IsRunning)
             {
+                // wait incomingInput
+                // update events
+                
                 // TODO Await client input, cache it in 
                 // walkDirection
                 // faceDirection

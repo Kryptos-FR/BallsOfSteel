@@ -52,6 +52,32 @@ namespace Gamelogic
 
             return player[0];
         }
+        
+        protected Entity RegisterNewNetworkPlayer(Prefab playerPrefab, Server.RemoteClient client)
+        {       
+            if (playerPrefab == null)
+                return null;
+
+            var player = playerPrefab.Instantiate();
+            if (player.Count != 1)
+                throw new InvalidOperationException("The player prefab must have exactly ONE root entity!");
+
+            var playerInputControl = player[0].Get<PlayerInputControl>();
+            playerInputControl.Camera = MainCamera;
+
+            // Assign the proper controller id
+            var networkController = player[0].GetOrCreate<NetworkInput>();
+            networkController.ControllerID = controllerId;
+            networkController.client = client;
+            
+            playerInputControl.ControlInput = networkController;
+
+            SceneSystem.SceneInstance.RootScene.Entities.Add(player[0]);
+
+            playerInputControl.Respawn(new Vector3(0, 2, 0));
+
+            return player[0];
+        }
 
         public override void Update()
         {

@@ -1,0 +1,84 @@
+!PrefabAsset
+Id: 7c829b9b-c538-47d0-a54f-6b7e85b14803
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Hierarchy:
+    RootPartIds:
+        - 2401b190-06e1-4db7-ae26-0c4e8967be6b
+    Parts:
+        -   Entity:
+                Id: 2401b190-06e1-4db7-ae26-0c4e8967be6b
+                Name: Ramp
+                Components:
+                    74afede29feb76560a57203ee59dcf88: !TransformComponent
+                        Id: ce3dd92a-052f-4d75-b067-094f8cf03196
+                        Position: {X: 0.0, Y: 0.0, Z: 3.57627869E-07}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children:
+                            5c9b4d739585bd9765d562677c0d80b2: ref!! 3b90735e-5b09-4d47-bd02-dc71d3c1784c
+                            3bf49d0ac1e2574724840b0a3dc0405b: ref!! 6e88eae7-ce94-4328-94eb-a8328842ae4d
+        -   Folder: null
+            Entity:
+                Id: ab764054-957c-4816-859b-9e1723cbae77
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 6e88eae7-ce94-4328-94eb-a8328842ae4d
+                        Position*: {X: -0.5, Y: 0.25, Z: 2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: 95e9a02b-39c2-4a23-b0a8-17ef31d70984
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: 60dc0d4f-6132-4bcc-a58e-ab8627b0c573
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 063bac5c-8963-4ce9-9c21-ff7f719d5bde:BlocksPrefabs/Ramp1x1_2x2
+                BasePartId: ebb1699f-cbad-48c0-8147-9d3d1236b47b
+                InstanceId: 8bbfb114-e3bb-4a76-9ba0-339f6e55edf8
+        -   Folder: null
+            Entity:
+                Id: f191e186-225e-4b72-a25b-aad70dbc4389
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 3b90735e-5b09-4d47-bd02-dc71d3c1784c
+                        Position*: {X: 0.5, Y: 0.25, Z: -2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: e46fcaf6-6e50-49f8-b81b-626f15dbbda7
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: fcf77ca5-a2e7-48a9-a05d-2053ecf11d83
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 063bac5c-8963-4ce9-9c21-ff7f719d5bde:BlocksPrefabs/Ramp1x1_2x2
+                BasePartId: ebb1699f-cbad-48c0-8147-9d3d1236b47b
+                InstanceId: 2ed79524-28b3-408d-a26c-0b819e595386

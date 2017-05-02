@@ -1,0 +1,837 @@
+!SceneAsset
+Id: 193ed80d-0fd3-42f9-a9ed-5f27fcff46cf
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+ChildrenIds: []
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootPartIds:
+        - 3d2699a4-94f5-4746-bac6-37bce7e793a9
+        - 81840a2f-0395-492b-8a92-e287e7fbdab9
+        - 9e8ca458-438e-4037-9e5a-ca0286e3b1ad
+        - 25b98262-725f-4828-88c2-5c8bf0ea887a
+        - 5d2b970e-0e40-4849-8c9b-7f543b67ac07
+        - 8e72074b-2727-4243-8f54-3e4f322c4799
+        - 78441e95-6e88-4c56-a878-e83921f51e53
+        - 17c06536-c7e9-4763-b05d-2c2a0897f7ee
+        - fd92f63d-5f41-41b5-856c-ecc19885178d
+        - 02a37949-0d85-44a7-b82b-ea9711ba8f9a
+        - 44e0b337-0f89-499f-a888-8615b8a9d767
+        - dd447a3e-2c06-447b-961a-2e2d8e5014b5
+        - 2097c3b1-3d5b-43ab-b79a-647227bc9567
+        - 1ae3c75b-b9d8-4949-9c8c-94973b9cad62
+        - 32c42153-44b9-4e6d-b9f2-4b5a7841fa43
+        - a5bb0d89-1ec7-4cac-918d-9ec56e36c944
+        - cafe5e1e-7386-440d-bf12-469f24ea2534
+        - e1c8adfc-5315-4686-af7e-8d6a2f5210cd
+        - 865fdbb1-f3fb-4ade-8f60-b561a8f5ceeb
+        - 05959d9a-22f1-4834-9a75-a02a1c82cb1f
+    Parts:
+        -   Folder: Borders/East
+            Entity:
+                Id: 02a37949-0d85-44a7-b82b-ea9711ba8f9a
+                Name: Wall0x2x5
+                Components:
+                    db07bec9b88cb84e9f8d6d3511eb10f2: !TransformComponent
+                        Id: 6f7e3f14-2488-4c66-b5fa-dde3b6456e77
+                        Position*: {X: -15.0000029, Y: 2.0, Z: 7.499997}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Children: {}
+                    6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
+                        Id: aaa029a6-513e-40e3-bf65-d5dd355e625b
+                        Model: 017bbc0d-9079-47ed-9c48-69dd6feecc9d:Models/Blocks/Wall0x2x5
+                        Materials:
+                            ec9522ed2e91694abd8663b5b8ada228~0: 39689a5c-f77a-4464-a8d7-865d175e44ea:Materials/Blocks/GridMTWall
+                    74299af04257e746be4dcca2e071c23f: !StaticColliderComponent
+                        Id: 50f73c68-722d-4599-a8cd-e560041212af
+                        CollisionGroup*: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c43a4bb1930ada42a1651c91b5317898: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 2.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
+                BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
+                InstanceId: e4f60d26-76be-4c66-a233-d9cb0c81d201
+        -   Entity:
+                Id: 05959d9a-22f1-4834-9a75-a02a1c82cb1f
+                Name: Pillar0x5x0
+                Components:
+                    b3879bae84509c87b220ee22926ba478: !TransformComponent
+                        Id: 12e405ec-ddd7-4697-8b52-eeee54f51714
+                        Position: {X: 0.0, Y: -2.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            03f9a77c205e46ae67d9fc33d521a881: ref!! c522c135-1284-4f1f-8d18-10fc3bcb9ba3
+        -   Folder: null
+            Entity:
+                Id: 06ac7fb4-55df-4b49-9419-422dde9c598a
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: d9fd2a26-e938-4966-8654-4d700469a895
+                        Position: {X: 0.5, Y: 0.25, Z: -2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: 78f56f87-23a6-4ad6-940e-c92428db09bb
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: f2ded4ed-6a64-4fce-9701-7386251610d5
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: f191e186-225e-4b72-a25b-aad70dbc4389
+                InstanceId: 72a5a832-be6d-467c-b6c0-f11ceccb71bf
+        -   Folder: null
+            Entity:
+                Id: 06b4432e-534a-4544-a654-a691097c056d
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 7cf89420-a73f-406e-a3c0-d9bc711dd831
+                        Position: {X: 0.5, Y: 0.25, Z: -2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: 918a2d08-ce08-4cb0-998a-379668c66bba
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: 0e85c984-af8f-471a-94c6-c22e189af211
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: f191e186-225e-4b72-a25b-aad70dbc4389
+                InstanceId: 362bc5ec-28fb-4fe2-acdd-5f8c913dd10a
+        -   Folder: Borders/North
+            Entity:
+                Id: 17c06536-c7e9-4763-b05d-2c2a0897f7ee
+                Name: Wall0x2x5
+                Components:
+                    db07bec9b88cb84e9f8d6d3511eb10f2: !TransformComponent
+                        Id: 0cd01a99-d8c5-41b7-a59a-04484f2c9333
+                        Position*: {X: -7.499999, Y: 2.0, Z: -15.0}
+                        Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Children: {}
+                    6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
+                        Id: f658a7cf-5bd5-41ad-8eee-e3d6d8d00c3b
+                        Model: 017bbc0d-9079-47ed-9c48-69dd6feecc9d:Models/Blocks/Wall0x2x5
+                        Materials:
+                            ec9522ed2e91694abd8663b5b8ada228~0: 39689a5c-f77a-4464-a8d7-865d175e44ea:Materials/Blocks/GridMTWall
+                    74299af04257e746be4dcca2e071c23f: !StaticColliderComponent
+                        Id: adf342eb-72ff-44d6-b03b-64741c828704
+                        CollisionGroup*: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c43a4bb1930ada42a1651c91b5317898: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 2.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
+                BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
+                InstanceId: 6bc33753-65cd-4048-a9db-01a7c01adf06
+        -   Entity:
+                Id: 1ae3c75b-b9d8-4949-9c8c-94973b9cad62
+                Name*: Ramp
+                Components:
+                    74afede29feb76560a57203ee59dcf88: !TransformComponent
+                        Id: 350c63bf-e450-4315-a9c8-80d42e83f40a
+                        Position*: {X: 5.5, Y: 0.0, Z: 3.57627869E-07}
+                        Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children:
+                            5c9b4d739585bd9765d562677c0d80b2: ref!! d9fd2a26-e938-4966-8654-4d700469a895
+                            3bf49d0ac1e2574724840b0a3dc0405b: ref!! cd544384-da4b-4014-8460-1098b3478507
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
+                InstanceId: 72a5a832-be6d-467c-b6c0-f11ceccb71bf
+        -   Folder: Borders/South
+            Entity:
+                Id: 2097c3b1-3d5b-43ab-b79a-647227bc9567
+                Name: Wall0x2x5
+                Components:
+                    db07bec9b88cb84e9f8d6d3511eb10f2: !TransformComponent
+                        Id: b053ba6c-dedd-4fe8-82d7-fa451f1f89ea
+                        Position*: {X: -7.500001, Y: 2.0, Z: 14.9999962}
+                        Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Children: {}
+                    6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
+                        Id: c7c57cf5-1f0a-46ca-ab67-8e9e042ec4b5
+                        Model: 017bbc0d-9079-47ed-9c48-69dd6feecc9d:Models/Blocks/Wall0x2x5
+                        Materials:
+                            ec9522ed2e91694abd8663b5b8ada228~0: 39689a5c-f77a-4464-a8d7-865d175e44ea:Materials/Blocks/GridMTWall
+                    74299af04257e746be4dcca2e071c23f: !StaticColliderComponent
+                        Id: 17210962-7990-48a8-ae36-ca0a9418dd7f
+                        CollisionGroup*: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c43a4bb1930ada42a1651c91b5317898: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 2.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
+                BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
+                InstanceId: db442f54-3a3b-43c5-813d-9e382a088ede
+        -   Entity:
+                Id: 25b98262-725f-4828-88c2-5c8bf0ea887a
+                Name: Ground
+                Components:
+                    a345cbba4fb41e62aef66cbeb0346c6f: !TransformComponent
+                        Id: 500ea1ee-7de6-4ac8-ad7a-64994d2bdbe2
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 3.0, Y: 3.0, Z: 3.0}
+                        Children: {}
+                    fc8f383ed0a092389833c07321ad6a9b: !ModelComponent
+                        Id: 0cf5ce8a-2b6c-4edc-8155-8cbae6c8de10
+                        Model: f47dec17-c40c-4ee1-8331-f2195656b921:Ground
+                        Materials:
+                            267a9e79aac64d60d4c57e9efdbbbc5c~0: f0c52996-ad3e-4156-bbee-7cceeb45e02b:Materials/Blocks/GridMTx10
+                    14a5460244bdbd5cfc70fc518421f9ed: !StaticColliderComponent
+                        Id: c8ac73f0-b187-4718-a53d-dcb4d92fd1b6
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            98b474483f6290cd53ef0d08201d2f1a: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 1.0, Z: 0.0}
+                                Offset: 0.0
+        -   Folder: null
+            Entity:
+                Id: 32c42153-44b9-4e6d-b9f2-4b5a7841fa43
+                Name*: Ramp
+                Components:
+                    74afede29feb76560a57203ee59dcf88: !TransformComponent
+                        Id: 7abe88c5-7022-4ce7-b4cd-75401d660e16
+                        Position*: {X: 0.0, Y: 0.0, Z: 5.5}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children:
+                            5c9b4d739585bd9765d562677c0d80b2: ref!! 9b8dad57-7181-4c0b-b153-73169ad93472
+                            3bf49d0ac1e2574724840b0a3dc0405b: ref!! 946b52d4-0e29-492e-bce1-246999280b9d
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
+                InstanceId: 32c58d56-7fe2-4449-9e29-815f0537c7aa
+        -   Entity:
+                Id: 3d2699a4-94f5-4746-bac6-37bce7e793a9
+                Name: Camera
+                Components:
+                    5803e08c8c1850187abeee7b86354e67: !TransformComponent
+                        Id: fd3a8b18-2224-4ab0-a200-67bba8650474
+                        Position: {X: 22.15952, Y: 22.4105072, Z: 0.0}
+                        Rotation: {X: -0.2979503, Y: 0.6412688, Z: 0.2979503, W: 0.6412688}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
+                        Id: 3cde50cf-5779-4f3f-b738-d9261fbe020c
+                        Name: null
+                        Projection: Perspective
+                        Slot: 532a4ab3-bb07-4d00-8bf0-7d130729ae0b
+                    157f6a6e60bb1b3a16a68384ff33c98c: !BallsOfSteel.BasicCameraController,BallsOfSteel.Game
+                        Id: 1900ebac-cc8a-4385-9728-412218038705
+                        KeyboardMovementSpeed: {X: 5.0, Y: 5.0, Z: 5.0}
+                        TouchMovementSpeed: {X: 40.0, Y: 40.0, Z: 20.0}
+                        SpeedFactor: 5.0
+                        KeyboardRotationSpeed: {X: 3.0, Y: 3.0}
+                        MouseRotationSpeed: {X: 90.0, Y: 60.0}
+                        TouchRotationSpeed: {X: 60.0, Y: 40.0}
+        -   Folder: Borders/East
+            Entity:
+                Id: 44e0b337-0f89-499f-a888-8615b8a9d767
+                Name: Wall0x2x5
+                Components:
+                    db07bec9b88cb84e9f8d6d3511eb10f2: !TransformComponent
+                        Id: 9f42e3cd-f160-47f5-8582-b672072b7cf8
+                        Position*: {X: -15.0, Y: 2.0, Z: -7.500004}
+                        Rotation*: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Children: {}
+                    6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
+                        Id: a6571296-31ae-4b95-b96f-da39b0316a65
+                        Model: 017bbc0d-9079-47ed-9c48-69dd6feecc9d:Models/Blocks/Wall0x2x5
+                        Materials:
+                            ec9522ed2e91694abd8663b5b8ada228~0: 39689a5c-f77a-4464-a8d7-865d175e44ea:Materials/Blocks/GridMTWall
+                    74299af04257e746be4dcca2e071c23f: !StaticColliderComponent
+                        Id: bf54019b-5eca-4831-956a-71ee36ed92f3
+                        CollisionGroup*: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c43a4bb1930ada42a1651c91b5317898: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 2.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
+                BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
+                InstanceId: 81d98d3f-d1f4-4cf9-a20b-7a16d25acd95
+        -   Entity:
+                Id: 5d2b970e-0e40-4849-8c9b-7f543b67ac07
+                Name: MainGameLogic
+                Components:
+                    f147b87e26407ea1bb28118cbfa2ba2a: !TransformComponent
+                        Id: 5edfa825-3a30-42ee-87a6-f35f55ca0158
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9ea1247759c4e80c4255e6173981ddfc: !Gamelogic.MainGameLogic,BallsOfSteel.Game
+                        Id: 1e4df01e-5947-44d4-85dd-7cebc8fb9122
+                        MainCamera: ref!! 3cde50cf-5779-4f3f-b738-d9261fbe020c
+                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+        -   Folder: null
+            Entity:
+                Id: 64cfdb6e-66c0-4611-8bd4-df336522555a
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: f1565dda-b72d-4844-99e2-b7e89555b7fb
+                        Position: {X: 0.5, Y: 0.25, Z: -2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: bab81884-c926-4eb9-9450-e7152c9f68e1
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: ec05f7f0-37d7-417c-9173-84dc45650f60
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: f191e186-225e-4b72-a25b-aad70dbc4389
+                InstanceId: e82bd7d1-0781-4752-99a2-a4d515dade5d
+        -   Entity:
+                Id: 6c7cb07a-4aa1-42c7-9027-1ab625c40881
+                Name: Gunpoint
+                Components:
+                    a674882fc5d4dc96ab93d61ebb948a4e: !TransformComponent
+                        Id: 1e62ee3d-19dd-4766-8841-52734e38a9e9
+                        Position: {X: 0.0, Y: 0.1548201, Z: -0.7910748}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    68008cb0c19f042d45dcba2fdca41fa9: !Gamelogic.MahineGunScript,BallsOfSteel.Game
+                        Id: 1f77ba06-7c73-4b7c-bfc7-d2efdbab7494
+                        GunSound: null
+                        BulletPrefab: 05146b7f-b17b-4703-882e-2a5f0117a4bd:Silver bullet
+                        IsShooting: true
+                        MuzzleFlash: null
+                        Cooldown: 0.2
+                        ReloadCooldown: 1.2
+                        MagazineCapacity: 16
+                        BulletInitialSpeed: 20.0
+        -   Entity:
+                Id: 6cb2301f-a62d-4dc1-93de-cab0cc0d038f
+                Name: Pillar0x5x0
+                Components:
+                    e96f0faea3329947a94aed18021d4112: !TransformComponent
+                        Id: c522c135-1284-4f1f-8d18-10fc3bcb9ba3
+                        Position: {X: 0.0, Y: 2.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    9824be4e570113419527810ca0e59df5: !ModelComponent
+                        Id: 4fa03754-d0eb-4450-b00a-81004d92a75f
+                        Model: 5fa37e79-cc00-4ca5-b1e2-73388de33a03:Models/Blocks/Pillar0x5x0
+                        Materials:
+                            375be21b17b931489b7075f15158cba7~0: d2c8739d-7bbe-4d12-a18c-56eaa9ea908f:Materials/Blocks/GridMTHazard
+                    23c28da116b69348aa23606dcc7b416f: !StaticColliderComponent
+                        Id: 812d41ac-33a2-4ffd-8643-f0abcb750d2e
+                        CollisionGroup: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            0c11aab71bdaff448b0974b597a6f84f: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 5.0, Z: 0.1}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: e28aaebe-8f52-494d-90c3-ba906ef2995b:BlocksPrefabs/Pillar0x5x0
+                BasePartId: 9a9e7e72-7cc0-4631-aee3-8ec36aad1662
+                InstanceId: e0e809db-3371-4982-a4c2-64a33a430895
+        -   Folder: Borders
+            Entity:
+                Id: 78441e95-6e88-4c56-a878-e83921f51e53
+                Name: WestWall
+                Components:
+                    110112c4dece6b44a62c0e1476419b10: !TransformComponent
+                        Id: 1358b87e-68b7-4b2d-9b4d-f726da7a5c19
+                        Position: {X: 14.9999981, Y: 0.0, Z: -2.98023224E-07}
+                        Rotation: {X: 0.0, Y: -0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    003199dae18c99e4b39ab488e717f3cb: !StaticColliderComponent
+                        Id: 448ceae7-27fb-4e7b-8d13-df3eda9253f0
+                        CollisionGroup: StaticFilter
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            7387e3c64746b9673681c71ef55c69bc: !StaticPlaneColliderShapeDesc
+                                Normal: {X: 0.0, Y: 0.0, Z: 1.0}
+                                Offset: 0.0
+        -   Entity:
+                Id: 81840a2f-0395-492b-8a92-e287e7fbdab9
+                Name: Directional light
+                Components:
+                    21e30de78e7545f69ea7c232711368ff: !TransformComponent
+                        Id: 5dfafa76-89da-49cd-83fc-88f3bf7d72be
+                        Position: {X: 0.0, Y: 12.999999, Z: -3.27825518E-07}
+                        Rotation: {X: -2.58218016E-08, Y: 0.9396926, Z: 0.342020124, W: 7.094482E-08}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    8edd0ba7a73f7ec06f3ad6468cbd692c: !LightComponent
+                        Id: 73f709e4-6a57-4790-aa3a-036ab9566f15
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: Large
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 20.0
+        -   Entity:
+                Id: 865fdbb1-f3fb-4ade-8f60-b561a8f5ceeb
+                Name: Floor1x0x1
+                Components:
+                    0629a2f496d121dfee4164f44b099f23: !TransformComponent
+                        Id: 33161154-9061-4b64-8b11-b4b358381822
+                        Position: {X: 0.0, Y: 3.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children:
+                            e4930a9f0d8a4363c007a311132795d6: ref!! 207119f1-f0f0-466d-8785-5dea7e1ca0c8
+        -   Entity:
+                Id: 8e72074b-2727-4243-8f54-3e4f322c4799
+                Name: Machine gun hazard
+                Components:
+                    78dbbcb71d2a0c4a4fb09cf92dcb7f97: !TransformComponent
+                        Id: 2593d775-dd10-4477-a8d0-0388f06698d3
+                        Position: {X: 7.30096054, Y: 0.5, Z: 10.4591074}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            a83cb7ffe423bad33baca820add63f46: ref!! 1e62ee3d-19dd-4766-8841-52734e38a9e9
+                    5a189ed221e981897412ea6b6ca5e50b: !ModelComponent
+                        Id: aaa5677a-6cee-411e-bf29-3bab02a94bdf
+                        Model: 3e6401fc-3403-4810-ac61-f0ce799b99a3:Models/MachinegunModel
+                        Materials: {}
+        -   Folder: null
+            Entity:
+                Id: 9014ed9a-9b30-498b-a0a1-b63c4765bb7f
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 9b8dad57-7181-4c0b-b153-73169ad93472
+                        Position: {X: 0.5, Y: 0.25, Z: -2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: ff51a633-e9a2-464e-bd28-b877f7097b83
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: 5a680f4f-5ca9-4396-9095-604f1f7468fc
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: f191e186-225e-4b72-a25b-aad70dbc4389
+                InstanceId: 32c58d56-7fe2-4449-9e29-815f0537c7aa
+        -   Folder: null
+            Entity:
+                Id: 96d4587d-0a4b-4bce-a948-c30d9e31fa1c
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 946b52d4-0e29-492e-bce1-246999280b9d
+                        Position: {X: -0.5, Y: 0.25, Z: 2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: 7fd08ab6-8ba3-40fd-be75-c94b89d62731
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: b8e0651d-deb6-46e8-8664-0df753df402e
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: ab764054-957c-4816-859b-9e1723cbae77
+                InstanceId: 32c58d56-7fe2-4449-9e29-815f0537c7aa
+        -   Folder: null
+            Entity:
+                Id: 9cabbf82-eaf3-4373-9596-5dbd18152d23
+                Name: Floor1x0x1
+                Components:
+                    10c0801cc1dd4143933cbc13534ebf54: !TransformComponent
+                        Id: 207119f1-f0f0-466d-8785-5dea7e1ca0c8
+                        Position*: {X: 5.96046448E-08, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    4b50702e8d933344b17a530059aebafc: !ModelComponent
+                        Id: 1e2fcd97-f877-4d90-8067-504491ce0a06
+                        Model: 34d4612d-0a5b-45bf-a317-a913573b60eb:Models/Blocks/Floor1x0x1
+                        Materials:
+                            1f66d7610cd6dc4c9b32d800d312e162~0: c29cf05b-c701-4b8b-96d8-64f6b086b8ca:Materials/Blocks/GridMTPlatform
+                    9fd04a146701174387ebf7ca57fcecc3: !StaticColliderComponent
+                        Id: 83643dba-e417-4a36-b309-6b7056914df8
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d2e120603d7fa5488247697dbd90f469: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 0.05, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 0046b887-2077-4d42-9525-ef550b83b60e:BlocksPrefabs/Floor1x0x1
+                BasePartId: 69eeb2f5-cf60-4018-8efd-3e4352e1779d
+                InstanceId: f262c1b9-84c6-4a04-8ed7-ca4f3281fecc
+        -   Entity:
+                Id: 9e8ca458-438e-4037-9e5a-ca0286e3b1ad
+                Name: Skybox
+                Components:
+                    ba190c00a8b47036ea31a3d45ec884bd: !TransformComponent
+                        Id: 358790d0-6396-451f-b816-9bdf11d01ff8
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    c0bb89a8da50bab16424df8b49851b08: !BackgroundComponent
+                        Id: 4bcbe083-7d7d-44ba-b4e4-65f36955f07e
+                        Texture: 84f1f9ea-e5ec-4c52-bdef-9704fff2fc6e:Skybox Texture
+                    33a61fd218b1204a32a2422d3645148d: !LightComponent
+                        Id: b52fb705-0007-488a-9cd7-ffcd7c32740c
+                        Type: !LightSkybox
+                            Skybox: d7214a8c-d420-4d14-aaa5-bfc0f34b3ee7:Skybox
+        -   Folder: null
+            Entity:
+                Id: a5bb0d89-1ec7-4cac-918d-9ec56e36c944
+                Name*: Ramp
+                Components:
+                    74afede29feb76560a57203ee59dcf88: !TransformComponent
+                        Id: da5152c0-ab01-46b0-931c-811cbf98b0d8
+                        Position*: {X: -5.5, Y: 0.0, Z: 3.57627869E-07}
+                        Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: -0.707106769}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children:
+                            5c9b4d739585bd9765d562677c0d80b2: ref!! f1565dda-b72d-4844-99e2-b7e89555b7fb
+                            3bf49d0ac1e2574724840b0a3dc0405b: ref!! 9fd62ce5-f3ce-4f92-95e0-8c2dcd9ef14d
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
+                InstanceId: e82bd7d1-0781-4752-99a2-a4d515dade5d
+        -   Folder: null
+            Entity:
+                Id: cafe5e1e-7386-440d-bf12-469f24ea2534
+                Name*: Ramp
+                Components:
+                    74afede29feb76560a57203ee59dcf88: !TransformComponent
+                        Id: 17b2d13b-97fd-4fe7-9cf4-8adf28ab20ea
+                        Position*: {X: 0.0, Y: 0.0, Z: -5.5}
+                        Rotation*: {X: 0.0, Y: 1.0, Z: 0.0, W: -4.371139E-08}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Children:
+                            5c9b4d739585bd9765d562677c0d80b2: ref!! 7cf89420-a73f-406e-a3c0-d9bc711dd831
+                            3bf49d0ac1e2574724840b0a3dc0405b: ref!! 6cdafcba-8500-4aeb-9d0c-3ac62f50f685
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: 2401b190-06e1-4db7-ae26-0c4e8967be6b
+                InstanceId: 362bc5ec-28fb-4fe2-acdd-5f8c913dd10a
+        -   Folder: Borders/South
+            Entity:
+                Id: dd447a3e-2c06-447b-961a-2e2d8e5014b5
+                Name: Wall0x2x5
+                Components:
+                    db07bec9b88cb84e9f8d6d3511eb10f2: !TransformComponent
+                        Id: 7a0d3888-d2c8-4f10-9148-819322f2965d
+                        Position*: {X: 7.499997, Y: 2.0, Z: 14.9999971}
+                        Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Children: {}
+                    6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
+                        Id: cbeb5519-89e5-4190-944b-5bfa8c829e10
+                        Model: 017bbc0d-9079-47ed-9c48-69dd6feecc9d:Models/Blocks/Wall0x2x5
+                        Materials:
+                            ec9522ed2e91694abd8663b5b8ada228~0: 39689a5c-f77a-4464-a8d7-865d175e44ea:Materials/Blocks/GridMTWall
+                    74299af04257e746be4dcca2e071c23f: !StaticColliderComponent
+                        Id: 8f0a8b44-e990-461a-a47f-75b860693d5f
+                        CollisionGroup*: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c43a4bb1930ada42a1651c91b5317898: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 2.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
+                BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
+                InstanceId: 0cca4bda-5e5b-4872-994f-c05c8a4eb3cc
+        -   Folder: null
+            Entity:
+                Id: de01ef21-3f7d-43f5-b369-b13520f83617
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: cd544384-da4b-4014-8460-1098b3478507
+                        Position: {X: -0.5, Y: 0.25, Z: 2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: 33b22534-5b30-470a-a393-a1df0a4c0088
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: 040b111d-511c-4678-be58-fc95a8680ebc
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: ab764054-957c-4816-859b-9e1723cbae77
+                InstanceId: 72a5a832-be6d-467c-b6c0-f11ceccb71bf
+        -   Entity:
+                Id: e1c8adfc-5315-4686-af7e-8d6a2f5210cd
+                Name: Box1x1x1
+                Components:
+                    5c46eecd43819be46c51b2458ef597fd: !TransformComponent
+                        Id: 26dd3d4c-c0f2-43b0-98f2-3d1449d4fdd9
+                        Position: {X: 2.0, Y: 0.0, Z: 2.5}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+        -   Folder: null
+            Entity:
+                Id: fa7c5bf8-1be1-4a0f-8d7e-bf9aeb1ae9ac
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 9fd62ce5-f3ce-4f92-95e0-8c2dcd9ef14d
+                        Position: {X: -0.5, Y: 0.25, Z: 2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: 2b310936-f941-4782-8f2b-ad653817b065
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: 2fb5895c-fa6e-4857-9a1a-7a92671f9fc0
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: ab764054-957c-4816-859b-9e1723cbae77
+                InstanceId: e82bd7d1-0781-4752-99a2-a4d515dade5d
+        -   Folder: Borders/North
+            Entity:
+                Id: fd92f63d-5f41-41b5-856c-ecc19885178d
+                Name: Wall0x2x5
+                Components:
+                    db07bec9b88cb84e9f8d6d3511eb10f2: !TransformComponent
+                        Id: 9c342304-10fc-428a-b35f-29daffb00ddd
+                        Position*: {X: 7.499999, Y: 2.0, Z: -14.999999}
+                        Rotation*: {X: 0.0, Y: 0.707106769, Z: 0.0, W: 0.707106769}
+                        Scale*: {X: 1.0, Y: 2.0, Z: 3.0}
+                        Children: {}
+                    6585e6d3aa27884f8d14790bf65b8607: !ModelComponent
+                        Id: 9e665549-3fdc-47a6-ab06-52bb74304081
+                        Model: 017bbc0d-9079-47ed-9c48-69dd6feecc9d:Models/Blocks/Wall0x2x5
+                        Materials:
+                            ec9522ed2e91694abd8663b5b8ada228~0: 39689a5c-f77a-4464-a8d7-865d175e44ea:Materials/Blocks/GridMTWall
+                    74299af04257e746be4dcca2e071c23f: !StaticColliderComponent
+                        Id: 508e7892-64c9-46c3-b619-becbe6d8973b
+                        CollisionGroup*: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            c43a4bb1930ada42a1651c91b5317898: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 0.1, Y: 2.0, Z: 5.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+            Base:
+                BasePartAsset: 6be4d035-9c6b-4ec7-bce9-3e4496e9cef1:BlocksPrefabs/Wall0x2x5
+                BasePartId: fbdff817-df62-4a56-83f8-19a9d12589b8
+                InstanceId: 5ce69a55-9510-4f34-b048-de2bf8788d21
+        -   Folder: null
+            Entity:
+                Id: fda101d7-454d-44b3-8e52-20a77b5392dd
+                Name: Ramp1x1_2x2
+                Components:
+                    cfce75d38d66e24fae426d1f40aa4f8a: !TransformComponent
+                        Id: 6cdafcba-8500-4aeb-9d0c-3ac62f50f685
+                        Position: {X: -0.5, Y: 0.25, Z: 2.98023259E-08}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    f37bc5fdfb615b449c53b27bf6cd774c: !ModelComponent
+                        Id: c09bb8fd-3a82-4b8b-b714-66bfb4291c58
+                        Model: 48c7dea9-d91d-4dce-94d6-e5855071bd83:Models/Blocks/Ramp1x1_2x2
+                        Materials:
+                            74dc3e7c6e633f46a3801edd86a197dd~0: 9f9a591d-bdb8-4ca8-919d-49aac222f3e5:Materials/Blocks/GridMTStairs
+                    dc14c0a2cfc23c4888d690b32f62969d: !StaticColliderComponent
+                        Id: 7edab713-60ad-43e9-8d6d-4d61f6068ced
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            d3bac6d7e45a544588ebd5170d5258b4: !ColliderShapeAssetDesc
+                                Shape: 5d08776e-2dae-4e20-8c37-06444b7767ff:CollisionMeshes/Blocks/Ramp1x1_2x2
+            Base:
+                BasePartAsset: 7c829b9b-c538-47d0-a54f-6b7e85b14803:Level/Ramp
+                BasePartId: ab764054-957c-4816-859b-9e1723cbae77
+                InstanceId: 362bc5ec-28fb-4fe2-acdd-5f8c913dd10a

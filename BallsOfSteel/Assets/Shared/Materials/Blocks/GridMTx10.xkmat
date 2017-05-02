@@ -11,7 +11,7 @@ Attributes:
             Texture: a1d9e7d7-feed-471d-b72e-bdde1bc4cbec:Textures/Blocks/CheckerGrid10x10
             FallbackValue:
                 Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-            Scale: {X: 1.0, Y: 1.0}
+            Scale: {X: 3.0, Y: 3.0}
             Offset: {X: 0.0, Y: 0.0}
             Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}

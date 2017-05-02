@@ -5,7 +5,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SiliconStudio.Core;
 using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Audio;
 using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Physics;
@@ -15,7 +17,9 @@ namespace Gamelogic
 {
     public class SwordScript : SyncScript
     {
-        // Declared public member fields and properties will show in the game studio
+        [Display("Sword", category: "Sound")]
+        public Sound SwordSound { get; set; }
+        private SoundInstance swordSfxInstance;
 
         private Vector3[] animPos = new Vector3[4];
         private Vector3[] animRot = new Vector3[4];
@@ -37,6 +41,8 @@ namespace Gamelogic
             animRot[3] = new Vector3(0f, -1.3962634f, 1.5708f);
 
             // Initialization of the script.
+            swordSfxInstance = SwordSound?.CreateInstance();
+            swordSfxInstance?.Stop();
         }
 
         public override void Update()
@@ -77,12 +83,14 @@ namespace Gamelogic
             Entity.Get<RigidbodyComponent>().Enabled = true;
             Entity.Get<ParticleSystemComponent>().Enabled = true;
             Entity.Get<ParticleSystemComponent>().ParticleSystem.Play();
+            swordSfxInstance?.Play();
         }
 
         private void DisableDamage()
         {
             Entity.Get<RigidbodyComponent>().Enabled = false;
             Entity.Get<ParticleSystemComponent>().ParticleSystem.StopEmitters();
+            swordSfxInstance?.Stop();
         }
 
     }

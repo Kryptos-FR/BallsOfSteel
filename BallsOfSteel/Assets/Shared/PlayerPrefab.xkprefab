@@ -124,6 +124,7 @@ Hierarchy:
                         Materials: {}
                     36349a0ef69c6e0c0d3ca3cd73d44bb0: !Gamelogic.SwordScript,BallsOfSteel.Game
                         Id: f67fb772-2601-4867-bcc6-ac2a285bfce8
+                        SwordSound: 3d791a6d-3803-4231-8b8a-f2999d6f9d8c:Audio/sword
                         SwingDuration: 0.4
                     e28047cde102c82637c36cab283b2087: !RigidbodyComponent
                         Id: 532012bf-3ca8-4085-acb5-442c22fa837f

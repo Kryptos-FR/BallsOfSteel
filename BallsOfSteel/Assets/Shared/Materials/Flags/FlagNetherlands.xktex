@@ -1,0 +1,7 @@
+!Texture
+Id: 2a152f15-7c09-4dbb-bc06-f89b607280c3
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagNetherlands.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

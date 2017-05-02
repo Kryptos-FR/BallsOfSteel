@@ -1,27 +1,23 @@
 !MaterialAsset
-Id: 39689a5c-f77a-4464-a8d7-865d175e44ea
+Id: 544f8521-5d6e-4f47-8064-f38709039530
 SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeFloat
-            Value: 0.5
+            Value: 0.65
     Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeBinaryColor
-            Operator: Multiply
-            LeftChild: !ComputeTextureColor
-                Texture: 07f99f15-c607-4b33-83d6-21139deca5cd:Textures/Blocks/CheckerGrid1x1
-                FallbackValue:
-                    Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                Scale: {X: 1.0, Y: 1.0}
-                Offset: {X: 0.0, Y: 0.0}
-                Swizzle: null
-            RightChild: !ComputeColor
-                Value: {R: 0.435294122, G: 0.0, B: 0.0, A: 1.0}
+        DiffuseMap: !ComputeTextureColor
+            Texture: a3132ac4-f35a-4f28-8574-bffd3ee03bf0:Materials/Flags/FlagJapan
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
-            Value: 0.5
+            Value: 0.8
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}

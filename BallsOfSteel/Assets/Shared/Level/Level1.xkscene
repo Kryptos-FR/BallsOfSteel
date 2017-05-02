@@ -278,8 +278,10 @@ Hierarchy:
                 Components:
                     5803e08c8c1850187abeee7b86354e67: !TransformComponent
                         Id: fd3a8b18-2224-4ab0-a200-67bba8650474
-                        Position: {X: 22.15952, Y: 22.4105072, Z: 0.0}
-                        Rotation: {X: -0.2979503, Y: 0.6412688, Z: 0.2979503, W: 0.6412688}
+
+                        Position: {X: 28.1408234, Y: 11.3733826, Z: 0.0}
+                        Rotation: {X: -0.115569331, Y: 0.6975985, Z: 0.115569331, W: 0.6975985}
+                        
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     782a76118b7c67a4e06d8b16cbaa2a38: !CameraComponent
@@ -343,6 +345,20 @@ Hierarchy:
                         Children: {}
                     9ea1247759c4e80c4255e6173981ddfc: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 1e4df01e-5947-44d4-85dd-7cebc8fb9122
+<<<<<<< HEAD
+=======
+                        VariousNations:
+                            c017815aefb196e33e5c4efce73ef3bf: 7b40eeec-3fe6-42f0-948b-5bfd5cff6e3f:Materials/Flags/SomeFlag1
+                            0838a6c798bc535c0aded09ab9392953: bc159876-4473-4383-962c-8756ac862ea2:Materials/Flags/SomeFlag2
+                            acf4ff5a25470ea638f9eda30bdd99f3: f52bfade-9082-4159-9672-16e91d811499:Materials/Flags/SomeFlag3
+                            87c0b0032126b6de2eed4372d2d75b2a: c121b26b-975e-4334-bd83-cbc4473c7f1f:Materials/Flags/SomeFlag4
+                            afd1bc71a3fe833c88b2afa840b20e6f: c2c1e5ae-df36-4d54-bf55-8a3444c76688:Materials/Flags/SomeFlag5
+                            0ee7b0522ba317f5b60bfb7c7ec2a076: 544f8521-5d6e-4f47-8064-f38709039530:Materials/Flags/SomeFlag6
+                            5d13cd4ae21691f842b3e0da391c1595: db0a61d7-85c5-4e2f-ac69-037b13608f70:Materials/Flags/SomeFlag7
+                            b1b3b2a29dcf288063a21781ff742aa4: 9ecd7cd3-5061-48d2-8f59-85b6f23a19d6:Materials/Flags/SomeFlag8
+                            8ae91f8c38ef79db99602eef81b73f35: f4b8813d-abf1-4494-afcd-32d2d2348b21:Materials/Flags/SomeFlag11
+                        MainCamera: ref!! 3cde50cf-5779-4f3f-b738-d9261fbe020c
+>>>>>>> origin/alex
                         NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
                         MainCamera: ref!! 3cde50cf-5779-4f3f-b738-d9261fbe020c
         -   Folder: null

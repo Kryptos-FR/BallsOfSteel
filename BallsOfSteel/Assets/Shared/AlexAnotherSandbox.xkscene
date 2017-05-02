@@ -140,8 +140,9 @@ Hierarchy:
                         Children: {}
                     cf939da5e0ad89a273de47027f412d13: !Gamelogic.MainGameLogic,BallsOfSteel.Game
                         Id: 5534b014-8fc8-40e8-b03b-9c552c0e2fd4
-                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+                        VariousNations: {}
                         MainCamera: ref!! 94cde23c-71f9-4a19-b7a6-42a0a545bd7b
+                        NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
         -   Folder: Borders
             Entity:
                 Id: 9e8de272-5b45-430e-876e-25ed62abffa0

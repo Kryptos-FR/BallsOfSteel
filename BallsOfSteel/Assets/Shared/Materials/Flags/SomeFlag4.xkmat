@@ -1,27 +1,23 @@
 !MaterialAsset
-Id: 39689a5c-f77a-4464-a8d7-865d175e44ea
+Id: c121b26b-975e-4334-bd83-cbc4473c7f1f
 SerializedVersion: {Xenko: 2.0.0.0}
 Tags: []
 Attributes:
     MicroSurface: !MaterialGlossinessMapFeature
         GlossinessMap: !ComputeFloat
-            Value: 0.5
+            Value: 0.65
     Diffuse: !MaterialDiffuseMapFeature
-        DiffuseMap: !ComputeBinaryColor
-            Operator: Multiply
-            LeftChild: !ComputeTextureColor
-                Texture: 07f99f15-c607-4b33-83d6-21139deca5cd:Textures/Blocks/CheckerGrid1x1
-                FallbackValue:
-                    Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                Scale: {X: 1.0, Y: 1.0}
-                Offset: {X: 0.0, Y: 0.0}
-                Swizzle: null
-            RightChild: !ComputeColor
-                Value: {R: 0.435294122, G: 0.0, B: 0.0, A: 1.0}
+        DiffuseMap: !ComputeTextureColor
+            Texture: bfdae766-4462-4059-86c3-277c9271ec8a:Materials/Flags/FlagGermany
+            FallbackValue:
+                Value: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+            Scale: {X: 1.0, Y: 1.0}
+            Offset: {X: 0.0, Y: 0.0}
+            Swizzle: null
     DiffuseModel: !MaterialDiffuseLambertModelFeature {}
     Specular: !MaterialMetalnessMapFeature
         MetalnessMap: !ComputeFloat
-            Value: 0.5
+            Value: 0.8
     SpecularModel: !MaterialSpecularMicrofacetModelFeature
         Fresnel: !MaterialSpecularMicrofacetFresnelSchlick {}
         Visibility: !MaterialSpecularMicrofacetVisibilitySmithSchlickGGX {}

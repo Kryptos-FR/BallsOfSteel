@@ -1,0 +1,7 @@
+!Texture
+Id: 5d106559-4533-4e5f-906f-eeb1cec806d0
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagBelgium.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

@@ -1,0 +1,7 @@
+!Texture
+Id: bfdae766-4462-4059-86c3-277c9271ec8a
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Source: ../../../../Resources/Textures/FlagGermany.png
+Type: !ColorTextureType
+    ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}

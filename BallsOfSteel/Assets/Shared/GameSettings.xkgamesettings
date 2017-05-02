@@ -8,8 +8,8 @@ SplashScreenTexture: d26edb11-10bd-403c-b3c2-9c7fcccf25e5:XenkoDefaultSplashScre
 SplashScreenColor: {R: 0, G: 0, B: 0, A: 255}
 Defaults:
     - !SiliconStudio.Xenko.Graphics.RenderingSettings,SiliconStudio.Xenko.Graphics
-        DefaultBackBufferWidth: 1280
-        DefaultBackBufferHeight: 720
+        DefaultBackBufferWidth: 1920
+        DefaultBackBufferHeight: 1080
         AdaptBackBufferToScreen: false
         DefaultGraphicsProfile: Level_10_0
         ColorSpace: Linear

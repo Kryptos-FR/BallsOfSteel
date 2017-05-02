@@ -8,7 +8,7 @@ Attributes:
             Value: 0.5
     Diffuse: !MaterialDiffuseMapFeature
         DiffuseMap: !ComputeBinaryColor
-            Operator: Add
+            Operator: Multiply
             LeftChild: !ComputeTextureColor
                 Texture: 07f99f15-c607-4b33-83d6-21139deca5cd:Textures/Blocks/CheckerGrid1x1
                 FallbackValue:

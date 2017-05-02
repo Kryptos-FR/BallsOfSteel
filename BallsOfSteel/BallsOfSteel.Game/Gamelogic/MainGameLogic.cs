@@ -125,7 +125,7 @@ namespace Gamelogic
                         var networkController = players[i].GetOrCreate<NetworkInput>();
                         if (networkController.client.clientIp.Address.Equals(clientToRemove.clientIp.Address))
                         {
-                            // remove the player
+                            players[i].Scene.Entities.Remove(players[i]);
                             break;
                         }
                     }

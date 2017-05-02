@@ -121,6 +121,11 @@ namespace BallsOfSteel
 
             while (Game.IsRunning)
             {
+                if (Input.IsKeyPressed(Keys.Escape))
+                {
+                    break;
+                }
+
                 for (var index = 0; index < packetsToSend.Count; index++)
                 {
                     sender.Client.Send(packetsToSend[index]);

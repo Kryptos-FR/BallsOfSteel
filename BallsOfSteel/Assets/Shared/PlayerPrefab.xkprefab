@@ -74,8 +74,8 @@ Hierarchy:
                     8044d8ad92dae4ad6b1d896c91f21399: !BallsOfSteel.Player.PlayerInputControl,BallsOfSteel.Game
                         Id: bc44134c-8ee6-4c85-9399-c4b7ddebbe2a
                         MaximumHitpoints: 100.0
-                        RespawnEffect: 8127b912-100a-4868-8c9d-ecae0bfaf619:VFXPrefabs/vfx-Teleport
-                        DieEffect: 4f241b5f-709a-4239-b51f-9036ae0f5ec8:VFXPrefabs/vfx-Explosion
+                        RespawnEffect: null
+                        DieEffect: null
                         JumpSound: 2af4149a-2e09-44ea-967d-367ee18989d9:Audio/jump
                         SpawnSound: a0bce443-e3f3-43e0-85e8-9e9e5c2b65be:Audio/respawn
                         Camera: null
@@ -271,7 +271,7 @@ Hierarchy:
                     f6941161c25b1e4722b9963b057656a8: !Gamelogic.DamagingScript,BallsOfSteel.Game
                         Id: e3014237-feab-4170-9a0b-8bf8a81f859a
                         DamagePerHit: 40.0
-                        PersistantDamage: true
+                        PersistantDamage: false
         -   Entity:
                 Id: 9aa7cf13-705f-4495-92b8-0228f0259ecd
                 Name: Muzzle Flash

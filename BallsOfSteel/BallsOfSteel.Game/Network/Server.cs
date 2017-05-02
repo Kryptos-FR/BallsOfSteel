@@ -86,7 +86,7 @@ namespace BallsOfSteel
                 if (clients[i].clientIp.Equals(clientInfos))
                 {
                     clients[i].clientIp = clientInfos;
-                    clients[i].isUsed = true;
+                    clients[i].isUsed = false;
                     GameLogic.ClientsToRemove.Push(clients[i]);
 
                     Console.WriteLine(">> BoS Server : Received disconnection request from client {1}", i, clientInfos);

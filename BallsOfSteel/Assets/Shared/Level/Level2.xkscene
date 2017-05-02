@@ -1270,6 +1270,9 @@ Hierarchy:
                         Id: b2e32e84-0382-4e83-bc07-ce54a61e7986
                         MainCamera: ref!! c9bfc26c-9f0e-474b-91ca-caae94dc92fc
                         NewPlayerPrefab: b3f9791b-fa3c-4b58-b08d-34eba3be76e3:PlayerPrefab
+                    681d7870e588ea12e0d594fa5e8ee5df: !BallsOfSteel.MusicScript,BallsOfSteel.Game
+                        Id: 0e1886b1-98be-458d-8da8-9b227e083644
+                        SoundMusic: 11416e66-c105-4026-beb2-3e4f6dabeb9f:Audio/Music
         -   Folder: Borders/East
             Entity:
                 Id: c13020f7-1f41-46e1-a081-07d633a120f8
